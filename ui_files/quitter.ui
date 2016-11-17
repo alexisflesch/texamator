@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>91</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Quit</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icones.qrc">
+    <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Do you really want to quit TeXamator ?</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>5</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_cancel">
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icones.qrc">
+           <normaloff>:/all/icones/cancel.png</normaloff>:/all/icones/cancel.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_ok">
+         <property name="text">
+          <string>Ok</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icones.qrc">
+           <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_ok</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

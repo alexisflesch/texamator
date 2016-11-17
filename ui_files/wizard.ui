@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>983</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Wizard</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icones.qrc">
+    <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame1">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Maximum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>130</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="icones.qrc">:/all/icones/wizard.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_warning">
+          <property name="text">
+           <string>Warning ! This wizard will erase some of your settings !</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>TeXamator needs to know a few things before it can fully work :
+- how do you declare your exercises in your tex files ?
+- what header do you use to compile your files (what comes before begin{document}) ?
+
+If you want, TeXamator can try to find out automatically. Just enter the location of one of your typical tex files with some exercices in it and hit the &quot;Next&quot; button.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_browse">
+          <property name="text">
+           <string>Browse</string>
+          </property>
+          <property name="icon">
+           <iconset resource="icones.qrc">
+            <normaloff>:/all/icones/folder.png</normaloff>:/all/icones/folder.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame2">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_tags">
+        <property name="text">
+         <string>Here are the tags TeXamator found. You can add or delete tags from the list.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>What comes before an exercise ?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_tag1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_tag2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>What comes after ?</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="_3">
+        <item>
+         <widget class="QListWidget" name="listWidget"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_add">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icones.qrc">
+              <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_remove">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icones.qrc">
+              <normaloff>:/all/icones/edit_remove.png</normaloff>:/all/icones/edit_remove.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>16</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QFrame" name="frame3">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_header">
+        <property name="text">
+         <string>Here is the header TeXamator is going to use each time it needs to compile a file.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_warning_2">
+        <property name="text">
+         <string>Note that \begin{document} must not appear here !</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_back">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icones.qrc">
+         <normaloff>:/all/icones/left.png</normaloff>:/all/icones/left.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="pushButton_next">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icones.qrc">
+         <normaloff>:/all/icones/right.png</normaloff>:/all/icones/right.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_cancel">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icones.qrc">
+         <normaloff>:/all/icones/cancel.png</normaloff>:/all/icones/cancel.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QPushButton" name="pushButton_apply">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Apply</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icones.qrc">
+         <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>972</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_apply</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>695</x>
+     <y>957</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>385</x>
+     <y>959</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

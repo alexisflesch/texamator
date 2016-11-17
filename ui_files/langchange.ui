@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>90</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Changing language</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icones.qrc">
+    <normaloff>:/all/icones/small_logo.png</normaloff>:/all/icones/small_logo.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>You need to restart TeXamator for the changes to take effect</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>338</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icones.qrc">
+       <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>422</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

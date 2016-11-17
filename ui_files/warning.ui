@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>135</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Error</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../programmes/TeXamator/ui_files/icones.qrc">
+    <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>You need to install python-kde4 to use this feature</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_ok">
+       <property name="text">
+        <string>Ok</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../../programmes/TeXamator/ui_files/icones.qrc">
+         <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../../programmes/TeXamator/ui_files/icones.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_ok</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

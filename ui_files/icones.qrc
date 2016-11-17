@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="all" >
+    <file>icones/find.png</file>
+    <file>icones/delete.png</file>
+    <file>icones/folder.png</file>
+    <file>icones/small_logo.png</file>
+    <file>icones/wizard.png</file>
+    <file>icones/hat.png</file>
+    <file>icones/fileclose.png</file>
+    <file>icones/apply.png</file>
+    <file>icones/cancel.png</file>
+    <file>icones/left.png</file>
+    <file>icones/right.png</file>
+    <file>icones/down.png</file>
+    <file>icones/edit_add.png</file>
+    <file>icones/edit.png</file>
+    <file>icones/edit_remove.png</file>
+    <file>icones/exit.png</file>
+    <file>icones/filesave.png</file>
+    <file>icones/gear.png</file>
+    <file>icones/messagebox_info.png</file>
+    <file>icones/TeXamator.png</file>
+    <file>icones/pencil.png</file>
+    <file>icones/up.png</file>
+    <file>icones/pdf.png</file>
+    <file>icones/2downarrow.png</file>
+  </qresource>
+</RCC>

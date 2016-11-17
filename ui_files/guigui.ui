@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1622</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TeXamator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icones.qrc">
+    <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSplitter" name="big_splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Folder in which TeXamator should look for exercices</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_parcourir">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Browse</string>
+              </property>
+              <property name="icon">
+               <iconset resource="icones.qrc">
+                <normaloff>:/all/icones/folder.png</normaloff>:/all/icones/folder.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="button_refresh">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Look for exercices !</string>
+              </property>
+              <property name="icon">
+               <iconset resource="icones.qrc">
+                <normaloff>:/all/icones/find.png</normaloff>:/all/icones/find.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSplitter" name="little_splitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QTreeWidget" name="treeWidget">
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAsNeeded</enum>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+              <property name="indentation">
+               <number>10</number>
+              </property>
+              <column>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLabel" name="label_search">
+                <property name="text">
+                 <string>Search</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_search"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="tabKeyNavigation">
+               <bool>false</bool>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Exercises</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QPushButton" name="pushButton_edit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Edit</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/edit.png</normaloff>:/all/icones/edit.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>118</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_preview">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Preview</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/pdf.png</normaloff>:/all/icones/pdf.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item>
+               <widget class="QPushButton" name="button_remove">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/edit_remove.png</normaloff>:/all/icones/edit_remove.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="button_add">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>31</width>
+                  <height>21</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="button_up">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/up.png</normaloff>:/all/icones/up.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="button_down">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="icones.qrc">
+                  <normaloff>:/all/icones/down.png</normaloff>:/all/icones/down.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_2">
+              <item>
+               <widget class="QScrollArea" name="okularlayout">
+                <property name="sizeIncrement">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>684</width>
+                   <height>864</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2"/>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="button_recompile">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Re-run LaTeX</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>231</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_save">
+            <property name="text">
+             <string>Export</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icones.qrc">
+              <normaloff>:/all/icones/filesave.png</normaloff>:/all/icones/filesave.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1622</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExport"/>
+    <addaction name="actionGenerate_Random_Exam"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuChange_language">
+     <property name="title">
+      <string>Choose language</string>
+     </property>
+     <addaction name="actionCzech"/>
+     <addaction name="actionEnglish"/>
+     <addaction name="actionFrench"/>
+     <addaction name="actionGerman"/>
+     <addaction name="actionUkrainian"/>
+    </widget>
+    <widget class="QMenu" name="menuCompilation">
+     <property name="title">
+      <string>Compilation</string>
+     </property>
+    </widget>
+    <addaction name="actionStart_Wizard"/>
+    <addaction name="actionPrefs"/>
+    <addaction name="menuCompilation"/>
+    <addaction name="actionEdit_exercise"/>
+    <addaction name="actionExpand_Collapse"/>
+    <addaction name="separator"/>
+    <addaction name="menuChange_language"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionA_propos"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdition"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/filesave.png</normaloff>:/all/icones/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionPartieliser">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/edit.png</normaloff>:/all/icones/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Generate Exam</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/exit.png</normaloff>:/all/icones/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionPrefs">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/gear.png</normaloff>:/all/icones/gear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionA_propos">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/messagebox_info.png</normaloff>:/all/icones/messagebox_info.png</iconset>
+   </property>
+   <property name="text">
+    <string>About ...</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Random_Exam">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/pencil.png</normaloff>:/all/icones/pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pick exercises randomly</string>
+   </property>
+  </action>
+  <action name="actionEdit_exercise">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/edit.png</normaloff>:/all/icones/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit exercise</string>
+   </property>
+  </action>
+  <action name="actionExpand_Collapse">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/2downarrow.png</normaloff>:/all/icones/2downarrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Expand/Collapse</string>
+   </property>
+  </action>
+  <action name="actionStart_Wizard">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/all/icones/hat.png</normaloff>:/all/icones/hat.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start Wizard</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionFrench">
+   <property name="text">
+    <string>French</string>
+   </property>
+  </action>
+  <action name="actionCzech">
+   <property name="text">
+    <string>Czech</string>
+   </property>
+  </action>
+  <action name="actionUkrainian">
+   <property name="text">
+    <string>Ukrainian</string>
+   </property>
+  </action>
+  <action name="actionGerman">
+   <property name="text">
+    <string>German</string>
+   </property>
+  </action>
+  <action name="actionM">
+   <property name="text">
+    <string>m</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections/>
+</ui>
