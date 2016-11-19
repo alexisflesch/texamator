@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="cs_CZ" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>Dialog</name>
     <message>
@@ -25,12 +26,12 @@
     <message>
         <location filename="../texamator.py" line="91"/>
         <source>No exercise found</source>
-        <translation type="unfinished">Nebylo nalezeno žádné cvičení</translation>
+        <translation>Nebylo nalezeno žádné cvičení</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="93"/>
         <source>1 exercise found</source>
-        <translation type="unfinished">Bylo nalezeno jedno  cvičení</translation>
+        <translation>Bylo nalezeno jedno cvičení</translation>
     </message>
     <message>
         <location filename="../TeXamator.py" line="94"/>
@@ -118,7 +119,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
         <source>What type of file will you generate ? (default : dvi)</source>
-        <translation type="unfinished">Jaký druh dokumentu chcete vytvořit (výchozí nastavení typu souboru: dvi) ?</translation>
+        <translation>Jaký druh dokumentu chcete vytvořit (výchozí nastavení typu souboru: dvi)?</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="95"/>
@@ -441,7 +442,7 @@ Přidejte je, prosím, aby TeXamator mohl pracovat, ručně.</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -484,97 +485,97 @@ using the compilation sequence in the preferences menu.</source>
     <message>
         <location filename="../ui_files/preferences.ui" line="67"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ano</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="77"/>
         <source>&amp;No</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="623"/>
         <source>Footer</source>
-        <translation type="unfinished"></translation>
+        <translation>Zápatí</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="632"/>
         <source>This is the footer used by TeXamator to compile your .tex files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto je zápatí, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex).</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="820"/>
         <source>Set here what you want to appear before your exercises</source>
-        <translation type="unfinished"></translation>
+        <translation>Zde napište, co se má objevovat před vašimi cvičeními</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="836"/>
         <source>New Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Nové nastavení</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="894"/>
         <source>Set here what you want to appear after your exercises</source>
-        <translation type="unfinished"></translation>
+        <translation>Zde napište, co se má objevovat za vašimi cvičeními</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="406"/>
         <source>If you want, you can create your own compile sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokud chcete, můžete vytvořit vlastní řadu příkazů pro překladač</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="793"/>
         <source>Select a config name</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte název nastavení</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="170"/>
         <source>Which viewer do you want to use when you export a project ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaký prohlížeč dokumentů chcete používat po vyvedení dokumentu?</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="37"/>
         <source>Here are the sources that will be used. You can edit them if you want</source>
-        <translation type="unfinished"></translation>
+        <translation>Zde jsou zdrojové soubory, které budou použity při sestavování. Pokud chcete, můžete je upravit</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="128"/>
         <source>What type of file do you want to export ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Do jakého typu souboru chcete dokument vyvést?</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="87"/>
         <source>Choose a compilation sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte řadu příkazů pro překladač</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="373"/>
         <source>Select the config to use (and edit it if you want to)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte nastavení (a upravte je, chcete-li)</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="133"/>
         <source>Which viewer do you want TeXamator to use inside the application ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaký prohlížeč dokumentů chcete používat v programu?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="594"/>
         <source>This is the header used by TeXamator to compile your .tex files. You can include \begin{document} if you want.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto je záhlaví, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex). Můžete zahrnout \begin{document}, chcete-li.</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="121"/>
         <source>Choose a header/footer</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte záhlaví/zápatí</translation>
     </message>
     <message>
         <location filename="../ui_files/warning.ui" line="14"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="../ui_files/warning.ui" line="24"/>
         <source>You need to install python-kde4 to use this feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro používání této funkce musíte nainstalovat python-kde4</translation>
     </message>
     <message>
         <location filename="../ui_files/apropos.ui" line="90"/>
@@ -589,7 +590,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;TeXamator je šířen pod GPL.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Více informací naleznete na stránkách projektu:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Máte-li nějaké otázky nebo požadavky, můžete se se mnou spojit&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;prostřednictvím elektronické pošty: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -602,12 +613,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../partielatormods/guis/guiprefsplus.py" line="285"/>
         <source>You are about to delete the compile sequence : </source>
-        <translation type="unfinished"></translation>
+        <translation>Chystáte se smazat řadu příkazů pro překladač: </translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiprefsplus.py" line="387"/>
         <source>You are about to delete the config : </source>
-        <translation type="unfinished"></translation>
+        <translation>Chystáte se smazat nastavení: </translation>
     </message>
 </context>
 <context>
@@ -715,47 +726,47 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/guigui.ui" line="552"/>
         <source>English</source>
-        <translation>Anglický</translation>
+        <translation>Angličtina</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="557"/>
         <source>French</source>
-        <translation>Francouzský</translation>
+        <translation>Francouzština</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="562"/>
         <source>Czech</source>
-        <translation>Český</translation>
+        <translation>Čeština</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="567"/>
         <source>Ukrainian</source>
-        <translation>ukrajinský</translation>
+        <translation>Ukrajinština</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="371"/>
         <source>Re-run LaTeX</source>
-        <translation type="unfinished"></translation>
+        <translation>Přeložit znovu (LaTeX)</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="572"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Němčina</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="441"/>
         <source>Compilation</source>
-        <translation type="unfinished">Sestavení</translation>
+        <translation>Sestavení</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="577"/>
         <source>m</source>
-        <translation type="unfinished"></translation>
+        <translation>m</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="202"/>
         <source>Exercises</source>
-        <translation type="unfinished"></translation>
+        <translation>Cvičení</translation>
     </message>
 </context>
 </TS>
