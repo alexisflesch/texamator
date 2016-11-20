@@ -7,7 +7,11 @@ import sys, os
 from random import shuffle
 from partielatormods import *
 
-
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
 
 
 class MonApplication(Ui_MainWindow):
@@ -101,15 +105,18 @@ class MonApplication(Ui_MainWindow):
             topname = topdir.split('/')[-1]
             racine = os.path.split(topdir)[0]
             itemDict[racine] = self.treeWidget
-            font = QtGui.QFont()
-            font.setBold(True)
+            folderIcon = QtGui.QIcon()
+            folderIcon.addPixmap(QtGui.QPixmap(_fromUtf8(":/all/icones/folder.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            fileIcon = QtGui.QIcon()
+            fileIcon.addPixmap(QtGui.QPixmap(_fromUtf8(":/all/icones/tex.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
 
             for fullpath, b, c in someTree:
                 nom = fullpath.split("/")[-1]
                 parent = os.path.split(fullpath)[0]
                 itemDict[fullpath] = QtGui.QTreeWidgetItem(itemDict[parent])
                 itemDict[fullpath].setText(0,QtGui.QApplication.translate("Form", nom, None,\
-                QtGui.QApplication.UnicodeUTF8))
+                    QtGui.QApplication.UnicodeUTF8))
+                itemDict[fullpath].setIcon(0, folderIcon)
 
                 for i in c:#TeX file
                     nb = len(i[1]) #number of exercices in the file
@@ -119,11 +126,7 @@ class MonApplication(Ui_MainWindow):
                     itemDict[nom_element] = QtGui.QTreeWidgetItem(itemDict[fullpath])
                     itemDict[nom_element].setText(0,QtGui.QApplication.translate("Form", nom2, None,\
                     QtGui.QApplication.UnicodeUTF8))
-                    #change font for TeX files to bold
-                    #font = QtGui.QFont()
-                    #font = itemDict[nom_element].font(0)
-                    #font.setBold(True)
-                    itemDict[nom_element].setFont(0, font)
+                    itemDict[nom_element].setIcon(0, fileIcon)
 
                     compteur_exos = 0
                     for j in i[1]:#Exercises
@@ -403,7 +406,7 @@ class MonApplication(Ui_MainWindow):
         if len(items)>1 or items[0].childCount():
             return
         else:
-            self.add_ex_to_table(self)
+            self.add_ex_to_table()
 
     def remove_exercises(self):
         """Delete selected elements from the tableWidget"""
