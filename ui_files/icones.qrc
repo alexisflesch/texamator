@@ -1,5 +1,6 @@
 <RCC>
-  <qresource prefix="all" >
+  <qresource prefix="all">
+    <file>icones/tex.png</file>
     <file>icones/find.png</file>
     <file>icones/delete.png</file>
     <file>icones/folder.png</file>
