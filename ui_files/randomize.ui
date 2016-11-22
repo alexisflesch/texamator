@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>339</width>
-    <height>174</height>
+    <width>551</width>
+    <height>243</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -35,6 +35,9 @@
      </item>
      <item>
       <widget class="QSpinBox" name="spinBox">
+       <property name="maximum">
+        <number>9999</number>
+       </property>
        <property name="value">
         <number>4</number>
        </property>
@@ -84,7 +87,7 @@
      <item>
       <widget class="QRadioButton" name="radioButton_selected_folder">
        <property name="text">
-        <string>Selected folder in the tree</string>
+        <string>Selected elements in the tree</string>
        </property>
        <property name="checked">
         <bool>true</bool>
