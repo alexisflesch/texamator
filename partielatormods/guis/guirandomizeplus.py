@@ -9,35 +9,33 @@ def close(self, res):
     if res:
         #Depending on what radioButton was selected, set parent.
         if self.ui_random.radioButton_selected_folder.isChecked():
-            parent = self.treeWidget.topLevelItem(0)
-            if not parent: #If user didn't click on "look for exercises"
+            itemsList = [self.treeWidget.topLevelItem(0)]
+            if not itemsList: #If user didn't click on "look for exercises"
                 print "Look for exercises before !!!"
                 return
-            if not self.treeWidget.currentItem(): #If treeWidget has never been clicked
+            if not self.treeWidget.selectedItems(): #If treeWidget has never been clicked
                 print "You did not select a folder : picking exercises in the entire database"
             else:
-                parent = self.treeWidget.currentItem()
-            if (parent.childCount() == 0): #If an exercise is selected, use its parent instead
-                parent = parent.parent()
+                itemsList = self.treeWidget.selectedItems()
         else:
-            parent = self.treeWidget.topLevelItem(0)
-        #List the exercises under the item        
-        l = self.list_child_exercises(parent, [])
+            itemsList = [self.treeWidget.topLevelItem(0)]
+        #List the exercises under the items
+        leaves = []
+        for i in itemsList:
+            leaves += self.list_children(i, [])
         #Is there enough exercises ?
         n = self.ui_random.spinBox.value()
-        if n>len(l):
+        if n>len(leaves):
             print "not enough exercises"
-            n = len(l)
-        shuffle(l)
-        l = l[:n]
-        for exo in l:
-            item = QtGui.QListWidgetItem(self.listWidget)
-            nom = exo["titre"]
-            item.enonce = exo["enonce"]
-            item.setText(QtGui.QApplication.translate("Form", str(nom), None,\
-                            QtGui.QApplication.UnicodeUTF8))
-        if l:
+            n = len(leaves)
+        shuffle(leaves)
+        leaves = leaves[:n]
+        self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
+        self.tableWidget.selectionModel().clearSelection()
+        for exercise in leaves:
+            self.add_items(exercise)
+        self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+        if leaves:
             self.pushButton_preview.setEnabled(True)
             self.actionEdit_exercise.setEnabled(True)
             self.pushButton_edit.setEnabled(True)
-            self.listWidget.setCurrentItem(item)
