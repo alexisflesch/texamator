@@ -6,6 +6,7 @@ or contact me by mail :
 alexis.flesch@gmail.com
 
 ---------------------------- Instructions --------------------------------------------
+
 You need the following to run this programm :
 - latex
 - dvipng
@@ -20,6 +21,7 @@ hop to the directory and type in "python TeXamator.py". This last method is pref
 because it will let you see LaTeX running in the background.
 
 ------------------------------- Credits -----------------------------------------------
+
 * Most of the icons used are from the crystal diamond icon 2.85 theme :
 http://www.kde-look.org/content/show.php/Crystal+Diamond+Icons?content=45576
 which is released under LGPL (version not specified to my knowledge)
@@ -34,6 +36,7 @@ http://fripohled.blogspot.com/
 * I am responsible for all the bugs... Send me an email if you find one !!
 
 ------------------------------ Special features --------------------------------------
+
 * Right clicking on the tree will expand/collapse everything under the element
 
 * Ctrl+C on an exercise (or more) in the tree or in the list will copy the source code
