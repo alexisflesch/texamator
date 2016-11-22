@@ -23,12 +23,12 @@
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="91"/>
+        <location filename="../texamator.py" line="95"/>
         <source>No exercise found</source>
         <translation>Aucun exercice trouvé</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="93"/>
+        <location filename="../texamator.py" line="97"/>
         <source>1 exercise found</source>
         <translation>1 exercice trouvé</translation>
     </message>
@@ -265,17 +265,17 @@ exercices, y compris \begin{document}.</translation>
         <translation>Ajouter combien d&apos;exercices ?</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="48"/>
+        <location filename="../ui_files/randomize.ui" line="51"/>
         <source>Pick exercises from :</source>
         <translation>Prendre les exercices dans :</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="87"/>
-        <source>Selected folder in the tree</source>
-        <translation>Le dossier sélectionné dans l&apos;arbre</translation>
+        <location filename="../ui_files/randomize.ui" line="90"/>
+        <source>Selected elements in the tree</source>
+        <translation>Les éléments sélectionnés dans l&apos;arbre</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="97"/>
+        <location filename="../ui_files/randomize.ui" line="100"/>
         <source>Entire database</source>
         <translation>Toute la base d&apos;exercices</translation>
     </message>
@@ -425,7 +425,7 @@ l&apos;en-tête par défault : il sera utilisé pour compiler tous vos fichiers 
 Vous devez les ajouter-les manuellement pour que Partielator fonctionne.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="95"/>
+        <location filename="../texamator.py" line="99"/>
         <source>exercises found</source>
         <translation>exercices trouvés</translation>
     </message>
@@ -442,7 +442,7 @@ Vous devez les ajouter-les manuellement pour que Partielator fonctionne.</transl
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -590,7 +590,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
