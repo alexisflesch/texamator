@@ -5,4 +5,4 @@ from PyQt4 import QtCore, QtGui
 
 
 def updateUi(ui):
-    ui.label.setText(QtGui.QApplication.translate("Dialog", "TeXamator 2.0", None, QtGui.QApplication.UnicodeUTF8))
+    ui.label.setText(QtGui.QApplication.translate("Dialog", "TeXamator 2.0.2", None, QtGui.QApplication.UnicodeUTF8))
