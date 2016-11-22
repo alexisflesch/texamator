@@ -264,6 +264,16 @@ class MonApplication(Ui_MainWindow):
             l.append({'titre':parent.titre,'enonce':parent.enonce})
         return l
 
+    def list_children(self, parent, l=[]):
+        """List all children of an parent item"""
+        if parent.childCount():
+            for i in range(parent.childCount()):
+                item = parent.child(i)
+                self.list_children(item,l)
+        else:
+            l.append(parent)
+        return l
+
     def parcourir(self):
         dirName = QtGui.QFileDialog.getExistingDirectory(MainWindow,\
                   QtGui.QApplication.translate("Form", "Pick a folder", None, QtGui.QApplication.UnicodeUTF8),
@@ -784,7 +794,7 @@ class MonApplication(Ui_MainWindow):
             import PyKDE4.kparts as kp
             self.okupart = ll.self().factory('okularpart').create()
             self.okularlayout.setWidget(self.okupart.widget())
-            self.okupart.slotHideFindBar()
+            #self.okupart.slotHideFindBar()
         else:
             self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
             self.preview = QtGui.QLabel()
