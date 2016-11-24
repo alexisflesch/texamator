@@ -187,6 +187,12 @@ def close_prefs(self, res):
             h.write(t1 + "!!!" + t2 + "\n")
         h.close()
         #Compile sequence
+        #Update config displayed before the change of config
+        self.new_compile_seq[self.last_compile] = []
+        for i in range(self.ui_prefs.listWidget_comp.count()):
+            c = self.ui_prefs.listWidget_comp.item(i).text()
+            self.new_compile_seq[self.last_compile].append(c)
+        #Save config sequence
         self.compile_seq = self.new_compile_seq #save changes
         self.settings["preferred compile sequence"] = unicode(self.ui_prefs.comboBox_compile.currentText())
         self.populate_compile() #update compile submenu
