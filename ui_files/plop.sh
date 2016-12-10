@@ -12,8 +12,10 @@ pyuic4 -o ../partielatormods/guis/guinewconf.py -x newconf.ui
 pyuic4 -o ../partielatormods/guis/guiexport.py -x export.ui
 pyuic4 -o ../partielatormods/guis/guiwizard.py -x wizard.ui
 pyuic4 -o ../partielatormods/guis/guidelete.py -x delete.ui
+pyuic4 -o ../partielatormods/guis/guishuffle.py -x shufflelist.ui
 pyuic4 -o ../partielatormods/guis/guiwarning.py -x warning.ui
 pyuic4 -o ../partielatormods/guis/guilangchange.py -x langchange.ui
+pyuic4 -o ../partielatormods/guis/guieditsource.py -x editsource.ui
 pylupdate4 ../ts_files/TeXamator.pro
 
 find ../ -type f -name "*.pyc" -exec rm -f {} \;

@@ -36,6 +36,4 @@ def close(self, res):
             self.add_items(exercise)
         self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
         if leaves:
-            self.pushButton_preview.setEnabled(True)
-            self.actionEdit_exercise.setEnabled(True)
-            self.pushButton_edit.setEnabled(True)
+            self.tableWidget.emit(QtCore.SIGNAL("notempty()"))

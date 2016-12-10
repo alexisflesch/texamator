@@ -91,7 +91,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>What type of file will you generate ? (default : dvi)</string>
+            <string>What type of file will you generate ? (default : pdf)</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
@@ -130,7 +130,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Which viewer do you want TeXamator to use inside the application ?</string>
+            <string>Which viewer do you want TeXamator to use inside the application ? (default : okular)</string>
            </property>
           </widget>
          </item>
@@ -324,7 +324,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Here you can set up the way LaTeX is called in the background. !file is a shortcut for /tmp/partielator/file. Leave default settings if unsure. Help is available online here :
+            <string>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :
 </string>
            </property>
            <property name="textFormat">

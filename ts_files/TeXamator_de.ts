@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
-        <source>What type of file will you generate ? (default : dvi)</source>
+        <source>What type of file will you generate ? (default : pdf)</source>
         <translation type="unfinished">Zu erstellender Dokumententyp? (Standard: dvi)</translation>
     </message>
     <message>
@@ -147,9 +147,9 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="327"/>
-        <source>Here you can set up the way LaTeX is called in the background. !file is a shortcut for /tmp/partielator/file. Leave default settings if unsure. Help is available online here :
+        <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :
 </source>
-        <translation>Hier kann man eintragen auf welche Weise LaTeX im Hintergrund aufgerufen wird. !file ist eine Abkürzung für /tmp/partielator/file. Im Zweifel sollte nichts geändert werden.Weitere Informationen sind (auf Englisch) hier zu finden :</translation>
+        <translation type="unfinished">Hier kann man eintragen auf welche Weise LaTeX im Hintergrund aufgerufen wird. !file ist eine Abkürzung für /tmp/partielator/file. Im Zweifel sollte nichts geändert werden.Weitere Informationen sind (auf Englisch) hier zu finden :</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="347"/>
@@ -245,17 +245,17 @@ p, li { white-space: pre-wrap; }
         <translation>Wie viele Aufgaben möchten Sie?</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="48"/>
+        <location filename="../ui_files/randomize.ui" line="51"/>
         <source>Pick exercises from :</source>
         <translation>Quelle für Aufgaben:</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="87"/>
-        <source>Selected folder in the tree</source>
-        <translation>Ausgewählter Ordner im Verzeichnisbaum</translation>
+        <location filename="../ui_files/randomize.ui" line="90"/>
+        <source>Selected elements in the tree</source>
+        <translation type="unfinished">Ausgewählter Ordner im Verzeichnisbaum</translation>
     </message>
     <message>
-        <location filename="../ui_files/randomize.ui" line="97"/>
+        <location filename="../ui_files/randomize.ui" line="100"/>
         <source>Entire database</source>
         <translation>Vollständiger Datenbestand</translation>
     </message>
@@ -382,17 +382,17 @@ TeXamator kann versuchen das automatisch zu ermitteln. Geben Sie nur den Pfad zu
         <translation>Sie müssen TeXamator neu starten, damit die Änderung aktiv wird</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="91"/>
+        <location filename="../texamator.py" line="103"/>
         <source>No exercise found</source>
         <translation type="unfinished">Keine Übungen gefunden</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="93"/>
+        <location filename="../texamator.py" line="105"/>
         <source>1 exercise found</source>
         <translation type="unfinished">Eine Übung gefunden</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="95"/>
+        <location filename="../texamator.py" line="107"/>
         <source>exercises found</source>
         <translation>Übungen gefunden</translation>
     </message>
@@ -481,7 +481,7 @@ Diese werden bei der Übersetzung der .tex Dateien verwendet.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="133"/>
-        <source>Which viewer do you want TeXamator to use inside the application ?</source>
+        <source>Which viewer do you want TeXamator to use inside the application ? (default : okular)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -519,21 +519,56 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../texamator.py" line="895"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="920"/>
+        <source>Edit...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="917"/>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="922"/>
+        <source>Move up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="924"/>
+        <source>Move down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="926"/>
+        <source>Shuffle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="928"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="359"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="365"/>
         <source>Pick a folder</source>
         <translation>Wählen Sie einen Ordner</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="285"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="291"/>
         <source>You are about to delete the compile sequence : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="387"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="393"/>
         <source>You are about to delete the config : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -571,7 +606,7 @@ p, li { white-space: pre-wrap; }
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="427"/>
+        <location filename="../ui_files/guigui.ui" line="439"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
@@ -581,108 +616,113 @@ p, li { white-space: pre-wrap; }
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="371"/>
+        <location filename="../ui_files/guigui.ui" line="383"/>
         <source>Re-run LaTeX</source>
         <translation>LaTex ausführen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="469"/>
+        <location filename="../ui_files/guigui.ui" line="482"/>
         <source>Export</source>
         <translation>Export</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="418"/>
+        <location filename="../ui_files/guigui.ui" line="430"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="431"/>
+        <location filename="../ui_files/guigui.ui" line="443"/>
         <source>Choose language</source>
         <translation>Sprache auswählen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="454"/>
+        <location filename="../ui_files/guigui.ui" line="467"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="478"/>
+        <location filename="../ui_files/guigui.ui" line="491"/>
         <source>Generate Exam</source>
         <translation>Examen erstellen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="487"/>
+        <location filename="../ui_files/guigui.ui" line="500"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="496"/>
+        <location filename="../ui_files/guigui.ui" line="509"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="505"/>
+        <location filename="../ui_files/guigui.ui" line="518"/>
         <source>About ...</source>
         <translation>Über ...</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="514"/>
+        <location filename="../ui_files/guigui.ui" line="527"/>
         <source>Pick exercises randomly</source>
         <translation>Übungen zufällig auswählen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="526"/>
+        <location filename="../ui_files/guigui.ui" line="539"/>
         <source>Edit exercise</source>
         <translation>Übung bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="538"/>
+        <location filename="../ui_files/guigui.ui" line="551"/>
         <source>Expand/Collapse</source>
         <translation>Auf-/Zuklappen</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="547"/>
+        <location filename="../ui_files/guigui.ui" line="560"/>
         <source>Start Wizard</source>
         <translation>Asisstenten starten</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="552"/>
+        <location filename="../ui_files/guigui.ui" line="565"/>
         <source>English</source>
         <translation>Englisch</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="557"/>
+        <location filename="../ui_files/guigui.ui" line="570"/>
         <source>French</source>
         <translation>Französisch</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="562"/>
+        <location filename="../ui_files/guigui.ui" line="575"/>
         <source>Czech</source>
         <translation>Tschechisch</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="567"/>
+        <location filename="../ui_files/guigui.ui" line="580"/>
         <source>Ukrainian</source>
         <translation> Ukrainisch</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="572"/>
+        <location filename="../ui_files/guigui.ui" line="585"/>
         <source>German</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="441"/>
+        <location filename="../ui_files/guigui.ui" line="453"/>
         <source>Compilation</source>
         <translation type="unfinished">Übersetzung</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="577"/>
+        <location filename="../ui_files/guigui.ui" line="590"/>
         <source>m</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="202"/>
         <source>Exercises</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="598"/>
+        <source>Shuffle list</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -253,6 +253,9 @@
              <layout class="QHBoxLayout">
               <item>
                <widget class="QPushButton" name="button_remove">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -264,6 +267,9 @@
               </item>
               <item>
                <widget class="QPushButton" name="button_add">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -288,6 +294,9 @@
               </item>
               <item>
                <widget class="QPushButton" name="button_up">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -299,6 +308,9 @@
               </item>
               <item>
                <widget class="QPushButton" name="button_down">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -446,6 +458,7 @@
     <addaction name="menuCompilation"/>
     <addaction name="actionEdit_exercise"/>
     <addaction name="actionExpand_Collapse"/>
+    <addaction name="actionShuffle_list"/>
     <addaction name="separator"/>
     <addaction name="menuChange_language"/>
    </widget>
@@ -575,6 +588,14 @@
   <action name="actionM">
    <property name="text">
     <string>m</string>
+   </property>
+  </action>
+  <action name="actionShuffle_list">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Shuffle list</string>
    </property>
   </action>
  </widget>

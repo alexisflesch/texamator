@@ -25,7 +25,7 @@ except AttributeError:
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(339, 174)
+        Dialog.resize(551, 243)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -42,6 +42,7 @@ class Ui_Dialog(object):
         self.label.setObjectName(_fromUtf8("label"))
         self.horizontalLayout_2.addWidget(self.label)
         self.spinBox = QtGui.QSpinBox(Dialog)
+        self.spinBox.setMaximum(9999)
         self.spinBox.setProperty("value", 4)
         self.spinBox.setObjectName(_fromUtf8("spinBox"))
         self.horizontalLayout_2.addWidget(self.spinBox)
@@ -100,7 +101,7 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Pick exercises randomly", None))
         self.label.setText(_translate("Dialog", "How many exercises should be added ?", None))
         self.label_2.setText(_translate("Dialog", "Pick exercises from :", None))
-        self.radioButton_selected_folder.setText(_translate("Dialog", "Selected folder in the tree", None))
+        self.radioButton_selected_folder.setText(_translate("Dialog", "Selected elements in the tree", None))
         self.radioButton_root_folder.setText(_translate("Dialog", "Entire database", None))
         self.pushButton_cancel.setText(_translate("Dialog", "Cancel", None))
         self.pushButton_ok.setText(_translate("Dialog", "Ok", None))

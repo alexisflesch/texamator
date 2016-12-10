@@ -55,7 +55,7 @@ def gimme_my_settings():
     #Get basic settings in a dictionnary
     fichier = os.path.join(home_dir,".partielator","basics")
     defautDict = { "file_viewer" : "xdvi",\
-               "type_of_file" : "dvi",\
+               "type_of_file" : "pdf",\
                "save_location" : home_dir,\
                "tex_path" : home_dir,\
                "use_preview" : "True",\
@@ -71,11 +71,11 @@ def gimme_my_settings():
                "export height" : "400",\
                "prefs splitter one" : "250",\
                "prefs splitter two" : "150",\
-               "preferred compile sequence" : "Default (dvi no okular)",\
-               "preferred compile sequence for exportation" : "Alternative 1 (dvi + okular)",\
-               "preferred type of export" : "dvi",\
+               "preferred compile sequence" : "Default (pdf + okular)",\
+               "preferred compile sequence for exportation" : "Default (pdf + okular)",\
+               "preferred type of export" : "pdf",\
                "preferred header/footer" : "Same header/footer",\
-               "embedded viewer" : "embedded (with dvipng)",\
+               "embedded viewer" : "okular",\
                "lang" : "en"}
     dictionnary = file_to_dict(fichier,defautDict)
 
@@ -109,10 +109,10 @@ def gimme_my_settings():
     liste_fichiers = os.listdir(os.path.join(home_dir,".partielator"))
     if "compile_seq2" not in liste_fichiers:           #First time running Texamator > 1.6
         #Adding default compile sequences
-        compile_seq["Default (dvi no okular)"] = ["latex -halt-on-error -output-directory=/tmp/partielator !file.tex",\
-                    "dvipng !file.dvi -o !file.png"]
-        compile_seq["Alternative 1 (dvi + okular)"] = ["latex -halt-on-error -output-directory=/tmp/partielator !file.tex"]
-        compile_seq["Alternative 2 (pdf + okular)"] = ["pdflatex -halt-on-error -output-directory=/tmp/partielator !file.tex"]
+        compile_seq["Old computer (dvi no okular)"] = ["latex -interaction=nonstopmode file.tex",\
+                    "dvipng file.dvi -o file.png"]
+        compile_seq["Alternative (dvi + okular)"] = ["latex -interaction=nonstopmode file.tex"]
+        compile_seq["Default (pdf + okular)"] = ["pdflatex -interaction=nonstopmode file.tex"]
         if "compile_seq" in liste_fichiers:            #TeXamator < 1.6 has been used before on this computer, adding old compile config
             compile_seq["User Defined"] = []
             f = codecs.open(os.path.join(home_dir,".partielator","compile_seq"),'r','utf-8')
@@ -139,15 +139,11 @@ def gimme_my_settings():
                 compile_seq[sequence] = []
                 continue
             compile_seq[sequence].append(i)
-        
-    #try:
-        #compile_seq = {}
-        #f = codecs.open(os.path.join(home_dir,".partielator","compile_seq"),'r','utf-8')
-        #for i in f.readlines():
-            #compile_seq.append(i.replace("\n",""))
-    #except:
-        #compile_seq = ["latex -halt-on-error -output-directory=/tmp/partielator !file.tex",\
-                       #"dvipng !file.dvi -o !file.png"]
+        #Adding default compile sequences
+        compile_seq["Old computer (dvi no okular)"] = ["latex -interaction=nonstopmode file.tex",\
+                    "dvipng file.dvi -o file.png"]
+        compile_seq["Alternative (dvi + okular)"] = ["latex -interaction=nonstopmode file.tex"]
+        compile_seq["Default (pdf + okular)"] = ["pdflatex -interaction=nonstopmode file.tex"]
     
     #Get generate files
     generate = {"Same header/footer" : [header,footer]}

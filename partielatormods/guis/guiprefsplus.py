@@ -67,7 +67,7 @@ def updateUi(self, MyHighlighter):
     num = self.ui_prefs.comboBox_compile.findText(self.settings["preferred compile sequence"])
     self.ui_prefs.comboBox_compile.setCurrentIndex(num)
     #Disable buttons if compile sequence is protected
-    if self.settings["preferred compile sequence"] in ["Default (dvi no okular)","Alternative 1 (dvi + okular)","Alternative 2 (pdf + okular)"]:
+    if self.settings["preferred compile sequence"] in ["Old computer (dvi no okular)","Alternative (dvi + okular)","Default (pdf + okular)"]:
         self.ui_prefs.pushButton_delete_compile_config.setEnabled(False)
         self.ui_prefs.pushButton_addc.setEnabled(False)
         self.ui_prefs.pushButton_removec.setEnabled(False)
@@ -257,7 +257,7 @@ def comboCompile(self,text):
     """Dealing with compile configs"""
     comp = str(text)
     #Disable buttons if compile sequence is protected
-    if comp in ["Default (dvi no okular)","Alternative 1 (dvi + okular)","Alternative 2 (pdf + okular)"]:
+    if comp in ["Old computer (dvi no okular)","Alternative (dvi + okular)","Default (pdf + okular)"]:
         self.ui_prefs.pushButton_delete_compile_config.setEnabled(False)
         self.ui_prefs.pushButton_addc.setEnabled(False)
         self.ui_prefs.pushButton_removec.setEnabled(False)

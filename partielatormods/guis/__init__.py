@@ -9,4 +9,6 @@ import guiexport, guiexportplus
 import guiwizard, guiwizardplus
 import guilangchange
 import guiwarning
+import guishuffle, guishuffleplus
+import guieditsource
 from guigui import *

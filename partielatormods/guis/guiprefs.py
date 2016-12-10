@@ -553,15 +553,15 @@ class Ui_Dialog(object):
         self.label_9.setText(_translate("Dialog", "Do you want to use the preview package (default : yes) ?", None))
         self.radioButton_yes.setText(_translate("Dialog", "&Yes", None))
         self.radioButton_no.setText(_translate("Dialog", "&No", None))
-        self.label.setText(_translate("Dialog", "What type of file will you generate ? (default : dvi)", None))
-        self.label_21.setText(_translate("Dialog", "Which viewer do you want TeXamator to use inside the application ?", None))
+        self.label.setText(_translate("Dialog", "What type of file will you generate ? (default : pdf)", None))
+        self.label_21.setText(_translate("Dialog", "Which viewer do you want TeXamator to use inside the application ? (default : okular)", None))
         self.label_10.setText(_translate("Dialog", "Which viewer do you want to use when you export a project ?", None))
         self.label_2.setText(_translate("Dialog", "Default folder in which you wish to save your projects ?", None))
         self.pushButton_parcourir_sav.setText(_translate("Dialog", "Browse", None))
         self.label_4.setText(_translate("Dialog", "Which folder contains your tex files ?", None))
         self.pushButton_parcourir_tex_path.setText(_translate("Dialog", "Browse", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab1), _translate("Dialog", "Basics", None))
-        self.label_7.setText(_translate("Dialog", "Here you can set up the way LaTeX is called in the background. !file is a shortcut for /tmp/partielator/file. Leave default settings if unsure. Help is available online here :\n"
+        self.label_7.setText(_translate("Dialog", "Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :\n"
 "", None))
         self.label_siteweb.setText(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
