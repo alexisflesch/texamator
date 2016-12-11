@@ -16,6 +16,7 @@ pyuic4 -o ../partielatormods/guis/guishuffle.py -x shufflelist.ui
 pyuic4 -o ../partielatormods/guis/guiwarning.py -x warning.ui
 pyuic4 -o ../partielatormods/guis/guilangchange.py -x langchange.ui
 pyuic4 -o ../partielatormods/guis/guieditsource.py -x editsource.ui
+pyuic4 -o ../partielatormods/guis/guidepthwarning.py -x depthWarning.ui
 pylupdate4 ../ts_files/TeXamator.pro
 
 find ../ -type f -name "*.pyc" -exec rm -f {} \;

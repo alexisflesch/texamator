@@ -41,6 +41,7 @@ def get_tags_header(d):
                "\\begin{multicols}", \
                "\\begin{matrix}", \
                "\\begin{smallmatrix}",\
+               "\\begin{minipage}",\
                "\\begin{cases}" ]
     tags = []
     for i in liste:

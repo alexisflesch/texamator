@@ -171,13 +171,8 @@ class MonApplication(Ui_MainWindow):
         if enonce == self.enonce and inside:  #only run LaTeX if necessary
             return False
         self.enonce = enonce
-        try:
-            os.mkdir("/tmp/partielator")
-            os.chdir("/tmp/partielator")
-        except:
-            print("couldn't create partielator dir or partielator dir already exists")
         a = codecs.open("/tmp/partielator/file.tex","w","utf-8")
-        if inside and self.settings["use_preview"] == "True":
+        if inside and self.compile_seq[self.settings["preferred compile sequence"]]['use preview'] == "True":
             replace = "\n\usepackage[active,graphics]{preview}"
             replace += "\n\\begin{document}\n"
             replace += "\\begin{preview}\n"
@@ -204,39 +199,45 @@ class MonApplication(Ui_MainWindow):
             a.write(enonce)
         a.close()
         if inside:
-            for cmd in self.compile_seq[self.settings["preferred compile sequence"]]:
+            print(self.compile_seq[self.settings["preferred compile sequence"]]['sequence'])
+            for cmd in self.compile_seq[self.settings["preferred compile sequence"]]['sequence']:
                 os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
         else:
-            for cmd in self.compile_seq[self.settings["preferred compile sequence for exportation"]]:
+            for cmd in self.compile_seq[self.settings["preferred compile sequence for exportation"]]['sequence']:
                 os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
         return True
 
 
     def show_preview_outside(self, enonce):
         if self.show_preview(enonce, 0):
-            os.system(self.settings["file_viewer"] + " /tmp/partielator/file." + self.settings["preferred type of export"] + " &")
+            sequence = self.settings["preferred compile sequence for exportation"]
+            filetype = self.compile_seq[sequence]['type of file']
+            os.system(self.settings["file_viewer"] + " /tmp/partielator/file." + filetype + " &")
 
     def show_preview_inside(self, enonce):
         if self.show_preview(enonce):
-            if self.settings["embedded viewer"] == "embedded (with dvipng)":
+            if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == 'png':
+                if self.viewer == 'okular':
+                    self.switchBetweenViewers('embedded')
                 self.preview.setPixmap(QtGui.QPixmap("/tmp/partielator/file.png"))
                 if self.whatson == "tree":
                     self.verticalScrollBar.setValue(0)
             else:
-                self.okupart.openDocument("/tmp/partielator/file."  + self.settings["type_of_file"])
+                if self.viewer == 'embedded':
+                    self.switchBetweenViewers('okular')
+                self.okupart.openDocument("/tmp/partielator/file."  + self.compile_seq[self.settings["preferred compile sequence"]]['type of file'])
                 self.okupart.goToPage(0)
 
     def recompile(self):
         """Recompile tex file e.g. to get references right"""
         if self.enonce == "None":
             return
-        os.chdir('/tmp/partielator')
-        for cmd in self.compile_seq[self.settings["preferred compile sequence"]]:
+        for cmd in self.compile_seq[self.settings["preferred compile sequence"]]['sequence']:
             os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
-        if self.settings["embedded viewer"] == "embedded (with dvipng)":
+        if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == "png":
             self.preview.setPixmap(QtGui.QPixmap("/tmp/partielator/file.png"))
         else:
-            self.okupart.openDocument("/tmp/partielator/file."  + self.settings["type_of_file"])
+            self.okupart.openDocument("/tmp/partielator/file."  + self.compile_seq[self.settings["preferred compile sequence"]]['type of file'])
 
     def show_preview_tree(self):
         """Show preview of the current tex file in the tree"""
@@ -480,8 +481,19 @@ class MonApplication(Ui_MainWindow):
             self.tableWidget.setCurrentItem(newitem)   
         
     def add_ex_to_table(self):
-        """Add selected exercise to the tableWidget"""
+        """Add selected exercise to the tableWidget
+           Show a warning when trying to add (at least) an entire folder
+           to the project (that's the first for loop)
+        """
         items = self.treeWidget.selectedItems()
+        for item in items:
+            if item.childCount() and item.child(0).childCount():
+                Dialog_warning = QtGui.QDialog()
+                ui_warning = guidepthwarning.Ui_Dialog()
+                ui_warning.setupUi(Dialog_warning)
+                res = Dialog_warning.exec_()
+                if not res:
+                    return
         if items:
             self.tableWidget.emit(QtCore.SIGNAL("notempty()"))
         self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
@@ -638,10 +650,18 @@ class MonApplication(Ui_MainWindow):
         Dialog_edit = QtGui.QDialog()
         self.ui_edit = guiedit.Ui_Dialog()
         self.ui_edit.setupUi(Dialog_edit)
+        #Window geometry
+        w = self.settings["edit width"]
+        h = self.settings["edit height"]
+        Dialog_edit.resize(int(w), int(h))
+        #Highlighter
         self.ui_edit.textEdit.setFont(self.myfont)
         self.highlighter4 = MyHighlighter(self.ui_edit.textEdit)
         self.ui_edit.textEdit.setText(unicode(self.tableWidget.currentItem().enonce,"utf8"))
         res = Dialog_edit.exec_()
+        #Keep window ratio for next time 
+        self.settings["edit width"] = str(Dialog_edit.width())
+        self.settings["edit height"] = str(Dialog_edit.height())
         #Then, depending on whether the user clicked ok or cancel...
         if res:
             self.tableWidget.currentItem().enonce = unicode(self.ui_edit.textEdit.toPlainText()).encode("utf8")
@@ -657,11 +677,19 @@ class MonApplication(Ui_MainWindow):
         Dialog_edit = QtGui.QDialog()
         ui_edit = guieditsource.Ui_Dialog()
         ui_edit.setupUi(Dialog_edit)
+        #Window geometry
+        w = self.settings["edit width"]
+        h = self.settings["edit height"]
+        Dialog_edit.resize(int(w), int(h))
+        #Highlighter
         ui_edit.textEdit.setFont(self.myfont)
         highlighter4 = MyHighlighter(ui_edit.textEdit)
         ui_edit.textEdit.setText(unicode(oldtext,"utf8"))
         ui_edit.label_source.setText(unicode(item.filename,"utf8"))
         res = Dialog_edit.exec_()
+        #Keep window ratio for next time 
+        self.settings["edit width"] = str(Dialog_edit.width())
+        self.settings["edit height"] = str(Dialog_edit.height())
         #Then, depending on whether the user clicked ok or cancel...
         if res:
             newtext = unicode(ui_edit.textEdit.toPlainText()).encode("utf8")
@@ -694,8 +722,14 @@ class MonApplication(Ui_MainWindow):
     def gen_back(self):
         guiexportplus.gen_back(self)
 
-    def export_sources(self, key):
-        return guiexportplus.export_sources(self, key)
+    def create_document(self, key):
+        return guiexportplus.create_document(self, key)
+
+    def compile_export(self):
+        return guiexportplus.compile_export(self)
+    
+    def source_export(self):
+        return guiexportplus.source_export(self)
 
     def update_header(self,text):
         guiexportplus.update_header(self, text)
@@ -720,7 +754,6 @@ class MonApplication(Ui_MainWindow):
         self.Dialog_export = QtGui.QDialog()
         self.ui_export = guiexport.Ui_Dialog()
         self.ui_export.setupUi(self.Dialog_export)
-        self.ui_export.frame1.hide()
         guiexportplus.updateUi(self, MyHighlighter)
         #Opening dialog
         self.Dialog_export.exec_()
@@ -825,6 +858,8 @@ class MonApplication(Ui_MainWindow):
                 elif object == self.tableWidget and self.tableWidget.selectedItems() is not None:
                     self.copyToClipboardFromTable()
                     return 1 #Do not pass event to next handler
+            elif event.matches(QtGui.QKeySequence.Delete):
+                self.remove_exercises()
         return 0 #pass event to the next handler
 
     def copyToClipboardFromTree(self):
@@ -936,6 +971,27 @@ class MonApplication(Ui_MainWindow):
                 
             menu.exec_(self.tableWidget.viewport().mapToGlobal(position)+QtCore.QPoint(3,0))
 
+    ######################### SWITCH BETWEEN EMBEDDED/OKULAR VIEWER ##################
+    def switchBetweenViewers(self,viewer):
+        if viewer == 'okular':
+            try:
+                from PyKDE4.kdecore import KUrl
+                from PyKDE4.kdecore import ki18n, KAboutData, KCmdLineArgs
+                from PyKDE4.kdecore import KLibLoader as ll
+                from PyKDE4.kdeui import KApplication
+                import PyKDE4.kparts as kp
+                self.okupart = ll.self().factory('okularpart').create()
+                self.okularlayout.setWidget(self.okupart.widget())
+                self.viewer = 'okular'
+            except:
+                print("Error trying to load PyKDE4 module")
+                print("Please install python-kde4 and try again or select embedded viewer (dvipng) in the preferences window")
+        else:
+            self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
+            self.okularlayout.setWidget(self.preview)
+            self.verticalScrollBar = self.okularlayout.verticalScrollBar()
+            self.viewer = 'embedded'
+        
 
     ######################### COMPLETING MAIN WINDOW #################################
     def setupUi2(self,Form):
@@ -996,24 +1052,12 @@ class MonApplication(Ui_MainWindow):
         self.treeWidget.installEventFilter(Form)
         self.tableWidget.installEventFilter(Form)
         QtCore.QObject.connect(self.treeWidget,QtCore.SIGNAL("right_clicked()"),self.expand_collapse_me)       
-        #Okular preview
-        if self.settings["embedded viewer"] == "okular":
-            try:
-                from PyKDE4.kdecore import KUrl
-                from PyKDE4.kdecore import ki18n, KAboutData, KCmdLineArgs
-                from PyKDE4.kdecore import KLibLoader as ll
-                from PyKDE4.kdeui import KApplication
-                import PyKDE4.kparts as kp
-                self.okupart = ll.self().factory('okularpart').create()
-                self.okularlayout.setWidget(self.okupart.widget())
-            except:
-                print("Error trying to load PyKDE4 module")
-                print("Please install python-kde4 and try again or select embedded viewer (dvipng) in the preferences window")
+        #embedded viewer:
+        self.preview = QtGui.QLabel()
+        if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == "png":
+            self.switchBetweenViewers('embedded')
         else:
-            self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
-            self.preview = QtGui.QLabel()
-            self.okularlayout.setWidget(self.preview)
-            self.verticalScrollBar = self.okularlayout.verticalScrollBar()
+            self.switchBetweenViewers('okular')
         #Splitter sizes :
         self.windowHeight = Form.height
         self.windowWidth = Form.width
@@ -1040,6 +1084,12 @@ if __name__ == "__main__":
         t.load(os.path.join(full_path, "ts_files/TeXamator_"+x["lang"]))
         #t.load(os.path.join(full_path, "ts_files/TeXamator_de"))
         QtCore.QCoreApplication.installTranslator(t)
+    #chdir and create temp directory 
+    try:
+        os.mkdir("/tmp/partielator")
+    except:
+        print("couldn't create partielator dir or partielator dir already exists")
+    os.chdir("/tmp/partielator")
     #Let's go !
     MainWindow = QtGui.QMainWindow()
     ui = MonApplication(settings)

@@ -38,7 +38,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;електронною поштою: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="227"/>
+        <location filename="../ui_files/export.ui" line="170"/>
         <source>Close</source>
         <translation>Закрити</translation>
     </message>
@@ -73,7 +73,7 @@ p, li { white-space: pre-wrap; }
         <translation>Якщо ви внесете зміни до ваших вправ тут, ці зміни буде внесено до файла TeX, з якого було взято вправу.</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="216"/>
+        <location filename="../ui_files/export.ui" line="14"/>
         <source>Export</source>
         <translation>Експортувати</translation>
     </message>
@@ -141,14 +141,14 @@ the tab &quot;Generating files&quot;)</source>
         <translation>Параметри</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="43"/>
+        <location filename="../ui_files/preferences.ui" line="82"/>
         <source>Basics</source>
         <translation>Основні</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="57"/>
         <source>Do you want to use the preview package (default : yes) ?</source>
-        <translation>Бажаєте попередньо переглядати пакунок (типово, так)?</translation>
+        <translation type="obsolete">Бажаєте попередньо переглядати пакунок (типово, так)?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="44"/>
@@ -176,7 +176,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
         <source>What type of file will you generate ? (default : pdf)</source>
-        <translation type="unfinished">У якому форматі слід зберегти дані? (типово, dvi)</translation>
+        <translation type="obsolete">У якому форматі слід зберегти дані? (типово, dvi)</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="95"/>
@@ -199,7 +199,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Якою програмою слід скористатися для перегляду?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="218"/>
+        <location filename="../ui_files/preferences.ui" line="144"/>
         <source>Default folder in which you wish to save your projects ?</source>
         <translation>У якій теці слід типово зберігати ваші проекти?</translation>
     </message>
@@ -209,12 +209,12 @@ p, li { white-space: pre-wrap; }
         <translation>Вказати</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="252"/>
+        <location filename="../ui_files/preferences.ui" line="178"/>
         <source>Which folder contains your tex files ?</source>
         <translation>У якій теці містяться ваші файли tex?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="313"/>
+        <location filename="../ui_files/preferences.ui" line="239"/>
         <source>Compilation</source>
         <translation>Збирання</translation>
     </message>
@@ -222,11 +222,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui_files/preferences.ui" line="327"/>
         <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :
 </source>
-        <translation type="unfinished">Тут ви можете визначити спосіб виклику LaTeX. Рядок !file буде замінено на /tmp/partielator/file. Не змінюйте типових налаштувань, якщо не певні. Довідкові дані можна знайти у мережі за такою адресою:
+        <translation type="obsolete">Тут ви можете визначити спосіб виклику LaTeX. Рядок !file буде замінено на /tmp/partielator/file. Не змінюйте типових налаштувань, якщо не певні. Довідкові дані можна знайти у мережі за такою адресою:
 </translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="347"/>
+        <location filename="../ui_files/preferences.ui" line="270"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -241,10 +241,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="462"/>
         <source>Write a command and click the + button to add it</source>
-        <translation>Вкажіть команду і натисніть кнопку «+», щоб її додати</translation>
+        <translation type="obsolete">Вкажіть команду і натисніть кнопку «+», щоб її додати</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="588"/>
+        <location filename="../ui_files/preferences.ui" line="617"/>
         <source>Header</source>
         <translation>Заголовок</translation>
     </message>
@@ -259,12 +259,12 @@ p, li { white-space: pre-wrap; }
         <translation>Зауважте, що у заголовку не повинно бути команди \begin{document}!</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="650"/>
+        <location filename="../ui_files/preferences.ui" line="679"/>
         <source>Tags</source>
         <translation>Мітки</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="661"/>
+        <location filename="../ui_files/preferences.ui" line="690"/>
         <source>Set up the tags you use for your exercises</source>
         <translation>Налаштування міток окремих вправ</translation>
     </message>
@@ -279,17 +279,17 @@ p, li { white-space: pre-wrap; }
         <translation>Яка команда її завершує?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="764"/>
+        <location filename="../ui_files/preferences.ui" line="793"/>
         <source>TeXamator needs to know how to extract exercises from your .tex files.</source>
         <translation>TeXamator потрібно вказати спосіб видобування окремих вправ з ваших файлів .tex.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="775"/>
+        <location filename="../ui_files/preferences.ui" line="804"/>
         <source>Generating files</source>
         <translation>Створення файлів</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="781"/>
+        <location filename="../ui_files/preferences.ui" line="810"/>
         <source>Here, you can set up the way files are generated when you click the &quot;export&quot; button. For example, you could add an &quot;Exercise sheet&quot; config and another one, say &quot;Exam&quot;. Add as many configs as you want.</source>
         <translation>Тут ви можете налаштувати спосіб створення файлів після натискання кнопки «Експортувати». Ви можете, наприклад, створити два набори налаштувань «Контрольна» і «Іспит». Кількість наборів налаштувань не обмежено.</translation>
     </message>
@@ -304,7 +304,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Тут ви можете вказати набір команд, які передуватимуть вашим вправам, разом з \begin{document}.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="853"/>
+        <location filename="../ui_files/preferences.ui" line="882"/>
         <source>Delete</source>
         <translation>Вилучити</translation>
     </message>
@@ -421,87 +421,77 @@ Feel free to modify the default header : it will be used to compile .tex files.<
         <translation>TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="67"/>
+        <location filename="../ui_files/preferences.ui" line="587"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="77"/>
+        <location filename="../ui_files/preferences.ui" line="597"/>
         <source>&amp;No</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="623"/>
+        <location filename="../ui_files/preferences.ui" line="652"/>
         <source>Footer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="632"/>
+        <location filename="../ui_files/preferences.ui" line="661"/>
         <source>This is the footer used by TeXamator to compile your .tex files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="820"/>
+        <location filename="../ui_files/preferences.ui" line="849"/>
         <source>Set here what you want to appear before your exercises</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="836"/>
+        <location filename="../ui_files/preferences.ui" line="865"/>
         <source>New Config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="894"/>
+        <location filename="../ui_files/preferences.ui" line="923"/>
         <source>Set here what you want to appear after your exercises</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="406"/>
+        <location filename="../ui_files/preferences.ui" line="329"/>
         <source>If you want, you can create your own compile sequence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="793"/>
+        <location filename="../ui_files/preferences.ui" line="822"/>
         <source>Select a config name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="170"/>
+        <location filename="../ui_files/preferences.ui" line="96"/>
         <source>Which viewer do you want to use when you export a project ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="37"/>
+        <location filename="../ui_files/export.ui" line="106"/>
         <source>Here are the sources that will be used. You can edit them if you want</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="128"/>
-        <source>What type of file do you want to export ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/export.ui" line="87"/>
+        <location filename="../ui_files/export.ui" line="76"/>
         <source>Choose a compilation sequence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="373"/>
+        <location filename="../ui_files/preferences.ui" line="296"/>
         <source>Select the config to use (and edit it if you want to)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="133"/>
-        <source>Which viewer do you want TeXamator to use inside the application ? (default : okular)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/preferences.ui" line="594"/>
+        <location filename="../ui_files/preferences.ui" line="623"/>
         <source>This is the header used by TeXamator to compile your .tex files. You can include \begin{document} if you want.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="121"/>
+        <location filename="../ui_files/export.ui" line="33"/>
         <source>Choose a header/footer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -531,55 +521,85 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="895"/>
+        <location filename="../texamator.py" line="930"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="920"/>
+        <location filename="../texamator.py" line="955"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="917"/>
+        <location filename="../texamator.py" line="952"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="922"/>
+        <location filename="../texamator.py" line="957"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="924"/>
+        <location filename="../texamator.py" line="959"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="926"/>
+        <location filename="../texamator.py" line="961"/>
         <source>Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="928"/>
+        <location filename="../texamator.py" line="963"/>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="251"/>
+        <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="387"/>
+        <source>Write a command and click the + button to add it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="513"/>
+        <source>What type of file does this sequence generate?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="567"/>
+        <source>Do you want to use the preview package with it (default : no) ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/export.ui" line="142"/>
+        <source>Export source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/export.ui" line="159"/>
+        <source>Compile and export</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="365"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="350"/>
         <source>Pick a folder</source>
         <translation>Вкажіть теку</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="291"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="275"/>
         <source>You are about to delete the compile sequence : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="393"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="378"/>
         <source>You are about to delete the config : </source>
         <translation type="unfinished"></translation>
     </message>

@@ -73,7 +73,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;prostřednictvím elektronické pošty: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="227"/>
+        <location filename="../ui_files/export.ui" line="170"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
@@ -83,14 +83,14 @@ p, li { white-space: pre-wrap; }
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="43"/>
+        <location filename="../ui_files/preferences.ui" line="82"/>
         <source>Basics</source>
         <translation>Obecné</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="57"/>
         <source>Do you want to use the preview package (default : yes) ?</source>
-        <translation>Použít balíček &quot;preview&quot; (výchozí nastavení: ano)?</translation>
+        <translation type="obsolete">Použít balíček &quot;preview&quot; (výchozí nastavení: ano)?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="44"/>
@@ -118,7 +118,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
         <source>What type of file will you generate ? (default : pdf)</source>
-        <translation type="unfinished">Jaký druh dokumentu chcete vytvořit (výchozí nastavení typu souboru: dvi)?</translation>
+        <translation type="obsolete">Jaký druh dokumentu chcete vytvořit (výchozí nastavení typu souboru: dvi)?</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="95"/>
@@ -141,7 +141,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Jaký prohlížeč dokumentů chcete používat?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="218"/>
+        <location filename="../ui_files/preferences.ui" line="144"/>
         <source>Default folder in which you wish to save your projects ?</source>
         <translation>Do jaké složky si přejete ukládat své projekty?</translation>
     </message>
@@ -151,12 +151,12 @@ p, li { white-space: pre-wrap; }
         <translation>Procházet</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="252"/>
+        <location filename="../ui_files/preferences.ui" line="178"/>
         <source>Which folder contains your tex files ?</source>
         <translation>V jaké složce se nacházejí vaše soubory typu tex?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="313"/>
+        <location filename="../ui_files/preferences.ui" line="239"/>
         <source>Compilation</source>
         <translation>Sestavení</translation>
     </message>
@@ -181,10 +181,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="462"/>
         <source>Write a command and click the + button to add it</source>
-        <translation>Napište příkaz, a potom klepněte na tlačítko &quot;+&quot; pro jeho přidání</translation>
+        <translation type="obsolete">Napište příkaz, a potom klepněte na tlačítko &quot;+&quot; pro jeho přidání</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="588"/>
+        <location filename="../ui_files/preferences.ui" line="617"/>
         <source>Header</source>
         <translation>Záhlaví</translation>
     </message>
@@ -199,12 +199,12 @@ p, li { white-space: pre-wrap; }
         <translation>Povšimněte si, že \begin{document} se zde nemusí objevit.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="650"/>
+        <location filename="../ui_files/preferences.ui" line="679"/>
         <source>Tags</source>
         <translation>Makra</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="661"/>
+        <location filename="../ui_files/preferences.ui" line="690"/>
         <source>Set up the tags you use for your exercises</source>
         <translation>Nastavte makra, která používáte pro svá cvičení</translation>
     </message>
@@ -219,12 +219,12 @@ p, li { white-space: pre-wrap; }
         <translation>Který příkaz následuje po cvičení?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="764"/>
+        <location filename="../ui_files/preferences.ui" line="793"/>
         <source>TeXamator needs to know how to extract exercises from your .tex files.</source>
         <translation>TeXamator potřebuje znát způsob, jakým vyjadřujete svá cvičení - jakým způsobem má cvičení vytáhnout z vašich souborů .tex.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="775"/>
+        <location filename="../ui_files/preferences.ui" line="804"/>
         <source>Generating files</source>
         <translation>Vytvoření souborů</translation>
     </message>
@@ -251,7 +251,7 @@ exercises, including \begin{document}.</source>
 cvičeními, včetně \begin{document}.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="853"/>
+        <location filename="../ui_files/preferences.ui" line="882"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
@@ -301,7 +301,7 @@ cvičeními, včetně \begin{document}.</translation>
         <translation>Pokud upravujete svá cvičení zde, nebudou na soubor TeX, ze kterého byla vzata, použity žádné změny.</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="216"/>
+        <location filename="../ui_files/export.ui" line="14"/>
         <source>Export</source>
         <translation>Vytvořit</translation>
     </message>
@@ -432,10 +432,10 @@ Přidejte je, prosím, aby TeXamator mohl pracovat, ručně.</translation>
         <location filename="../ui_files/preferences.ui" line="327"/>
         <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :
 </source>
-        <translation type="unfinished">Zde můžete nastavit způsob, kterým jsou soubory sestavovány na pozadí. !file je zkratkou pro /tmp/partielator/file. Nejste-li si jistý, ponechte výchozí nastavení. Nápověda po internetu je dostupná zde (v angličtině):</translation>
+        <translation type="obsolete">Zde můžete nastavit způsob, kterým jsou soubory sestavovány na pozadí. !file je zkratkou pro /tmp/partielator/file. Nejste-li si jistý, ponechte výchozí nastavení. Nápověda po internetu je dostupná zde (v angličtině):</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="347"/>
+        <location filename="../ui_files/preferences.ui" line="270"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -448,7 +448,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="781"/>
+        <location filename="../ui_files/preferences.ui" line="810"/>
         <source>Here, you can set up the way files are generated when you click the &quot;export&quot; button. For example, you could add an &quot;Exercise sheet&quot; config and another one, say &quot;Exam&quot;. Add as many configs as you want.</source>
         <translation>Zde můžete určit způsob, jakým jsou cvičení vytvářena, když klepnete na tlačítko &quot;Vytvořit&quot;. Například byste mohl přidat nastavenír une configuration &quot;List se cvičením&quot;, a další, řekněme &quot;Zkouška&quot;, atd... Přidejte si tolik nastavení, kolik chcete.</translation>
     </message>
@@ -482,87 +482,87 @@ using the compilation sequence in the preferences menu.</source>
 řady příkazů určených v nastavení na kartě &quot;Sestavení&quot;.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="67"/>
+        <location filename="../ui_files/preferences.ui" line="587"/>
         <source>&amp;Yes</source>
         <translation>&amp;Ano</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="77"/>
+        <location filename="../ui_files/preferences.ui" line="597"/>
         <source>&amp;No</source>
         <translation>&amp;Ne</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="623"/>
+        <location filename="../ui_files/preferences.ui" line="652"/>
         <source>Footer</source>
         <translation>Zápatí</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="632"/>
+        <location filename="../ui_files/preferences.ui" line="661"/>
         <source>This is the footer used by TeXamator to compile your .tex files.</source>
         <translation>Toto je zápatí, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex).</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="820"/>
+        <location filename="../ui_files/preferences.ui" line="849"/>
         <source>Set here what you want to appear before your exercises</source>
         <translation>Zde napište, co se má objevovat před vašimi cvičeními</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="836"/>
+        <location filename="../ui_files/preferences.ui" line="865"/>
         <source>New Config</source>
         <translation>Nové nastavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="894"/>
+        <location filename="../ui_files/preferences.ui" line="923"/>
         <source>Set here what you want to appear after your exercises</source>
         <translation>Zde napište, co se má objevovat za vašimi cvičeními</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="406"/>
+        <location filename="../ui_files/preferences.ui" line="329"/>
         <source>If you want, you can create your own compile sequence</source>
         <translation>Pokud chcete, můžete vytvořit vlastní řadu příkazů pro překladač</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="793"/>
+        <location filename="../ui_files/preferences.ui" line="822"/>
         <source>Select a config name</source>
         <translation>Vyberte název nastavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="170"/>
+        <location filename="../ui_files/preferences.ui" line="96"/>
         <source>Which viewer do you want to use when you export a project ?</source>
         <translation>Jaký prohlížeč dokumentů chcete používat po vyvedení dokumentu?</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="37"/>
+        <location filename="../ui_files/export.ui" line="106"/>
         <source>Here are the sources that will be used. You can edit them if you want</source>
         <translation>Zde jsou zdrojové soubory, které budou použity při sestavování. Pokud chcete, můžete je upravit</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="128"/>
         <source>What type of file do you want to export ?</source>
-        <translation>Do jakého typu souboru chcete dokument vyvést?</translation>
+        <translation type="obsolete">Do jakého typu souboru chcete dokument vyvést?</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="87"/>
+        <location filename="../ui_files/export.ui" line="76"/>
         <source>Choose a compilation sequence</source>
         <translation>Vyberte řadu příkazů pro překladač</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="373"/>
+        <location filename="../ui_files/preferences.ui" line="296"/>
         <source>Select the config to use (and edit it if you want to)</source>
         <translation>Vyberte nastavení (a upravte je, chcete-li)</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="133"/>
         <source>Which viewer do you want TeXamator to use inside the application ? (default : okular)</source>
-        <translation type="unfinished">Jaký prohlížeč dokumentů chcete používat v programu?</translation>
+        <translation type="obsolete">Jaký prohlížeč dokumentů chcete používat v programu?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="594"/>
+        <location filename="../ui_files/preferences.ui" line="623"/>
         <source>This is the header used by TeXamator to compile your .tex files. You can include \begin{document} if you want.</source>
         <translation>Toto je záhlaví, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex). Můžete zahrnout \begin{document}, chcete-li.</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="121"/>
+        <location filename="../ui_files/export.ui" line="33"/>
         <source>Choose a header/footer</source>
         <translation>Vyberte záhlaví/zápatí</translation>
     </message>
@@ -602,55 +602,85 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;prostřednictvím elektronické pošty: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="895"/>
+        <location filename="../texamator.py" line="930"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="920"/>
+        <location filename="../texamator.py" line="955"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="917"/>
+        <location filename="../texamator.py" line="952"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="922"/>
+        <location filename="../texamator.py" line="957"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="924"/>
+        <location filename="../texamator.py" line="959"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="926"/>
+        <location filename="../texamator.py" line="961"/>
         <source>Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="928"/>
+        <location filename="../texamator.py" line="963"/>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="251"/>
+        <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="387"/>
+        <source>Write a command and click the + button to add it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="513"/>
+        <source>What type of file does this sequence generate?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="567"/>
+        <source>Do you want to use the preview package with it (default : no) ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/export.ui" line="142"/>
+        <source>Export source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/export.ui" line="159"/>
+        <source>Compile and export</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="365"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="350"/>
         <source>Pick a folder</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="291"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="275"/>
         <source>You are about to delete the compile sequence : </source>
         <translation>Chystáte se smazat řadu příkazů pro překladač: </translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="393"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="378"/>
         <source>You are about to delete the config : </source>
         <translation>Chystáte se smazat nastavení: </translation>
     </message>

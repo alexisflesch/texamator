@@ -15,8 +15,6 @@ def updateUi(self, MyHighlighter):
     self.Dialog_prefs.resize(int(w),int(h))
     for child in range(self.ui_prefs.splitter.count()):
         self.ui_prefs.splitter.setCollapsible(child,False)
-    #To know whether okularlayout should be reloaded when user exits
-    self.okularchange = False
     #Change font of textEdits
     self.ui_prefs.textEdit.setFont(self.myfont)
     self.ui_prefs.textEdit1.setFont(self.myfont)
@@ -32,17 +30,7 @@ def updateUi(self, MyHighlighter):
     self.ui_prefs.lineEdit_save_folder.setText(self.settings["save_location"])
     self.ui_prefs.textEdit.setText(self.header)
     self.ui_prefs.textEdit1.setText(self.footer)
-    #About the generate exam button :
     self.ui_prefs.lineEdit_dvi_viewer.setText(self.settings["file_viewer"])
-    for k in range(self.ui_prefs.comboBox.count()):
-        if self.ui_prefs.comboBox.itemText(k) == self.settings["type_of_file"]:
-            self.ui_prefs.comboBox.setCurrentIndex(k)
-            break
-    #About the embedded viewer comboBox:
-    for k in range(self.ui_prefs.comboBox_viewer.count()):
-        if self.ui_prefs.comboBox_viewer.itemText(k) == self.settings["embedded viewer"]:
-            self.ui_prefs.comboBox_viewer.setCurrentIndex(k)
-            break
     #Add tags to the listWidget :
     for i in range(len(self.tags[0])):
         t1 = self.tags[0][i]
@@ -54,12 +42,9 @@ def updateUi(self, MyHighlighter):
     #Make a copy of the settings
     self.new_generate = self.generate.copy()
     self.new_compile_seq = self.compile_seq.copy()
-    #Add compile commands to the listWidget_comp
-    for i in range(len(self.compile_seq[self.settings["preferred compile sequence"]])):
-        item = QtGui.QListWidgetItem(self.ui_prefs.listWidget_comp)
-        item.setText(self.compile_seq[self.settings["preferred compile sequence"]][i].replace("/tmp/partielator/file","!file"))
-        #item.c = self.compile_seq[self.settings["preferred compile sequence"]][i].replace("/tmp/partielator/file","!file")
+    #Select current compile sequence and update compile tab 
     self.last_compile = self.settings["preferred compile sequence"]   #config being displayed
+    updateCompileTab(self, self.compile_seq[self.last_compile])
     #Populate comboBox_compile
     for key in sorted(self.compile_seq):
         self.ui_prefs.comboBox_compile.addItem(key,key)
@@ -67,12 +52,8 @@ def updateUi(self, MyHighlighter):
     num = self.ui_prefs.comboBox_compile.findText(self.settings["preferred compile sequence"])
     self.ui_prefs.comboBox_compile.setCurrentIndex(num)
     #Disable buttons if compile sequence is protected
-    if self.settings["preferred compile sequence"] in ["Old computer (dvi no okular)","Alternative (dvi + okular)","Default (pdf + okular)"]:
-        self.ui_prefs.pushButton_delete_compile_config.setEnabled(False)
-        self.ui_prefs.pushButton_addc.setEnabled(False)
-        self.ui_prefs.pushButton_removec.setEnabled(False)
-        self.ui_prefs.pushButton_up.setEnabled(False)
-        self.ui_prefs.pushButton_down.setEnabled(False)
+    if self.settings["preferred compile sequence"] in ["Old computer (dvi no okular)","Alternative (latex)","Default (pdflatex)"]:
+        enableCompileEdition(self,enable=False)
     #Add elements to the generate comboBox and fills the textEdit_generate header and footer
     keys = self.new_generate.keys()
     keys.sort(key=str.lower)
@@ -86,13 +67,6 @@ def updateUi(self, MyHighlighter):
     self.ui_prefs.textEdit_generate.setText(text)
     self.ui_prefs.textEdit_generate_footer.setText(text1)
     self.combo(self.last_generate)
-    #Is preview package used ?
-    if self.settings["use_preview"] == "True":
-        self.ui_prefs.radioButton_yes.setChecked(True)
-        self.ui_prefs.radioButton_no.setChecked(False)
-    else:
-        self.ui_prefs.radioButton_no.setChecked(True)
-        self.ui_prefs.radioButton_yes.setChecked(False)
     #Signals and slots
     QtCore.QObject.connect(self.ui_prefs.pushButton_parcourir_tex_path,QtCore.SIGNAL("clicked()"),self.parcourir_tex_path)
     QtCore.QObject.connect(self.ui_prefs.pushButton_parcourir_sav,QtCore.SIGNAL("clicked()"),self.parcourir_sav)
@@ -104,7 +78,6 @@ def updateUi(self, MyHighlighter):
     QtCore.QObject.connect(self.ui_prefs.pushButton_down,QtCore.SIGNAL("clicked()"),self.godown2)
     QtCore.QObject.connect(self.ui_prefs.comboBox_gen,QtCore.SIGNAL("currentIndexChanged(QString)"),self.combo)
     QtCore.QObject.connect(self.ui_prefs.comboBox_compile,QtCore.SIGNAL("currentIndexChanged(QString)"),self.comboCompile)
-    QtCore.QObject.connect(self.ui_prefs.comboBox_viewer,QtCore.SIGNAL("currentIndexChanged(QString)"),self.comboViewer)
     QtCore.QObject.connect(self.ui_prefs.textEdit1,QtCore.SIGNAL("textChanged()"),self.update_generate_footer)
     QtCore.QObject.connect(self.ui_prefs.textEdit,QtCore.SIGNAL("textChanged()"),self.update_generate_header)
     QtCore.QObject.connect(self.ui_prefs.pushButton_delete,QtCore.SIGNAL("clicked()"),self.prefs_delete)
@@ -112,24 +85,39 @@ def updateUi(self, MyHighlighter):
     QtCore.QObject.connect(self.ui_prefs.pushButton_newconfig,QtCore.SIGNAL("clicked()"),self.add_generate_config)
     QtCore.QObject.connect(self.ui_prefs.pushButton_new_compile_config,QtCore.SIGNAL("clicked()"),self.add_compile_config)
 
-def comboViewer(self,text):
-    if text == "okular":
-        try:
-            from PyKDE4.kdecore import KUrl
-            from PyKDE4.kdecore import ki18n, KAboutData, KCmdLineArgs
-            from PyKDE4.kdecore import KLibLoader as ll
-            from PyKDE4.kdeui import KApplication
-            import PyKDE4.kparts as kp
-            self.okupart = ll.self().factory('okularpart').create()
-            self.okularchange = True
-        except:
-            Dialog_warning = QtGui.QDialog()
-            self.ui_warning = guiwarning.Ui_Dialog()
-            self.ui_warning.setupUi(Dialog_warning)
-            res = Dialog_warning.exec_()
-            self.ui_prefs.comboBox_viewer.setCurrentIndex(0)
+
+def enableCompileEdition(self,enable=True):
+    """to enable (or disable) buttons corresponding to the compile tab
+       (to protect default configs)
+    """
+    self.ui_prefs.pushButton_delete_compile_config.setEnabled(enable)
+    self.ui_prefs.pushButton_addc.setEnabled(enable)
+    self.ui_prefs.pushButton_removec.setEnabled(enable)
+    self.ui_prefs.pushButton_up.setEnabled(enable)
+    self.ui_prefs.pushButton_down.setEnabled(enable)
+    self.ui_prefs.comboBox_typeOfFile.setEnabled(enable)
+    self.ui_prefs.radioButton_yes.setEnabled(enable)
+    self.ui_prefs.radioButton_no.setEnabled(enable)
+
+
+def updateCompileTab(self,compile_seq):
+    #Clear list
+    self.ui_prefs.listWidget_comp.clear()
+    #Add compile commands to the listWidget_comp
+    for i in range(len(compile_seq['sequence'])):
+        item = QtGui.QListWidgetItem(self.ui_prefs.listWidget_comp)
+        item.setText(compile_seq['sequence'][i].replace("/tmp/partielator/file","!file"))
+    #Select (or not) the use preview radioButton
+    if compile_seq['use preview'] == 'True':
+        self.ui_prefs.radioButton_yes.setChecked(True)
+        self.ui_prefs.radioButton_no.setChecked(False)
     else:
-        self.okularchange = True       
+        self.ui_prefs.radioButton_no.setChecked(True)
+        self.ui_prefs.radioButton_yes.setChecked(False)
+    #Select the right type of file in the comboBox
+    num = self.ui_prefs.comboBox_typeOfFile.findText(compile_seq['type of file'])
+    self.ui_prefs.comboBox_typeOfFile.setCurrentIndex(num)
+    
 
 def close_prefs(self, res):
     """When the prefs window is closed"""
@@ -142,28 +130,13 @@ def close_prefs(self, res):
         self.settings["tex_path"] = unicode(self.ui_prefs.lineEdit_ex_folder.text())
         self.settings["save_location"] = unicode(self.ui_prefs.lineEdit_save_folder.text())
         self.settings["file_viewer"] = unicode(self.ui_prefs.lineEdit_dvi_viewer.text())
-        self.settings["type_of_file"] = unicode(self.ui_prefs.comboBox.currentText())
         self.header = unicode(self.ui_prefs.textEdit.toPlainText())
         self.footer = unicode(self.ui_prefs.textEdit1.toPlainText())
-        self.settings["embedded viewer"] = unicode(self.ui_prefs.comboBox_viewer.currentText())
-        if self.ui_prefs.radioButton_yes.isChecked():
-            self.settings["use_preview"] = "True"
-        else:
-            self.settings["use_preview"] = "False"
         home_dir = os.path.expanduser("~")
         f = codecs.open(os.path.join(home_dir, ".partielator", "basics"), 'w', "utf-8")
         for key, value in self.settings.iteritems():
             f.write(key + "=" + str(value) + "\n")
         f.close()
-        #Change okular layout if needed
-        if self.okularchange and self.settings["embedded viewer"] == "okular":
-            self.okularlayout.setWidget(self.okupart.widget())
-            self.okupart.slotHideFindBar()
-        elif self.okularchange and self.settings["embedded viewer"] == "embedded (with dvipng)":
-            self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
-            self.preview = QtGui.QLabel()
-            self.okularlayout.setWidget(self.preview)
-            self.verticalScrollBar = self.okularlayout.verticalScrollBar() 
         #Header
         g = codecs.open(os.path.join(home_dir, ".partielator", "header"), 'w', "utf-8")
         g.write(unicode(self.ui_prefs.textEdit.toPlainText()))
@@ -188,18 +161,25 @@ def close_prefs(self, res):
         h.close()
         #Compile sequence
         #Update config displayed before the change of config
-        self.new_compile_seq[self.last_compile] = []
+        self.new_compile_seq[self.last_compile]['sequence'] = []
         for i in range(self.ui_prefs.listWidget_comp.count()):
             c = self.ui_prefs.listWidget_comp.item(i).text()
-            self.new_compile_seq[self.last_compile].append(c)
+            self.new_compile_seq[self.last_compile]['sequence'].append(c)
+        self.new_compile_seq[self.last_compile]['type of file'] = unicode(self.ui_prefs.comboBox_typeOfFile.currentText())
+        if self.ui_prefs.radioButton_yes.isChecked():
+            self.new_compile_seq[self.last_compile]['use preview'] = 'True'
+        else:
+            self.new_compile_seq[self.last_compile]['use preview'] = 'False'
         #Save config sequence
         self.compile_seq = self.new_compile_seq #save changes
         self.settings["preferred compile sequence"] = unicode(self.ui_prefs.comboBox_compile.currentText())
         self.populate_compile() #update compile submenu
         f = codecs.open(os.path.join(home_dir,".partielator","compile_seq2"),'w','utf-8')
         for key in self.compile_seq.keys():
-            f.write("###" + key + "###\n")
-            for item in self.compile_seq[key]:
+            f.write('###' + key + '###\n')
+            f.write('#type of file:' + self.compile_seq[key]['type of file'] + '\n')
+            f.write('#use preview:' + self.compile_seq[key]['use preview'] + '\n')
+            for item in self.compile_seq[key]['sequence']:
                 f.write(item+'\n')
         f.close()
         #Generate
@@ -218,6 +198,7 @@ def close_prefs(self, res):
             f.close()
             g.close()
 
+
 def add_compile_config(self):
     """Add a new compile config"""
     Dialog_newconf = QtGui.QDialog()
@@ -226,7 +207,7 @@ def add_compile_config(self):
     res = Dialog_newconf.exec_()
     newkey = str(self.ui_newconf.lineEdit.text())
     if res and newkey and not newkey in self.new_generate.keys():
-        self.new_compile_seq[newkey] = []
+        self.new_compile_seq[newkey] = {'sequence':[],'type of file':'pdf', 'use preview':'False'}
         length = self.ui_prefs.comboBox_compile.count()
         for k in range(length):#insert alphabetically newkey
             if newkey.lower() < str(self.ui_prefs.comboBox_compile.itemText(k)).lower():
@@ -239,47 +220,50 @@ def add_compile_config(self):
             self.ui_prefs.comboBox_compile.insertItem(k,newkey)
             self.ui_prefs.comboBox_compile.setCurrentIndex(k)
         #Enable buttons
-        self.ui_prefs.pushButton_delete_compile_config.setEnabled(True)
-        self.ui_prefs.pushButton_addc.setEnabled(True)
-        self.ui_prefs.pushButton_removec.setEnabled(True)
-        self.ui_prefs.pushButton_up.setEnabled(True)
-        self.ui_prefs.pushButton_down.setEnabled(True)
+        enableCompileEdition(self)
         #Update last compile seq in case it has been modified
-        self.new_compile_seq[self.last_compile] = []
+        self.new_compile_seq[self.last_compile]['sequence'] = []
         for i in range(self.ui_prefs.listWidget_comp.count()):
             c = self.ui_prefs.listWidget_comp.item(i).text()
-            self.new_compile_seq[self.last_compile].append(c)
+            self.new_compile_seq[self.last_compile]['sequence'].append(c)
+        self.new_compile_seq[self.last_compile]['type of file'] = unicode(self.ui_prefs.comboBox_typeOfFile.currentText())
+        if self.ui_prefs.radioButton_yes.isChecked():
+            self.new_compile_seq[self.last_compile]['use preview'] = 'True'
+        else:
+            self.new_compile_seq[self.last_compile]['use preview'] = 'False'
         #Clear list
         self.ui_prefs.listWidget_comp.clear()        
         self.last_compile = newkey
+        #write defaults
+        self.ui_prefs.comboBox_typeOfFile.setCurrentIndex(0)
+        self.ui_prefs.radioButton_yes.setChecked(False)
+        self.ui_prefs.radioButton_no.setChecked(True)
+
 
 def comboCompile(self,text):
-    """Dealing with compile configs"""
+    """Function called when the compilation config has been changed
+       from the comboBox
+    """
     comp = str(text)
     #Disable buttons if compile sequence is protected
-    if comp in ["Old computer (dvi no okular)","Alternative (dvi + okular)","Default (pdf + okular)"]:
-        self.ui_prefs.pushButton_delete_compile_config.setEnabled(False)
-        self.ui_prefs.pushButton_addc.setEnabled(False)
-        self.ui_prefs.pushButton_removec.setEnabled(False)
-        self.ui_prefs.pushButton_up.setEnabled(False)
-        self.ui_prefs.pushButton_down.setEnabled(False)
+    if comp in ["Old computer (dvi no okular)","Alternative (latex)","Default (pdflatex)"]:
+        enableCompileEdition(self,enable=False)
     else:
-        self.ui_prefs.pushButton_delete_compile_config.setEnabled(True)
-        self.ui_prefs.pushButton_addc.setEnabled(True)
-        self.ui_prefs.pushButton_removec.setEnabled(True)
-        self.ui_prefs.pushButton_up.setEnabled(True)
-        self.ui_prefs.pushButton_down.setEnabled(True)
+        enableCompileEdition(self)
     #Update config displayed before the change of config
-    self.new_compile_seq[self.last_compile] = []
+    self.new_compile_seq[self.last_compile]['sequence'] = []
     for i in range(self.ui_prefs.listWidget_comp.count()):
         c = self.ui_prefs.listWidget_comp.item(i).text()
-        self.new_compile_seq[self.last_compile].append(c)
-    #Clear list and write corresponding compile sequence
-    self.ui_prefs.listWidget_comp.clear()
-    for i in range(len(self.new_compile_seq[comp])):
-        item = QtGui.QListWidgetItem(self.ui_prefs.listWidget_comp)
-        item.setText(self.new_compile_seq[comp][i].replace("/tmp/partielator/file","!file"))
+        self.new_compile_seq[self.last_compile]['sequence'].append(c)
+    self.new_compile_seq[self.last_compile]['type of file'] = unicode(self.ui_prefs.comboBox_typeOfFile.currentText())
+    if self.ui_prefs.radioButton_yes.isChecked():
+        self.new_compile_seq[self.last_compile]['use preview'] = 'True'
+    else:
+        self.new_compile_seq[self.last_compile]['use preview'] = 'False'
+    #update the tab
+    updateCompileTab(self, self.new_compile_seq[comp])
     self.last_compile = comp
+
 
 def delete_compile_config(self):
     """Opens a dialog to ensure user wants to delete the selected compile config"""
@@ -319,6 +303,7 @@ def add_generate_config(self):
             self.ui_prefs.comboBox_gen.setCurrentIndex(k)
         self.last_generate = newkey
         self.ui_prefs.pushButton_delete.setEnabled(True)
+
 
 def combo(self, text):
     """Dealing with generate configs"""

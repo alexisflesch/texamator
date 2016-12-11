@@ -54,11 +54,9 @@ def gimme_my_settings():
 
     #Get basic settings in a dictionnary
     fichier = os.path.join(home_dir,".partielator","basics")
-    defautDict = { "file_viewer" : "xdvi",\
-               "type_of_file" : "pdf",\
+    defautDict = { "file_viewer" : "okular",\
                "save_location" : home_dir,\
                "tex_path" : home_dir,\
-               "use_preview" : "True",\
                "little_splitter_s1" : "200",\
                "little_splitter_s2" : "250",\
                "big_splitter_s1" : "450",\
@@ -69,13 +67,14 @@ def gimme_my_settings():
                "prefs height" : "600",\
                "export width" : "400",\
                "export height" : "400",\
+               "edit width" : "400",\
+               "edit height" : "600",\
                "prefs splitter one" : "250",\
                "prefs splitter two" : "150",\
-               "preferred compile sequence" : "Default (pdf + okular)",\
-               "preferred compile sequence for exportation" : "Default (pdf + okular)",\
+               "preferred compile sequence" : "Default (pdflatex)",\
+               "preferred compile sequence for exportation" : "Default (pdflatex)",\
                "preferred type of export" : "pdf",\
                "preferred header/footer" : "Same header/footer",\
-               "embedded viewer" : "okular",\
                "lang" : "en"}
     dictionnary = file_to_dict(fichier,defautDict)
 
@@ -109,41 +108,31 @@ def gimme_my_settings():
     liste_fichiers = os.listdir(os.path.join(home_dir,".partielator"))
     if "compile_seq2" not in liste_fichiers:           #First time running Texamator > 1.6
         #Adding default compile sequences
-        compile_seq["Old computer (dvi no okular)"] = ["latex -interaction=nonstopmode file.tex",\
-                    "dvipng file.dvi -o file.png"]
-        compile_seq["Alternative (dvi + okular)"] = ["latex -interaction=nonstopmode file.tex"]
-        compile_seq["Default (pdf + okular)"] = ["pdflatex -interaction=nonstopmode file.tex"]
-        if "compile_seq" in liste_fichiers:            #TeXamator < 1.6 has been used before on this computer, adding old compile config
-            compile_seq["User Defined"] = []
-            f = codecs.open(os.path.join(home_dir,".partielator","compile_seq"),'r','utf-8')
-            for i in f.readlines():
-                compile_seq["User Defined"].append(i.replace("\n",""))
-            f.close()
-            if compile_seq["User Defined"] == compile_seq["Default (dvi no okular)"]:
-                del compile_seq["User Defined"]
+        setDefaultSequences(compile_seq)
         #Export new config to text file
         f = codecs.open(os.path.join(home_dir,".partielator","compile_seq2"),'w','utf-8')
         for key in compile_seq.keys():
-            f.write("###" + key + "###\n")
-            for item in compile_seq[key]:
+            f.write('###' + key + '###\n')
+            f.write('#type of file:' + compile_seq[key]['type of file'] + '\n')
+            f.write('#use preview:' + compile_seq[key]['use preview'] + '\n')
+            for item in compile_seq[key]['sequence']:
                 f.write(item+'\n')
         f.close()
-            
     else:
         f = codecs.open(os.path.join(home_dir,".partielator","compile_seq2"),'r','utf-8')
-        sequence = "plop"
         for i in f.readlines():
             i = i.replace("\n","")
             if i[:3]=="###" and i[-3:]=="###":
-                sequence = i[3:-3]
-                compile_seq[sequence] = []
-                continue
-            compile_seq[sequence].append(i)
+                sequenceName = i[3:-3]
+                compile_seq[sequenceName] = {'sequence':[],'type of file':'pdf', 'use preview':'False'}
+            elif i[:13] == '#type of file':
+                compile_seq[sequenceName]['type of file'] = i[14:]
+            elif i[:12] == '#use preview':
+                compile_seq[sequenceName]['use preview'] = i[13:]
+            else:
+                compile_seq[sequenceName]['sequence'].append(i)
         #Adding default compile sequences
-        compile_seq["Old computer (dvi no okular)"] = ["latex -interaction=nonstopmode file.tex",\
-                    "dvipng file.dvi -o file.png"]
-        compile_seq["Alternative (dvi + okular)"] = ["latex -interaction=nonstopmode file.tex"]
-        compile_seq["Default (pdf + okular)"] = ["pdflatex -interaction=nonstopmode file.tex"]
+        setDefaultSequences(compile_seq)
     
     #Get generate files
     generate = {"Same header/footer" : [header,footer]}
@@ -167,10 +156,29 @@ def gimme_my_settings():
     return first_time, tags, header, footer, dictionnary, compile_seq, generate
 
 
+def setDefaultSequences(compile_seq):
+    #Old computer : with latex/dvipng/preview package and a QLabel to handle the png
+    compile_seq["Old computer (dvi no okular)"] = {}
+    compile_seq["Old computer (dvi no okular)"]['sequence'] = ["latex -interaction=nonstopmode file.tex", "dvipng file.dvi -o file.png"]
+    compile_seq["Old computer (dvi no okular)"]['use preview'] = 'True'
+    compile_seq["Old computer (dvi no okular)"]['type of file'] = 'png'
+    #Alternative : with latex/no preview package/okular
+    compile_seq["Alternative (latex)"] = {}
+    compile_seq["Alternative (latex)"]['sequence'] = ["latex -interaction=nonstopmode file.tex"]
+    compile_seq["Alternative (latex)"]['type of file'] = 'dvi'
+    compile_seq["Alternative (latex)"]['use preview'] = 'False'
+    #Default : with pdflatex/no preview package/okular
+    compile_seq["Default (pdflatex)"] = {}
+    compile_seq["Default (pdflatex)"]['sequence'] = ["pdflatex -interaction=nonstopmode file.tex"]
+    compile_seq["Default (pdflatex)"]['type of file'] = 'pdf'
+    compile_seq["Default (pdflatex)"]['use preview'] = 'False'    
+
 
 if __name__ == "__main__":
-    tags, header, dictionnary, compile_seq, generate = gimme_my_settings()
-    print generate["basics"]
+    first_time, tags, header, footer, dictionnary, compile_seq, generate = gimme_my_settings()
+    for key in compile_seq.keys():
+        print(key)
+        print(compile_seq[key])
 
 
 

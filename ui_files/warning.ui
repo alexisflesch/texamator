@@ -14,7 +14,7 @@
    <string>Error</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../../programmes/TeXamator/ui_files/icones.qrc">
+   <iconset resource="icones.qrc">
     <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -46,7 +46,7 @@
         <string>Ok</string>
        </property>
        <property name="icon">
-        <iconset resource="../../../programmes/TeXamator/ui_files/icones.qrc">
+        <iconset resource="icones.qrc">
          <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
        </property>
        <property name="default">
@@ -59,7 +59,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../../../programmes/TeXamator/ui_files/icones.qrc"/>
+  <include location="icones.qrc"/>
  </resources>
  <connections>
   <connection>

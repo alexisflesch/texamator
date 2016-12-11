@@ -5,3 +5,4 @@ from crazyparser import *
 from load import *
 from highlight import *
 from guess import *
+#from myTreeWidget import *
