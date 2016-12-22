@@ -69,6 +69,9 @@ def gimme_my_settings():
                "export height" : "400",\
                "edit width" : "400",\
                "edit height" : "600",\
+               "AMC" : "False",\
+               "AMC-text" : "%AMC-stuff",\
+               "AMC-env" : "qcm",\
                "prefs splitter one" : "250",\
                "prefs splitter two" : "150",\
                "preferred compile sequence" : "Default (pdflatex)",\

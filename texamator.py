@@ -10,6 +10,7 @@ from partielatormods import *
 from PyQt4.QtGui import *
 from PyQt4.QtCore import Qt
 
+import inspect
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -256,8 +257,8 @@ class MonApplication(Ui_MainWindow):
         """Exercises in the tableWidget"""
         whole_thing = ""
         for i in range(self.tableWidget.rowCount()):
-            item = self.tableWidget.item(0,i)
-            whole_thing += self.tableWidget.item(0,i).enonce + "\n\n"
+            item = self.tableWidget.item(i,0)
+            whole_thing += self.tableWidget.item(i,0).enonce + "\n\n"
         return whole_thing
 
     def show_preview_list(self):
@@ -297,7 +298,8 @@ class MonApplication(Ui_MainWindow):
     ################### Moving elements in the tableWidget #########################
     def gouptable(self):
         """Move selected element up in the list"""
-        tuple_selected = [(self.tableWidget.row(item),item) for item in self.tableWidget.selectedItems()]
+        tuple_selected = [(self.tableWidget.row(item),item) for item in self.tableWidget.selectedItems()\
+                            if not self.tableWidget.column(item)]
         tuple_selected = sorted(tuple_selected, key=lambda tup: tup[0]) #sort by position in the table
         if tuple_selected:
             if tuple_selected[0][0] == 0:
@@ -309,16 +311,22 @@ class MonApplication(Ui_MainWindow):
                 for tup in tuple_selected:
                     goingup = self.tableWidget.takeItem(tup[0],0)
                     goingdown = self.tableWidget.takeItem(tup[0]-1,0)
-                    #self.tableWidget.insertRow(tup[0])
                     self.tableWidget.setItem(tup[0],0,goingdown)
                     self.tableWidget.setItem(tup[0]-1,0,goingup)
                     self.tableWidget.setCurrentCell(tup[0]-1,0)
+                    if self.settings['AMC'] == 'True':
+                        goingupElt = self.tableWidget.takeItem(tup[0],1)
+                        goingdownElt = self.tableWidget.takeItem(tup[0]-1,1)
+                        self.tableWidget.setItem(tup[0],1,goingdownElt)
+                        self.tableWidget.setItem(tup[0]-1,1,goingupElt)
+                        self.tableWidget.setCurrentCell(tup[0]-1,1)                        
                 #Set tableWidget back to single selection
                 self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 
     def godowntable(self):
         """Move selected element down in the list"""
-        tuple_selected = [(self.tableWidget.row(item),item) for item in self.tableWidget.selectedItems()]
+        tuple_selected = [(self.tableWidget.row(item),item) for item in self.tableWidget.selectedItems()\
+                            if not self.tableWidget.column(item)]
         tuple_selected = sorted(tuple_selected, key=lambda tup: -tup[0]) #sort by position in the table
         if tuple_selected:
             if tuple_selected[0][0] == self.tableWidget.rowCount()-1:
@@ -334,6 +342,12 @@ class MonApplication(Ui_MainWindow):
                     self.tableWidget.setItem(tup[0]+1,0,goingdown)
                     self.tableWidget.setItem(tup[0],0,goingup)
                     self.tableWidget.setCurrentCell(tup[0]+1,0)
+                    if self.settings['AMC'] == 'True':
+                        goingdownElt = self.tableWidget.takeItem(tup[0],1)
+                        goingupElt = self.tableWidget.takeItem(tup[0]+1,1)
+                        self.tableWidget.setItem(tup[0]+1,1,goingdownElt)
+                        self.tableWidget.setItem(tup[0],1,goingupElt)
+                        self.tableWidget.setCurrentCell(tup[0]+1,1)
             #Set tableWidget back to single selection
             self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 
@@ -434,15 +448,32 @@ class MonApplication(Ui_MainWindow):
             self.button_down.setEnabled(False)
             self.button_remove.setEnabled(False)
         else:
-            self.button_remove.setEnabled(True)
-            if rows[0]==0:#one of the element is at the top of the table
+            if self.settings['AMC']=='False':
+                self.button_remove.setEnabled(True)
+                if rows[0]==0:#one of the element is at the top of the table
+                    self.button_up.setEnabled(False)
+                else:
+                    self.button_up.setEnabled(True)
+                if rows[-1]==self.tableWidget.rowCount()-1:#one of the element is at the bottom of the table
+                    self.button_down.setEnabled(False)
+                else:
+                    self.button_down.setEnabled(True)
+            elif self.tableWidget.item(rows[0],0).isSelected():
+                #selection includes an exercise name (and maybe an element name)
+                self.button_remove.setEnabled(True)
+                if rows[0]==0:#one of the element is at the top of the table
+                    self.button_up.setEnabled(False)
+                else:
+                    self.button_up.setEnabled(True)
+                if rows[-1]==self.tableWidget.rowCount()-1:#one of the element is at the bottom of the table
+                    self.button_down.setEnabled(False)
+                else:
+                    self.button_down.setEnabled(True)
+            else:
+                #selection concerns only element names
+                self.button_remove.setEnabled(False)
                 self.button_up.setEnabled(False)
-            else:
-                self.button_up.setEnabled(True)
-            if rows[-1]==self.tableWidget.rowCount()-1:#one of the element is at the bottom of the table
                 self.button_down.setEnabled(False)
-            else:
-                self.button_down.setEnabled(True)    
     
     def enable_stuff(self):
         """When there are exercises in the tableWidget,
@@ -471,14 +502,41 @@ class MonApplication(Ui_MainWindow):
             nb_exercises = self.tableWidget.rowCount()
             self.tableWidget.insertRow(nb_exercises)
             newitem = QtGui.QTableWidgetItem()
-            self.tableWidget.setHorizontalHeaderItem(nb_exercises+1, newitem)
-            newitem.setText(str(nb_exercises+1))
             newitem = QtGui.QTableWidgetItem()
+            newitem.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled )
             nom = item.titre
             newitem.enonce = item.enonce
             newitem.setText(str(nom))
             self.tableWidget.setItem(nb_exercises,0,newitem)
-            self.tableWidget.setCurrentItem(newitem)   
+            if self.settings['AMC']=='True':
+                itemAMC = QtGui.QTableWidgetItem()
+                itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
+                itemAMC.setText(self.findAMCGroup(item.enonce))
+                self.tableWidget.setItem(nb_exercises,1,itemAMC)
+                self.tableWidget.setCurrentItem(itemAMC)
+            self.tableWidget.setCurrentItem(newitem)
+
+    def findAMCGroup(self,enonce):
+        """When given an item from the treeWidget,
+           try to find its AMC group name (if it has one)
+        """
+        firstLine = enonce.split('%')[0]
+        firstLine = enonce.split('\n')[0]
+        if self.settings['AMC-tag']+'}' in firstLine:
+            a = firstLine.split(self.settings['AMC-tag']+'}')[1]
+            res = ''
+            cpt = 1
+            for i in a[1:]:
+                if i=='}':
+                    cpt -= 1
+                elif i=='{':
+                    cpt += 1
+                if cpt==0:
+                    break
+                res += i
+            return res
+        else:
+            return ''
         
     def add_ex_to_table(self):
         """Add selected exercise to the tableWidget
@@ -515,9 +573,11 @@ class MonApplication(Ui_MainWindow):
 
     def remove_exercises(self):
         """Delete selected elements from the tableWidget"""
-        selected_items = self.tableWidget.selectedItems()
-        for item in selected_items:
-            self.tableWidget.removeRow(self.tableWidget.row(item))
+        for item in self.tableWidget.selectedItems():
+            try:
+                self.tableWidget.removeRow(self.tableWidget.row(item))
+            except:
+                pass
         if not self.tableWidget.rowCount():
             self.tableWidget.emit(QtCore.SIGNAL("empty()"))
 
@@ -644,29 +704,31 @@ class MonApplication(Ui_MainWindow):
     def editExerciceTableWidget(self):
         """Opens a dialog to edit an exercise"""
         #If, for some reason, there is more than one exercise selected, don't do anything
-        if len(self.tableWidget.selectedItems())!=1:
-            return
-        #First, let's show the dialog :
-        Dialog_edit = QtGui.QDialog()
-        self.ui_edit = guiedit.Ui_Dialog()
-        self.ui_edit.setupUi(Dialog_edit)
-        #Window geometry
-        w = self.settings["edit width"]
-        h = self.settings["edit height"]
-        Dialog_edit.resize(int(w), int(h))
-        #Highlighter
-        self.ui_edit.textEdit.setFont(self.myfont)
-        self.highlighter4 = MyHighlighter(self.ui_edit.textEdit)
-        self.ui_edit.textEdit.setText(unicode(self.tableWidget.currentItem().enonce,"utf8"))
-        res = Dialog_edit.exec_()
-        #Keep window ratio for next time 
-        self.settings["edit width"] = str(Dialog_edit.width())
-        self.settings["edit height"] = str(Dialog_edit.height())
-        #Then, depending on whether the user clicked ok or cancel...
-        if res:
-            self.tableWidget.currentItem().enonce = unicode(self.ui_edit.textEdit.toPlainText()).encode("utf8")
-            if self.whatson == "list":
-                self.show_preview_list()
+        #Or, if element is an AMC group name, pass to the next handler
+        if self.tableWidget.selectedItems()[0].column():
+            self.tableWidget.editItem(self.tableWidget.selectedItems()[0])
+        else:
+            #First, let's show the dialog :
+            Dialog_edit = QtGui.QDialog()
+            self.ui_edit = guiedit.Ui_Dialog()
+            self.ui_edit.setupUi(Dialog_edit)
+            #Window geometry
+            w = self.settings["edit width"]
+            h = self.settings["edit height"]
+            Dialog_edit.resize(int(w), int(h))
+            #Highlighter
+            self.ui_edit.textEdit.setFont(self.myfont)
+            self.highlighter4 = MyHighlighter(self.ui_edit.textEdit)
+            self.ui_edit.textEdit.setText(unicode(self.tableWidget.currentItem().enonce,"utf8"))
+            res = Dialog_edit.exec_()
+            #Keep window ratio for next time 
+            self.settings["edit width"] = str(Dialog_edit.width())
+            self.settings["edit height"] = str(Dialog_edit.height())
+            #Then, depending on whether the user clicked ok or cancel...
+            if res:
+                self.tableWidget.currentItem().enonce = unicode(self.ui_edit.textEdit.toPlainText()).encode("utf8")
+                if self.whatson == "list":
+                    self.show_preview_list()
     
     def editExerciseTreeWidget(self):
         """Opens a dialog to edit the source of an exercise so as to
@@ -749,7 +811,26 @@ class MonApplication(Ui_MainWindow):
     def fin_export(self):
         guiexportplus.fin_export(self)
 
+    def createAMCMacros(self, elementsList, spinBoxes):
+        guiexportamcplus.createAMCMacros(self, elementsList, spinBoxes)
+
     def export(self):
+        """Export the tableWidget to an exercise sheet
+           If AMC is enabled, look for groups of questions
+           and show the corresponding Dialog
+        """
+        if self.settings['AMC']=='True':
+            elementsList = self.listAMCGroups()
+            if elementsList:
+                Dialog_AMC = QtGui.QDialog()
+                ui_AMC = guiexportamc.Ui_dialog()
+                ui_AMC.setupUi(Dialog_AMC)
+                guiexportamcplus.updateUi(self, ui_AMC, elementsList)
+                res = Dialog_AMC.exec_()
+                if res:
+                    self.createAMCMacros(elementsList, self.spinBoxes)
+                else:
+                    self.AMC_texte = ''
         #Create the dialog
         self.Dialog_export = QtGui.QDialog()
         self.ui_export = guiexport.Ui_Dialog()
@@ -758,6 +839,14 @@ class MonApplication(Ui_MainWindow):
         #Opening dialog
         self.Dialog_export.exec_()
 
+
+    ############################## SHUFFLE ##############################
+    
+    def shuffleFromContext(self):
+        guishuffleplus.shuffleFromContext(self)
+    
+    def shuffleTable(self, itemsList, fullList):
+        guishuffleplus.shuffleTable(self, itemsList, fullList)
 
     ############################## WIZARD ###############################
     def wizard_allow_next(self):
@@ -920,12 +1009,12 @@ class MonApplication(Ui_MainWindow):
             return
         if len(selectedItems)>1 or not self.treeWidget.currentItem().childCount() or not self.treeWidget.currentItem().child(0).childCount():
             menu = QMenu()
-            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Dialog", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
+            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
             copyToClipboard.setShortcut(QtGui.QKeySequence.Copy)
             copyToClipboard.triggered.connect(self.copyToClipboardFromTree)
-            addToTable = menu.addAction(QtGui.QApplication.translate("Dialog", "Add", None, QtGui.QApplication.UnicodeUTF8))
+            addToTable = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Add", None, QtGui.QApplication.UnicodeUTF8))
             addToTable.triggered.connect(self.add_ex_to_table)
-            editAction = menu.addAction(QtGui.QApplication.translate("Dialog", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
+            editAction = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
             editAction.triggered.connect(self.editExerciseTreeWidget)
             if len(self.treeWidget.selectedItems())!=1 or self.treeWidget.currentItem().childCount():
                 editAction.setEnabled(False)
@@ -945,18 +1034,19 @@ class MonApplication(Ui_MainWindow):
         n = len(self.tableWidget.selectedItems())
         if n>0:
             menu = QMenu()
-            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Dialog", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
+            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Table context menu", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
             copyToClipboard.setShortcut(QtGui.QKeySequence.Copy)
             copyToClipboard.triggered.connect(self.copyToClipboardFromTable)
-            editAction = menu.addAction(QtGui.QApplication.translate("Dialog", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
+            editAction = menu.addAction(QtGui.QApplication.translate("Table context menu", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
             editAction.triggered.connect(self.editExerciceTableWidget)
-            moveUp = menu.addAction(QtGui.QApplication.translate("Dialog", "Move up", None, QtGui.QApplication.UnicodeUTF8))
+            moveUp = menu.addAction(QtGui.QApplication.translate("Table context menu", "Move up", None, QtGui.QApplication.UnicodeUTF8))
             moveUp.triggered.connect(self.gouptable)
-            moveDown = menu.addAction(QtGui.QApplication.translate("Dialog", "Move down", None, QtGui.QApplication.UnicodeUTF8))
+            moveDown = menu.addAction(QtGui.QApplication.translate("Table context menu", "Move down", None, QtGui.QApplication.UnicodeUTF8))
             moveDown.triggered.connect(self.godowntable)
-            shuffle = menu.addAction(QtGui.QApplication.translate("Dialog", "Shuffle", None, QtGui.QApplication.UnicodeUTF8))
-            shuffle.triggered.connect(lambda:guishuffleplus.shuffleFromContext(self.tableWidget))
-            remove = menu.addAction(QtGui.QApplication.translate("Dialog", "Remove", None, QtGui.QApplication.UnicodeUTF8))
+            shuffle = menu.addAction(QtGui.QApplication.translate("Table context menu", "Shuffle", None, QtGui.QApplication.UnicodeUTF8))
+            shuffle.triggered.connect(self.shuffleFromContext)
+            remove = menu.addAction(QtGui.QApplication.translate("Table context menu", "Remove", None, QtGui.QApplication.UnicodeUTF8))
+            remove.setShortcut(QtGui.QKeySequence.Delete)
             remove.triggered.connect(self.remove_exercises)
             if n<2:
                 shuffle.setEnabled(False)
@@ -968,8 +1058,51 @@ class MonApplication(Ui_MainWindow):
                 moveDown.setEnabled(False)
             if not self.button_up.isEnabled():
                 moveUp.setEnabled(False)
-                
+            if self.settings['AMC']=='True':
+                AMC = menu.addMenu(QtGui.QApplication.translate("AMC-Menu", "Set element name (AMC)", None, QtGui.QApplication.UnicodeUTF8))
+                action = AMC.addAction(QtGui.QApplication.translate("AMC-Menu", "New element...", None,\
+                                QtGui.QApplication.UnicodeUTF8))
+                action.triggered.connect(self.newElement)
+                def plop(i):
+                    return lambda:self.setElementName(i)
+                for i in self.listAMCGroups():
+                    action = AMC.addAction(i)
+                    action.triggered.connect(plop(i))
             menu.exec_(self.tableWidget.viewport().mapToGlobal(position)+QtCore.QPoint(3,0))
+
+    def newElement(self):
+        """Creates a new element name and set it to the tableWidget.selectedItems()"""
+        Dialog_newelt = QtGui.QDialog()
+        ui_newelt = guinewconf.Ui_Dialog()
+        ui_newelt.setupUi(Dialog_newelt)
+        text = QtGui.QApplication.translate("AMC-Menu", "Enter the new element name", None,\
+            QtGui.QApplication.UnicodeUTF8)
+        ui_newelt.label.setText(text)
+        title = QtGui.QApplication.translate("AMC-Menu", "New element", None,\
+            QtGui.QApplication.UnicodeUTF8)
+        Dialog_newelt.setWindowTitle(title)
+        res = Dialog_newelt.exec_()
+        if res:
+            element = str(ui_newelt.lineEdit.text())
+            self.setElementName(element)
+        
+
+    def setElementName(self,i):
+        """set the element name of an exercise to i"""
+        rows = [self.tableWidget.row(item) for item in self.tableWidget.selectedItems()]
+        for row in rows:
+            item = self.tableWidget.item(row,1)
+            item.setText(i)
+
+    def listAMCGroups(self):
+        """list AMC Groups from tableWidget"""
+        a = []
+        for i in range(self.tableWidget.rowCount()):
+            plop = self.tableWidget.item(i,1).text()
+            if plop not in a:
+                a.append(plop)
+        a.sort()
+        return a
 
     ######################### SWITCH BETWEEN EMBEDDED/OKULAR VIEWER ##################
     def switchBetweenViewers(self,viewer):
@@ -985,7 +1118,7 @@ class MonApplication(Ui_MainWindow):
                 self.viewer = 'okular'
             except:
                 print("Error trying to load PyKDE4 module")
-                print("Please install python-kde4 and try again or select embedded viewer (dvipng) in the preferences window")
+                print("Please install python-kde4 and try again or work with dvipng")
         else:
             self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
             self.okularlayout.setWidget(self.preview)
@@ -1006,10 +1139,13 @@ class MonApplication(Ui_MainWindow):
         self.treeWidget.customContextMenuRequested.connect(self.openMenuTree)
         self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
         self.tableWidget.customContextMenuRequested.connect(self.openMenuTable)
+        #AMC 
+        self.AMC_texte = ''
+        if self.settings['AMC']=='True':
+            self.tableWidget.setColumnCount(2)
+            self.tableWidget.setHorizontalHeaderLabels(['Exercise','Element (AMC)'])
         #lineEdit
         self.lineEdit.setText(self.settings["tex_path"])
-        #Table
-        self.tableWidget.horizontalHeader().setStretchLastSection(True)
         QtCore.QObject.connect(self.actionShuffle_list,QtCore.SIGNAL("triggered()"),self.shuffle_list)
         QtCore.QObject.connect(self.actionGenerate_Random_Exam,QtCore.SIGNAL("triggered()"),self.randomize)
         QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("notempty()"),self.enable_stuff)
@@ -1068,6 +1204,9 @@ class MonApplication(Ui_MainWindow):
         Form.resize(l,w)
         self.big_splitter.setSizes(l2)
         self.little_splitter.setSizes(l1)
+        #Table sizes
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.setColumnWidth(0,.6*l1[1])
 
 
 if __name__ == "__main__":

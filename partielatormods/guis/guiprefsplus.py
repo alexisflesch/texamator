@@ -67,6 +67,15 @@ def updateUi(self, MyHighlighter):
     self.ui_prefs.textEdit_generate.setText(text)
     self.ui_prefs.textEdit_generate_footer.setText(text1)
     self.combo(self.last_generate)
+    #AMC
+    if self.settings['AMC'] == 'True':
+        self.ui_prefs.radioButtonAMCYes.setChecked(True)
+        self.ui_prefs.radioButtonAMCNo.setChecked(False)
+    else:
+        self.ui_prefs.radioButtonAMCYes.setChecked(False)
+        self.ui_prefs.radioButtonAMCNo.setChecked(True)
+    self.ui_prefs.lineEditAMCEnv.setText(self.settings['AMC-env'])
+    self.ui_prefs.lineEditAMCText.setText(self.settings['AMC-text'])
     #Signals and slots
     QtCore.QObject.connect(self.ui_prefs.pushButton_parcourir_tex_path,QtCore.SIGNAL("clicked()"),self.parcourir_tex_path)
     QtCore.QObject.connect(self.ui_prefs.pushButton_parcourir_sav,QtCore.SIGNAL("clicked()"),self.parcourir_sav)
@@ -130,6 +139,19 @@ def close_prefs(self, res):
         self.settings["tex_path"] = unicode(self.ui_prefs.lineEdit_ex_folder.text())
         self.settings["save_location"] = unicode(self.ui_prefs.lineEdit_save_folder.text())
         self.settings["file_viewer"] = unicode(self.ui_prefs.lineEdit_dvi_viewer.text())
+        l1 = self.little_splitter.sizes()[1]
+        if self.ui_prefs.radioButtonAMCYes.isChecked():
+            self.settings['AMC'] = 'True'
+            self.tableWidget.setColumnCount(2)
+            self.tableWidget.setHorizontalHeaderLabels(['Exercise','Element (AMC)'])
+            self.tableWidget.setColumnWidth(0,.6*l1)
+            self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        else:
+            self.settings['AMC'] = 'False'
+            self.tableWidget.setColumnCount(1)
+            self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.settings['AMC-env'] = self.ui_prefs.lineEditAMCEnv.text()
+        self.settings['AMC-text'] = self.ui_prefs.lineEditAMCText.text()
         self.header = unicode(self.ui_prefs.textEdit.toPlainText())
         self.footer = unicode(self.ui_prefs.textEdit1.toPlainText())
         home_dir = os.path.expanduser("~")

@@ -182,9 +182,6 @@
               <property name="autoFillBackground">
                <bool>false</bool>
               </property>
-              <property name="editTriggers">
-               <set>QAbstractItemView::NoEditTriggers</set>
-              </property>
               <property name="tabKeyNavigation">
                <bool>false</bool>
               </property>
@@ -194,12 +191,15 @@
               <property name="dragDropOverwriteMode">
                <bool>false</bool>
               </property>
+              <property name="columnCount">
+               <number>1</number>
+              </property>
               <attribute name="horizontalHeaderVisible">
-               <bool>false</bool>
+               <bool>true</bool>
               </attribute>
               <column>
                <property name="text">
-                <string>Exercises</string>
+                <string>Exercise</string>
                </property>
               </column>
              </widget>

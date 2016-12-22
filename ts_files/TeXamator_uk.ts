@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="2.0" language="uk_UA" sourcelanguage="">
 <context>
+    <name>AMC-Menu</name>
+    <message>
+        <location filename="../texamator.py" line="1069"/>
+        <source>Set element name (AMC)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1070"/>
+        <source>New element...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1085"/>
+        <source>Enter the new element name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1088"/>
+        <source>New element</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Dialog</name>
     <message>
         <location filename="../ui_files/apropos.ui" line="20"/>
@@ -151,14 +174,14 @@ the tab &quot;Generating files&quot;)</source>
         <translation type="obsolete">Бажаєте попередньо переглядати пакунок (типово, так)?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="44"/>
+        <location filename="../ui_files/preferences.ui" line="1034"/>
         <source>Yes</source>
-        <translation type="obsolete">Так</translation>
+        <translation type="unfinished">Так</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="54"/>
+        <location filename="../ui_files/preferences.ui" line="1044"/>
         <source>No</source>
-        <translation type="obsolete">Ні</translation>
+        <translation type="unfinished">Ні</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="103"/>
@@ -226,7 +249,7 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="270"/>
+        <location filename="../ui_files/preferences.ui" line="994"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -394,17 +417,17 @@ using the compilation sequence in the preferences menu.</source>
 файл буде створено на основі команд, вказаний у меню налаштування.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="103"/>
+        <location filename="../texamator.py" line="104"/>
         <source>No exercise found</source>
         <translation type="unfinished">Не знайдено жодної вправи</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="105"/>
+        <location filename="../texamator.py" line="106"/>
         <source>1 exercise found</source>
         <translation type="unfinished">Знайдено 1 вправу</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="107"/>
+        <location filename="../texamator.py" line="108"/>
         <source>exercises found</source>
         <translation>вправ знайдено</translation>
     </message>
@@ -521,41 +544,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="930"/>
-        <source>Add</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="955"/>
-        <source>Edit...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="952"/>
-        <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="957"/>
-        <source>Move up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="959"/>
-        <source>Move down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="961"/>
-        <source>Shuffle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="963"/>
-        <source>Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui_files/preferences.ui" line="251"/>
         <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</source>
         <translation type="unfinished"></translation>
@@ -585,21 +573,75 @@ p, li { white-space: pre-wrap; }
         <source>Compile and export</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="945"/>
+        <source>AMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="951"/>
+        <source>TeXamator can help you build multiple choices tests with AMC :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="967"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="978"/>
+        <source>For more information, especially on how to configure this tab and make AMC compatible with TeXamator, please visit :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1014"/>
+        <source>Do you want to enable this feature ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1058"/>
+        <source>What is the name of the corresponding environment?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1078"/>
+        <source>qcm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1094"/>
+        <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Generating files&quot; tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1106"/>
+        <source>What text do you want to use ? </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="1126"/>
+        <source>%AMC-stuff</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="350"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="372"/>
         <source>Pick a folder</source>
         <translation>Вкажіть теку</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="275"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="297"/>
         <source>You are about to delete the compile sequence : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="378"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="400"/>
         <source>You are about to delete the config : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -747,13 +789,64 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="202"/>
-        <source>Exercises</source>
+        <location filename="../ui_files/guigui.ui" line="598"/>
+        <source>Shuffle list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="598"/>
-        <source>Shuffle list</source>
+        <location filename="../ui_files/guigui.ui" line="202"/>
+        <source>Exercise</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Table context menu</name>
+    <message>
+        <location filename="../texamator.py" line="1044"/>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1047"/>
+        <source>Edit...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1049"/>
+        <source>Move up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1051"/>
+        <source>Move down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1053"/>
+        <source>Shuffle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1055"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Tree context menu</name>
+    <message>
+        <location filename="../texamator.py" line="1019"/>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1022"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1024"/>
+        <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

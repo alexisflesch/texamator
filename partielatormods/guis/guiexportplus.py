@@ -90,6 +90,12 @@ def create_document(self, key):
     sources += self.generate[key][1]
     if "\\end{document}" not in self.generate[key][1]:
         sources += u"\n\\end{document}"
+    if self.settings['AMC']=='True' and self.AMC_texte:
+        if self.settings['AMC-text'] in sources:
+            sources = sources.replace(self.settings['AMC-text'],self.AMC_texte)
+        else:
+            bla = self.AMC_texte + '\n' + '\\end{document}'
+            sources = sources.replace('\\end{document}',bla)
     return sources
 
 def compile_export(self):

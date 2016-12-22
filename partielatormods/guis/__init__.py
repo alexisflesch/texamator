@@ -12,4 +12,5 @@ import guiwarning
 import guishuffle, guishuffleplus
 import guieditsource
 import guidepthwarning
+import guiexportamc, guiexportamcplus
 from guigui import *
