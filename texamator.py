@@ -522,7 +522,7 @@ class MonApplication(Ui_MainWindow):
         """
         firstLine = enonce.split('%')[0]
         firstLine = enonce.split('\n')[0]
-        if self.settings['AMC-tag']+'}' in firstLine:
+        if r'\begin{'+self.settings['AMC-tag']+'}' in firstLine:
             a = firstLine.split(self.settings['AMC-tag']+'}')[1]
             res = ''
             cpt = 1
@@ -727,6 +727,10 @@ class MonApplication(Ui_MainWindow):
             #Then, depending on whether the user clicked ok or cancel...
             if res:
                 self.tableWidget.currentItem().enonce = unicode(self.ui_edit.textEdit.toPlainText()).encode("utf8")
+                if self.settings['AMC']=='True':
+                    row = self.tableWidget.currentRow()
+                    item = self.tableWidget.item(row,1)
+                    item.setText(self.findAMCGroup(self.tableWidget.currentItem().enonce))
                 if self.whatson == "list":
                     self.show_preview_list()
     
@@ -1091,9 +1095,33 @@ class MonApplication(Ui_MainWindow):
         """set the element name of an exercise to i"""
         rows = [self.tableWidget.row(item) for item in self.tableWidget.selectedItems()]
         for row in rows:
-            item = self.tableWidget.item(row,1)
-            item.setText(i)
-
+            itemElement = self.tableWidget.item(row,1)
+            itemElement.setText(i)
+            item = self.tableWidget.item(row,0)
+            self.changeElement(item,i)
+            
+    def changeElement(self,item,newElement):
+        """Edit an exercise and change the element name (AMC)"""
+        oldElement = self.findAMCGroup(item.enonce)
+        newEnonce = ''
+        old = item.enonce.decode('utf8').split('\n')
+        for line in old:
+            splitted = line.split('%')
+            noComment = splitted[0]
+            if r'\begin{'+self.settings['AMC-tag']+'}' in noComment:
+                noComment = noComment.replace(oldElement,newElement)
+                if len(splitted)>1:
+                    comment = splitted[1]
+                else:
+                    comment = ''
+                newEnonce += noComment
+                newEnonce += comment
+            else:
+                newEnonce += line
+            newEnonce += '\n'
+        item.enonce = newEnonce.encode('utf8')
+                
+                
     def listAMCGroups(self):
         """list AMC Groups from tableWidget"""
         a = []

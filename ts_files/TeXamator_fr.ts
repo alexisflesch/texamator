@@ -3,22 +3,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1069"/>
+        <location filename="../texamator.py" line="1073"/>
         <source>Set element name (AMC)</source>
         <translation>Changer l&apos;élément (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1070"/>
+        <location filename="../texamator.py" line="1074"/>
         <source>New element...</source>
         <translation>Nouvel élément...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1085"/>
+        <location filename="../texamator.py" line="1089"/>
         <source>Enter the new element name</source>
         <translation>Entrez le nom du nouvel élément</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1092"/>
         <source>New element</source>
         <translation>Nouvel élément</translation>
     </message>
@@ -888,32 +888,32 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1044"/>
+        <location filename="../texamator.py" line="1048"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1047"/>
+        <location filename="../texamator.py" line="1051"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1049"/>
+        <location filename="../texamator.py" line="1053"/>
         <source>Move up</source>
         <translation>Déplacer vers le haut</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1051"/>
+        <location filename="../texamator.py" line="1055"/>
         <source>Move down</source>
         <translation>Déplacer vers le bas</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1053"/>
+        <location filename="../texamator.py" line="1057"/>
         <source>Shuffle</source>
         <translation>Mélanger</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1055"/>
+        <location filename="../texamator.py" line="1059"/>
         <source>Remove</source>
         <translation>Supprimer</translation>
     </message>
@@ -921,17 +921,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1019"/>
+        <location filename="../texamator.py" line="1023"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1022"/>
+        <location filename="../texamator.py" line="1026"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1024"/>
+        <location filename="../texamator.py" line="1028"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>
