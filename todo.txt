@@ -21,7 +21,7 @@
     -> done
 
 - Modify the export window -> done
-- Add AMC feature -> almost done
+- Add AMC feature -> done
 
 - add a "QCut" feature?
 - add an "Undo" feature?
