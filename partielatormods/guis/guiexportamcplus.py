@@ -9,6 +9,7 @@ def updateUi(self, ui_AMC, elementsList):
     """add what's missing"""
     horizontalLayouts = []
     self.spinBoxes = []
+    elementsList = [i for i in elementsList if i]
     for i in elementsList:
         label = QtGui.QLabel()
         label.setText(i)
@@ -25,6 +26,7 @@ def createAMCMacros(self, elementsList, spinBoxes):
     """write AMC Macros"""
     texte = r'\cleargroup{everything}'
     texte += '\n'
+    elementsList = [i for i in elementsList if i]
     for i in range(len(elementsList)):
         if spinBoxes[i].value():
             texte += r'\shufflegroup{'

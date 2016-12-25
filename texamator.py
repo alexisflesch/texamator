@@ -845,7 +845,7 @@ class MonApplication(Ui_MainWindow):
         """
         if self.settings['AMC']=='True':
             elementsList = self.listAMCGroups()
-            if elementsList:
+            if elementsList and elementsList!=['']:
                 Dialog_AMC = QtGui.QDialog()
                 ui_AMC = guiexportamc.Ui_dialog()
                 ui_AMC.setupUi(Dialog_AMC)
