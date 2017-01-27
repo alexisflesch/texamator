@@ -76,12 +76,12 @@ p, li { white-space: pre-wrap; }
         <translation>Ви маєте намір вилучити файл налаштувань:</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="365"/>
+        <location filename="../ui_files/depthWarning.ui" line="40"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
     <message>
-        <location filename="../ui_files/warning.ui" line="46"/>
+        <location filename="../ui_files/depthWarning.ui" line="51"/>
         <source>Ok</source>
         <translation>Гаразд</translation>
     </message>
@@ -627,6 +627,16 @@ p, li { white-space: pre-wrap; }
         <source>%AMC-stuff</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ui_files/depthWarning.ui" line="20"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/depthWarning.ui" line="30"/>
+        <source>You are trying to add (at least) an entire folder to your project. This might take some time. Do you want to continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Form</name>
@@ -800,6 +810,19 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>Table</name>
+    <message>
+        <location filename="../texamator.py" line="1184"/>
+        <source>Exercise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1185"/>
+        <source>Element (AMC)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Table context menu</name>
     <message>
         <location filename="../texamator.py" line="1048"/>
@@ -847,6 +870,29 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../texamator.py" line="1028"/>
         <source>Edit...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>dialog</name>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="20"/>
+        <source>AMC export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="66"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Скасувати</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="77"/>
+        <source>Ok</source>
+        <translation type="unfinished">Гаразд</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="96"/>
+        <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

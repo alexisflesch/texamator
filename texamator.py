@@ -314,12 +314,12 @@ class MonApplication(Ui_MainWindow):
                     self.tableWidget.setItem(tup[0],0,goingdown)
                     self.tableWidget.setItem(tup[0]-1,0,goingup)
                     self.tableWidget.setCurrentCell(tup[0]-1,0)
-                    #if self.settings['AMC'] == 'True':
-                        #goingupElt = self.tableWidget.takeItem(tup[0],1)
-                        #goingdownElt = self.tableWidget.takeItem(tup[0]-1,1)
-                        #self.tableWidget.setItem(tup[0],1,goingdownElt)
-                        #self.tableWidget.setItem(tup[0]-1,1,goingupElt)
-                        #self.tableWidget.setCurrentCell(tup[0]-1,1)                        
+                    if self.settings['AMC'] == 'True':
+                        goingupElt = self.tableWidget.takeItem(tup[0],1)
+                        goingdownElt = self.tableWidget.takeItem(tup[0]-1,1)
+                        self.tableWidget.setItem(tup[0],1,goingdownElt)
+                        self.tableWidget.setItem(tup[0]-1,1,goingupElt)
+                        self.tableWidget.setCurrentCell(tup[0]-1,1)                        
                 #Set tableWidget back to single selection
                 self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 
@@ -342,12 +342,12 @@ class MonApplication(Ui_MainWindow):
                     self.tableWidget.setItem(tup[0]+1,0,goingdown)
                     self.tableWidget.setItem(tup[0],0,goingup)
                     self.tableWidget.setCurrentCell(tup[0]+1,0)
-                    #if self.settings['AMC'] == 'True':
-                        #goingdownElt = self.tableWidget.takeItem(tup[0],1)
-                        #goingupElt = self.tableWidget.takeItem(tup[0]+1,1)
-                        #self.tableWidget.setItem(tup[0]+1,1,goingdownElt)
-                        #self.tableWidget.setItem(tup[0],1,goingupElt)
-                        #self.tableWidget.setCurrentCell(tup[0]+1,1)
+                    if self.settings['AMC'] == 'True':
+                        goingdownElt = self.tableWidget.takeItem(tup[0],1)
+                        goingupElt = self.tableWidget.takeItem(tup[0]+1,1)
+                        self.tableWidget.setItem(tup[0]+1,1,goingdownElt)
+                        self.tableWidget.setItem(tup[0],1,goingupElt)
+                        self.tableWidget.setCurrentCell(tup[0]+1,1)
             #Set tableWidget back to single selection
             self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
 
@@ -508,12 +508,12 @@ class MonApplication(Ui_MainWindow):
             newitem.enonce = item.enonce
             newitem.setText(str(nom))
             self.tableWidget.setItem(nb_exercises,0,newitem)
-            #if self.settings['AMC']=='True':
-                #itemAMC = QtGui.QTableWidgetItem()
-                #itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
-                #itemAMC.setText(self.findAMCGroup(item.enonce))
-                #self.tableWidget.setItem(nb_exercises,1,itemAMC)
-                #self.tableWidget.setCurrentItem(itemAMC)
+            if self.settings['AMC']=='True':
+                itemAMC = QtGui.QTableWidgetItem()
+                itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
+                itemAMC.setText(self.findAMCGroup(item.enonce))
+                self.tableWidget.setItem(nb_exercises,1,itemAMC)
+                self.tableWidget.setCurrentItem(itemAMC)
             self.tableWidget.setCurrentItem(newitem)
 
     def findAMCGroup(self,enonce):
@@ -587,7 +587,7 @@ class MonApplication(Ui_MainWindow):
         Dialog_apropos = QtGui.QDialog()
         ui_apropos = guiabout.Ui_Dialog()
         ui_apropos.setupUi(Dialog_apropos)
-        #guiaboutplus.updateUi(ui_apropos)
+        guiaboutplus.updateUi(ui_apropos)
         Dialog_apropos.exec_()
 
 
@@ -734,26 +734,6 @@ class MonApplication(Ui_MainWindow):
                 if self.whatson == "list":
                     self.show_preview_list()
     
-    def itemChangedTable(self, item):
-        """This function is called whenever the data of an item
-           has changed in the tableWidget.
-        """
-        if self.settings['AMC']=='True' and not item.column():
-            row = item.row()
-            itemEnonce = self.tableWidget.item(row,0)
-            itemAMC = self.tableWidget.item(row,1)
-            if not itemAMC:
-                itemAMC = QtGui.QTableWidgetItem()
-                itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
-                itemAMC.setText(self.findAMCGroup(itemEnonce.enonce))
-                self.tableWidget.setItem(row,1,itemAMC)
-            itemAMC.setText(self.findAMCGroup(itemEnonce.enonce))
-        elif self.settings['AMC']=='True' and item.column():
-            if item.text():
-                self.changeElement(self.tableWidget.item(item.row(),0),item.text())
-            else:
-                item.setText(self.findAMCGroup(self.tableWidget.item(item.row(),0).enonce))
-    
     def editExerciseTreeWidget(self):
         """Opens a dialog to edit the source of an exercise so as to
            modify an existing tex file on the drive
@@ -845,7 +825,7 @@ class MonApplication(Ui_MainWindow):
         """
         if self.settings['AMC']=='True':
             elementsList = self.listAMCGroups()
-            if elementsList and elementsList!=['']:
+            if elementsList:
                 Dialog_AMC = QtGui.QDialog()
                 ui_AMC = guiexportamc.Ui_dialog()
                 ui_AMC.setupUi(Dialog_AMC)
@@ -1131,7 +1111,7 @@ class MonApplication(Ui_MainWindow):
             if r'\begin{'+self.settings['AMC-tag']+'}' in noComment:
                 noComment = noComment.replace(oldElement,newElement)
                 if len(splitted)>1:
-                    comment = ''.join(splitted[1:])
+                    comment = splitted[1]
                 else:
                     comment = ''
                 newEnonce += noComment
@@ -1191,7 +1171,9 @@ class MonApplication(Ui_MainWindow):
         self.AMC_texte = ''
         if self.settings['AMC']=='True':
             self.tableWidget.setColumnCount(2)
-            self.tableWidget.setHorizontalHeaderLabels(['Exercise','Element (AMC)'])
+            ex = QtGui.QApplication.translate("Table", "Exercise", None, QtGui.QApplication.UnicodeUTF8)
+            elt = QtGui.QApplication.translate("Table", "Element (AMC)", None, QtGui.QApplication.UnicodeUTF8)
+            self.tableWidget.setHorizontalHeaderLabels([ex,elt])
         #lineEdit
         self.lineEdit.setText(self.settings["tex_path"])
         QtCore.QObject.connect(self.actionShuffle_list,QtCore.SIGNAL("triggered()"),self.shuffle_list)
@@ -1213,8 +1195,6 @@ class MonApplication(Ui_MainWindow):
         ,self.treeSelectionChanged)
         QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("itemDoubleClicked(QTableWidgetItem*)")\
         ,self.editExerciceTableWidget)
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("itemChanged(QTableWidgetItem*)")\
-        ,self.itemChangedTable)
         QtCore.QObject.connect(self.button_save,QtCore.SIGNAL("clicked()"),self.export)
         QtCore.QObject.connect(self.button_recompile,QtCore.SIGNAL("clicked()"),self.recompile)
         QtCore.QObject.connect(self.actionQuitter,QtCore.SIGNAL("triggered()"),MainWindow.close)
