@@ -1,4 +1,4 @@
-# TeXamator (v.2.4.2)
+# TeXamator (v.2.4.3)
 
 This programm is distributed under the GPLv3. If you need help using it, please visit :
 http://alexisfles.ch/en/texamator/texamator.html

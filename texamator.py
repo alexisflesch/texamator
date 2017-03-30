@@ -200,7 +200,7 @@ class MonApplication(Ui_MainWindow):
             a.write(enonce)
         a.close()
         if inside:
-            print(self.compile_seq[self.settings["preferred compile sequence"]]['sequence'])
+            #print(self.compile_seq[self.settings["preferred compile sequence"]]['sequence'])
             for cmd in self.compile_seq[self.settings["preferred compile sequence"]]['sequence']:
                 os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
         else:
@@ -1127,7 +1127,7 @@ class MonApplication(Ui_MainWindow):
         a = []
         for i in range(self.tableWidget.rowCount()):
             plop = self.tableWidget.item(i,1).text()
-            if plop not in a:
+            if plop not in a and plop:#add plop to the list if it's not an empty string
                 a.append(plop)
         a.sort()
         return a
