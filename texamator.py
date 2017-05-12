@@ -506,14 +506,8 @@ class MonApplication(Ui_MainWindow):
             newitem.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled )
             nom = item.titre
             newitem.enonce = item.enonce
-            newitem.setText(str(nom))
+            newitem.setText(unicode(nom,"utf8"))
             self.tableWidget.setItem(nb_exercises,0,newitem)
-            #if self.settings['AMC']=='True':
-                #itemAMC = QtGui.QTableWidgetItem()
-                #itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
-                #itemAMC.setText(self.findAMCGroup(item.enonce))
-                #self.tableWidget.setItem(nb_exercises,1,itemAMC)
-                #self.tableWidget.setCurrentItem(itemAMC)
             self.tableWidget.setCurrentItem(newitem)
 
     def findAMCGroup(self,enonce):
@@ -1191,7 +1185,9 @@ class MonApplication(Ui_MainWindow):
         self.AMC_texte = ''
         if self.settings['AMC']=='True':
             self.tableWidget.setColumnCount(2)
-            self.tableWidget.setHorizontalHeaderLabels(['Exercise','Element (AMC)'])
+            exname = QtGui.QApplication.translate("table", "Exercise", None, QtGui.QApplication.UnicodeUTF8)
+            elname = QtGui.QApplication.translate("table", "Element (AMC)", None, QtGui.QApplication.UnicodeUTF8)
+            self.tableWidget.setHorizontalHeaderLabels([exname,'elname'])
         #lineEdit
         self.lineEdit.setText(self.settings["tex_path"])
         QtCore.QObject.connect(self.actionShuffle_list,QtCore.SIGNAL("triggered()"),self.shuffle_list)
