@@ -514,8 +514,8 @@ class MonApplication(Ui_MainWindow):
         """When given an item from the treeWidget,
            try to find its AMC group name (if it has one)
         """
-        firstLine = enonce.split('%')[0]
-        firstLine = enonce.split('\n')[0]
+        firstLine = unicode(enonce,'utf8').split('%')[0]
+        firstLine = firstLine.split('\n')[0]
         if r'\begin{'+self.settings['AMC-env']+'}' in firstLine:
             a = firstLine.split(self.settings['AMC-env']+'}')[1]
             res = ''
@@ -1187,7 +1187,7 @@ class MonApplication(Ui_MainWindow):
             self.tableWidget.setColumnCount(2)
             exname = QtGui.QApplication.translate("table", "Exercise", None, QtGui.QApplication.UnicodeUTF8)
             elname = QtGui.QApplication.translate("table", "Element (AMC)", None, QtGui.QApplication.UnicodeUTF8)
-            self.tableWidget.setHorizontalHeaderLabels([exname,'elname'])
+            self.tableWidget.setHorizontalHeaderLabels([exname,elname])
         #lineEdit
         self.lineEdit.setText(self.settings["tex_path"])
         QtCore.QObject.connect(self.actionShuffle_list,QtCore.SIGNAL("triggered()"),self.shuffle_list)

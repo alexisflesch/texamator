@@ -3,22 +3,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1073"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Set element name (AMC)</source>
         <translation>Changer l&apos;élément (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1074"/>
+        <location filename="../texamator.py" line="1088"/>
         <source>New element...</source>
         <translation>Nouvel élément...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1089"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>Enter the new element name</source>
         <translation>Entrez le nom du nouvel élément</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1092"/>
+        <location filename="../texamator.py" line="1106"/>
         <source>New element</source>
         <translation>Nouvel élément</translation>
     </message>
@@ -900,43 +900,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../texamator.py" line="1184"/>
         <source>Exercise</source>
-        <translation>Exercice</translation>
+        <translation type="obsolete">Exercice</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1185"/>
         <source>Element (AMC)</source>
-        <translation>Élément (AMC)</translation>
+        <translation type="obsolete">Élément (AMC)</translation>
     </message>
 </context>
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1048"/>
+        <location filename="../texamator.py" line="1062"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1051"/>
+        <location filename="../texamator.py" line="1065"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1053"/>
+        <location filename="../texamator.py" line="1067"/>
         <source>Move up</source>
         <translation>Déplacer vers le haut</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1055"/>
+        <location filename="../texamator.py" line="1069"/>
         <source>Move down</source>
         <translation>Déplacer vers le bas</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1057"/>
+        <location filename="../texamator.py" line="1071"/>
         <source>Shuffle</source>
         <translation>Mélanger</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1059"/>
+        <location filename="../texamator.py" line="1073"/>
         <source>Remove</source>
         <translation>Supprimer</translation>
     </message>
@@ -944,17 +944,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1023"/>
+        <location filename="../texamator.py" line="1037"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1026"/>
+        <location filename="../texamator.py" line="1040"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1028"/>
+        <location filename="../texamator.py" line="1042"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>
@@ -980,6 +980,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui_files/exportAMC.ui" line="96"/>
         <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
         <translation>Partielator a remarqué que vous êtiez en train de travailler avec AMC. Merci de choisir ci-dessous le nombre de questions à ajouter pour chacun des éléments présents.</translation>
+    </message>
+</context>
+<context>
+    <name>table</name>
+    <message>
+        <location filename="../texamator.py" line="1198"/>
+        <source>Exercise</source>
+        <translation>Exercice</translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1199"/>
+        <source>Element (AMC)</source>
+        <translation>Élément (AMC)</translation>
     </message>
 </context>
 </TS>

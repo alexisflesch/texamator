@@ -3,22 +3,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1073"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Set element name (AMC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1074"/>
+        <location filename="../texamator.py" line="1088"/>
         <source>New element...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1089"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>Enter the new element name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1092"/>
+        <location filename="../texamator.py" line="1106"/>
         <source>New element</source>
         <translation type="unfinished"></translation>
     </message>
@@ -799,47 +799,34 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-    <name>Table</name>
-    <message>
-        <location filename="../texamator.py" line="1184"/>
-        <source>Exercise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../texamator.py" line="1185"/>
-        <source>Element (AMC)</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1048"/>
+        <location filename="../texamator.py" line="1062"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1051"/>
+        <location filename="../texamator.py" line="1065"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1053"/>
+        <location filename="../texamator.py" line="1067"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1055"/>
+        <location filename="../texamator.py" line="1069"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1057"/>
+        <location filename="../texamator.py" line="1071"/>
         <source>Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1059"/>
+        <location filename="../texamator.py" line="1073"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
@@ -847,17 +834,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1023"/>
+        <location filename="../texamator.py" line="1037"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1026"/>
+        <location filename="../texamator.py" line="1040"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1028"/>
+        <location filename="../texamator.py" line="1042"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -882,6 +869,19 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/exportAMC.ui" line="96"/>
         <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>table</name>
+    <message>
+        <location filename="../texamator.py" line="1198"/>
+        <source>Exercise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1199"/>
+        <source>Element (AMC)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
