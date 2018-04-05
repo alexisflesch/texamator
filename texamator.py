@@ -174,7 +174,7 @@ class MonApplication(Ui_MainWindow):
         self.enonce = enonce
         a = codecs.open("/tmp/partielator/file.tex","w","utf-8")
         if inside and self.compile_seq[self.settings["preferred compile sequence"]]['use preview'] == "True":
-            replace = "\n\usepackage[active,graphics]{preview}"
+            replace = "\n\\usepackage[active,graphics]{preview}"
             replace += "\n\\begin{document}\n"
             replace += "\\begin{preview}\n"
             if "\\begin{document}" in self.header:
@@ -978,9 +978,12 @@ class MonApplication(Ui_MainWindow):
         for item in items:
             if not item.childCount():
                 try:
-                    to_clipboard += item.enonce.decode("utf8")
+                    #to_clipboard += item.enonce.decode("utf8")
+                    to_clipboard = unicode(item.enonce,"utf8")
+                    to_clipboard += item.enonce
                     to_clipboard += unicode("\n","utf8")
                 except:
+                    print("couldn't decode utf8")
                     to_clipboard += item.enonce
         QtGui.QApplication.clipboard().setText(to_clipboard)
 
@@ -1166,7 +1169,7 @@ class MonApplication(Ui_MainWindow):
             self.okularlayout.setWidget(self.preview)
             self.verticalScrollBar = self.okularlayout.verticalScrollBar()
             self.viewer = 'embedded'
-        
+        #self.okupart.sidebar().setSidebarVisibility(False)
 
     ######################### COMPLETING MAIN WINDOW #################################
     def setupUi2(self,Form):
