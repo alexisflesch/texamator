@@ -36,7 +36,7 @@
         <translation>Voulez-vous vraiment fermer Partielator ?</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="365"/>
+        <location filename="../ui_files/shufflelist.ui" line="75"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">exercices trouvés</translation>
     </message>
     <message>
-        <location filename="../ui_files/apropos.ui" line="20"/>
+        <location filename="../ui_files/warningNewVersion.ui" line="20"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
@@ -96,7 +96,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;contacter par mail : alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="170"/>
+        <location filename="../ui_files/warningNewVersion.ui" line="149"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
@@ -169,7 +169,7 @@ p, li { white-space: pre-wrap; }
         <translation>Dans quel dossier souhaitez-vous sauver vos projets ?</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="157"/>
+        <location filename="../ui_files/preferences.ui" line="193"/>
         <source>Browse</source>
         <translation>Parcourir</translation>
     </message>
@@ -219,7 +219,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="319"/>
         <source>Note that \begin{document} must not appear here !</source>
-        <translation>Attention ! \begin{document} ne doit pas apparaître ici.</translation>
+        <translation type="obsolete">Attention ! \begin{document} ne doit pas apparaître ici.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="239"/>
@@ -232,12 +232,12 @@ p, li { white-space: pre-wrap; }
         <translation>Déclarez les macros que vous utilisez pour vos exercices</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="200"/>
+        <location filename="../ui_files/preferences.ui" line="259"/>
         <source>What comes before an exercise ?</source>
         <translation>Quelle commande précède un exercices ?</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="227"/>
+        <location filename="../ui_files/preferences.ui" line="266"/>
         <source>What comes after ?</source>
         <translation>Quelle commande suit un exercice ?</translation>
     </message>
@@ -335,12 +335,12 @@ exercices, y compris \begin{document}.</translation>
     <message>
         <location filename="../ui_files/wizard.ui" line="337"/>
         <source>Back</source>
-        <translation>Précédent</translation>
+        <translation type="obsolete">Précédent</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="354"/>
         <source>Next</source>
-        <translation>Suivant</translation>
+        <translation type="obsolete">Suivant</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="139"/>
@@ -379,12 +379,12 @@ préférences, et cliquez sur l&apos;onglet &quot;Exporation&quot;)</translation
     <message>
         <location filename="../ui_files/wizard.ui" line="20"/>
         <source>Wizard</source>
-        <translation>Assistant de démarrage</translation>
+        <translation type="obsolete">Assistant de démarrage</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="100"/>
         <source>Warning ! This wizard will erase some of your settings !</source>
-        <translation>Attention ! Cet assistant écrasera certains de vos paramètres !</translation>
+        <translation type="obsolete">Attention ! Cet assistant écrasera certains de vos paramètres !</translation>
     </message>
     <message>
         <location filename="wizard.ui" line="114"/>
@@ -412,17 +412,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="188"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation>Partielator a trouvé ces macros. Vous pouvez en ajouter et en supprimer.</translation>
+        <translation type="obsolete">Partielator a trouvé ces macros. Vous pouvez en ajouter et en supprimer.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation>Partielator utilisera cet en-tête à chaque fois qu&apos;il devra compiler un fichier tex.</translation>
+        <translation type="obsolete">Partielator utilisera cet en-tête à chaque fois qu&apos;il devra compiler un fichier tex.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="379"/>
         <source>Apply</source>
-        <translation>Appliquer</translation>
+        <translation type="obsolete">Appliquer</translation>
     </message>
     <message>
         <location filename="../ui_files/langchange.ui" line="14"/>
@@ -488,7 +488,7 @@ p, li { white-space: pre-wrap; }
 - what header do you use to compile your files (what comes before begin{document}) ?
 
 If you want, TeXamator can try to find out automatically. Just enter the location of one of your typical tex files with some exercices in it and hit the &quot;Next&quot; button.</source>
-        <translation>Partielator a besoin de connaître plusieurs choses avant de marcher correctement :
+        <translation type="obsolete">Partielator a besoin de connaître plusieurs choses avant de marcher correctement :
 De quelle manière déclarez-vous vos exercices dans vos fichiers tex ?
 Quel en-tête utilisez-vous (que mettez-vous avant \begin{document}) ?
 Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lui un de vos fichiers tex contenant des exercices et cliquez sur &quot;Suivant&quot;.</translation>
@@ -732,6 +732,80 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui_files/preferences.ui" line="934"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
         <translation>Quand vous exporterez votre projet, TeXamator ajoutera les commandes du type \copygroup et \shufflegroup à un endroit de votre choix. Il faut pour cela renseigner un texte qui sera remplacé par ces commandes. Ce texte doit apparaître dans au moins l&apos;une de vos configurations de l&apos;onglet &quot;Préambule-postambule&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/warningNewVersion.ui" line="60"/>
+        <source>Warning</source>
+        <translation>Attention</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/depthWarning.ui" line="30"/>
+        <source>You are trying to add (at least) an entire folder to your project. This might take some time. Do you want to continue?</source>
+        <translation>Vous essayez d&apos;ajouter (au moins) un dossier complet à votre projet. Cette opération peut prendre du temps. Souhaitez-vous continuer ?</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="14"/>
+        <source>Edit source</source>
+        <translation>Éditer le fichier source</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="66"/>
+        <source>You are editing an exercise that was extracted from:</source>
+        <translation>Vous éditez un exercice qui a été extrait du fichier :</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="73"/>
+        <source>don&apos;t translate</source>
+        <translation>don&apos;t translate</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="80"/>
+        <source>Changes will be written to the file on your disk if you continue.</source>
+        <translation>Les changements effectués ici seront inscrits sur votre disque si vous continuez.</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="20"/>
+        <source>Shuffle list</source>
+        <translation>Mélanger la liste</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="101"/>
+        <source>The selected elements in the list</source>
+        <translation>Les éléments sélectionnés</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="111"/>
+        <source>The entire list</source>
+        <translation>Toute la liste</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="150"/>
+        <source>What do you want to shuffle?</source>
+        <translation>Que souhaitez-vous mélanger ?</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/warningNewVersion.ui" line="98"/>
+        <source>It looks like you just upgraded TeXamator. Your old config files where written in ~/.partielator : they have been copied to ~/.texamator.
+
+Please ensure that everything is ok and then delete the folder ~/.partielator.
+
+Also, please note that a few functionalities of TeXamator have changed :
+- You now have to produce a pdf to preview your exercises.
+- If you want to use the preview package then you should write it yourself in your preamble.
+- You can have multiple preambles/postambles to preview your exercises and export your documents : they are all stored under the &quot;Preamble-postamble&quot; tab, and you can select one under the &quot;Edit -&gt; Preamble&quot; menu.</source>
+        <translation>Vous venez de mettre à jour TeXamator. Vos anciers fichiers de configuration étaient sauvegardés dans ~/.partielator : ils ont été copiés dans ~/.texamator.
+
+Merci de vous assurer que tout a bien été sauvegardé avant de supprimer le dossier ~/.partielator.
+
+Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
+- Vous devez maintenant produire un pdf pour prévisualiser vos exercices.
+- Si vous souhaitez utiliser le paquet preview, il vous faudra le faire en éditant votre préambule.
+- Vous pouvez utiliser autant de préambules/postambules que vous le souhaitez pour prévisualiser vos exercices ainsi que pour les exporter : ils sont tous présents sous l&apos;onglet &quot;Préambules-postambules&quot; dans les préférences. Vous pouvez sélectionner le préambule à utiliser pour prévisualiser vos exercices via le menu &quot;Édition -&gt; Préambule&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiexportplus.py" line="62"/>
+        <source>All the changes you made to the source code will be lost. Do you want to continue?</source>
+        <translation>Tous les changements apportés au code source seront perdus. Souhaitez-vous vraiment continuer ?</translation>
     </message>
 </context>
 <context>
@@ -1015,6 +1089,29 @@ l&apos;en-tête par défault : il sera utilisé pour compiler tous vos fichiers 
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
         <translation>TeXamator n&apos;a pas pu déterminer quelles macros vous utilisez.
 Vous devez les ajouter-les manuellement pour que TeXamator fonctionne.</translation>
+    </message>
+</context>
+<context>
+    <name>dialog</name>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="20"/>
+        <source>AMC export</source>
+        <translation>AMC</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="66"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="77"/>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="96"/>
+        <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
+        <translation>TeXamator a détecté que vous travaillez sur un projet AMC. Merci de configurer le nombre d&apos;exercices à ajouter dans chacune des catégories ci-dessous :</translation>
     </message>
 </context>
 </TS>

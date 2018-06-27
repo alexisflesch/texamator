@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1005, 681)
+        Dialog.resize(1135, 561)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -44,7 +44,6 @@ class Ui_Dialog(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 22, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem2)
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setTextFormat(QtCore.Qt.AutoText)
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
@@ -75,18 +74,14 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "About"))
         self.label.setText(_translate("Dialog", "Warning"))
-        self.label_2.setText(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">It looks like you just upgraded TeXamator. Your old config files where written in </span><span style=\" font-family:\'Sans\'; font-size:10pt; font-style:italic;\">~/.partielator </span><span style=\" font-family:\'Sans\'; font-size:10pt;\">: they have been copied to </span><span style=\" font-family:\'Sans\'; font-size:10pt; font-style:italic;\">~/.texamator</span><span style=\" font-family:\'Sans\'; font-size:10pt;\">.</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans\'; font-size:10pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">Please ensure that everything is ok and then delete the folder </span><span style=\" font-family:\'Sans\'; font-size:10pt; font-style:italic;\">~/.partielator</span><span style=\" font-family:\'Sans\'; font-size:10pt;\">.</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans\'; font-size:10pt;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">Also, please note that a few functionalities of TeXamator have changed :</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">- You now have to produce a pdf to preview your exercises</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">- If you want to use the preview package then you should write it yourself in your preamble</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans\'; font-size:10pt;\">- You can have multiple preambles/postambles to preview your exercises and export your documents : they are all stored under the &quot;Preamble-postamble&quot; tab, and you can select one under the &quot;Edit -&gt; Preamble&quot; menu.</span></p></body></html>"))
+        self.label_2.setText(_translate("Dialog", "It looks like you just upgraded TeXamator. Your old config files where written in ~/.partielator : they have been copied to ~/.texamator.\n"
+"\n"
+"Please ensure that everything is ok and then delete the folder ~/.partielator.\n"
+"\n"
+"Also, please note that a few functionalities of TeXamator have changed :\n"
+"- You now have to produce a pdf to preview your exercises.\n"
+"- If you want to use the preview package then you should write it yourself in your preamble.\n"
+"- You can have multiple preambles/postambles to preview your exercises and export your documents : they are all stored under the \"Preamble-postamble\" tab, and you can select one under the \"Edit -> Preamble\" menu."))
         self.pushButton.setText(_translate("Dialog", "Close"))
 
 from . import icones_rc

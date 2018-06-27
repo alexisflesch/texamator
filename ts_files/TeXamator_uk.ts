@@ -26,7 +26,7 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../ui_files/apropos.ui" line="20"/>
+        <location filename="../ui_files/warningNewVersion.ui" line="20"/>
         <source>About</source>
         <translation>Про програму</translation>
     </message>
@@ -61,7 +61,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;електронною поштою: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/export.ui" line="170"/>
+        <location filename="../ui_files/warningNewVersion.ui" line="149"/>
         <source>Close</source>
         <translation>Закрити</translation>
     </message>
@@ -76,7 +76,7 @@ p, li { white-space: pre-wrap; }
         <translation>Ви маєте намір вилучити файл налаштувань:</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="365"/>
+        <location filename="../ui_files/shufflelist.ui" line="75"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
@@ -108,12 +108,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="337"/>
         <source>Back</source>
-        <translation>Назад</translation>
+        <translation type="obsolete">Назад</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="354"/>
         <source>Next</source>
-        <translation>Далі</translation>
+        <translation type="obsolete">Далі</translation>
     </message>
     <message>
         <location filename="export.ui" line="139"/>
@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
         <translation>У якій теці слід типово зберігати ваші проекти?</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="157"/>
+        <location filename="../ui_files/preferences.ui" line="193"/>
         <source>Browse</source>
         <translation>Вказати</translation>
     </message>
@@ -279,7 +279,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="319"/>
         <source>Note that \begin{document} must not appear here !</source>
-        <translation>Зауважте, що у заголовку не повинно бути команди \begin{document}!</translation>
+        <translation type="obsolete">Зауважте, що у заголовку не повинно бути команди \begin{document}!</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="239"/>
@@ -292,12 +292,12 @@ p, li { white-space: pre-wrap; }
         <translation>Налаштування міток окремих вправ</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="200"/>
+        <location filename="../ui_files/preferences.ui" line="259"/>
         <source>What comes before an exercise ?</source>
         <translation>Яка команда передує вправі?</translation>
     </message>
     <message>
-        <location filename="../ui_files/wizard.ui" line="227"/>
+        <location filename="../ui_files/preferences.ui" line="266"/>
         <source>What comes after ?</source>
         <translation>Яка команда її завершує?</translation>
     </message>
@@ -369,12 +369,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="20"/>
         <source>Wizard</source>
-        <translation>Майстер</translation>
+        <translation type="obsolete">Майстер</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="100"/>
         <source>Warning ! This wizard will erase some of your settings !</source>
-        <translation>Попередження: у результаті використання майстра частину налаштувань буде вилучено!</translation>
+        <translation type="obsolete">Попередження: у результаті використання майстра частину налаштувань буде вилучено!</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="123"/>
@@ -383,7 +383,7 @@ p, li { white-space: pre-wrap; }
 - what header do you use to compile your files (what comes before begin{document}) ?
 
 If you want, TeXamator can try to find out automatically. Just enter the location of one of your typical tex files with some exercices in it and hit the &quot;Next&quot; button.</source>
-        <translation>Для роботи TeXamator потрібно вказати певний набір даних:
+        <translation type="obsolete">Для роботи TeXamator потрібно вказати певний набір даних:
 - спосіб оголошення окремих вправ у ваших файлах tex;
 - заголовок, який слід використати для збирання остаточних документів (тобто набір команд до begin{document}).
 
@@ -392,17 +392,17 @@ If you want, TeXamator can try to find out automatically. Just enter the locatio
     <message>
         <location filename="../ui_files/wizard.ui" line="188"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation>Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
+        <translation type="obsolete">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation>Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
+        <translation type="obsolete">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="379"/>
         <source>Apply</source>
-        <translation>Застосувати</translation>
+        <translation type="obsolete">Застосувати</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="143"/>
@@ -600,6 +600,73 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="934"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/warningNewVersion.ui" line="60"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/depthWarning.ui" line="30"/>
+        <source>You are trying to add (at least) an entire folder to your project. This might take some time. Do you want to continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="14"/>
+        <source>Edit source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="66"/>
+        <source>You are editing an exercise that was extracted from:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="73"/>
+        <source>don&apos;t translate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/editsource.ui" line="80"/>
+        <source>Changes will be written to the file on your disk if you continue.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="20"/>
+        <source>Shuffle list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="101"/>
+        <source>The selected elements in the list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="111"/>
+        <source>The entire list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/shufflelist.ui" line="150"/>
+        <source>What do you want to shuffle?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiexportplus.py" line="62"/>
+        <source>All the changes you made to the source code will be lost. Do you want to continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/warningNewVersion.ui" line="98"/>
+        <source>It looks like you just upgraded TeXamator. Your old config files where written in ~/.partielator : they have been copied to ~/.texamator.
+
+Please ensure that everything is ok and then delete the folder ~/.partielator.
+
+Also, please note that a few functionalities of TeXamator have changed :
+- You now have to produce a pdf to preview your exercises.
+- If you want to use the preview package then you should write it yourself in your preamble.
+- You can have multiple preambles/postambles to preview your exercises and export your documents : they are all stored under the &quot;Preamble-postamble&quot; tab, and you can select one under the &quot;Edit -&gt; Preamble&quot; menu.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -883,6 +950,29 @@ Feel free to modify the default header : it will be used to compile .tex files.<
         <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
         <translation type="unfinished">TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
+    </message>
+</context>
+<context>
+    <name>dialog</name>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="20"/>
+        <source>AMC export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="66"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Скасувати</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="77"/>
+        <source>Ok</source>
+        <translation type="unfinished">Гаразд</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/exportAMC.ui" line="96"/>
+        <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
