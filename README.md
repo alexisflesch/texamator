@@ -1,4 +1,4 @@
-# TeXamator (v.2.4.5)
+# TeXamator (v.3.0.alpha)
 
 This programm is distributed under the GPLv3. If you need help using it, please visit :
 http://alexisfles.ch/en/texamator/texamator.html
@@ -9,16 +9,12 @@ alexis.flesch@gmail.com
 
 You need the following to run this programm :
 - latex
-- dvipng
-- python-qt4
+- python3-pyqt4
+- python3-poppler-qt5
 
-If you want to use okular inside the application (recommended) to preview your 
-dvi/ps/pdf, you also need to install :
-- python-kde4
-
-To launch the programm you can double-click on the file "TeXamator.py" or open a shell,
-hop to the directory and type in "python TeXamator.py". This last method is preferred
-because it will let you see LaTeX running in the background.
+To launch the programm you can double-click on the file "texamator.py" or open a shell,
+hop to the directory and type "python texamator.py". This last method is preferred
+because it will let you see LaTeX running in the background and catch errors.
 
 ------------------------------- Credits -----------------------------------------------
 
