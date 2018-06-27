@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import os, codecs
+from .loadOldConfig import *
 
 
-def file_to_dict(fichier,defautDict):    
+def fileToDict(fichier, defautDict):    
+    """turns a file into a dictionnary"""
     try:
         f = codecs.open(fichier,'r','utf-8')
     except:
         return defautDict
-    lines=f.readlines()
+    lines = f.readlines()
     f.close()
     ret = defautDict
     for line in lines:
@@ -17,12 +19,18 @@ def file_to_dict(fichier,defautDict):
             ret[values[0]] = values[1].replace('\"','')
     return ret
 
-def file_to_tag_list(fichier,defautList):
+
+
+def fileToTagList(fichier, defautList):
+    """ extracts tags from the text file where they are stored.
+        There is one tag per line, looking like this:
+        \begin{tag}!!!\end{tag}
+    """
     try:
         f = codecs.open(fichier,'r','utf-8')
     except:
         return defautList
-    lines=f.readlines()
+    lines = f.readlines()
     f.close()
     tags = [[],[]]
     for line in lines:
@@ -33,27 +41,57 @@ def file_to_tag_list(fichier,defautList):
             tags[1].append(values[1])
     return tags
 
-def gimme_my_settings():
-    """Give preferences"""
-    #First of all, create a .partielator dir in the home folder if it doesn't exist
-    #and delete .partielator if it's a file (old version worked with a .partielator file)
-    #Tells if a .partielator dir was found so as to know whether the wizard should be shown
+
+
+def getDefaultPreamblePostamble():
+    """Creates a minimalist preamble to compile tex files"""
+    preamblesPostambles = {}
+    #Default preamble (what comes before the exercises)
+    pre = """\\documentclass[a4paper,10pt]{article}""" + "\n"
+    pre += """\\usepackage[utf8]{inputenc}""" + "\n"
+    pre += """\\usepackage[top=0cm,bottom=0cm,left=0cm,right=0cm]{geometry}""" + "\n"
+    pre += """\\usepackage{amsthm}""" + "\n"
+    pre += """\\usepackage{amssymb}""" + "\n"
+    pre += """\\newtheorem{exercise}{Exercise}""" + "\n"
+    pre += """\\begin{document}""" + "\n"
+    #Default postamble (what comes after the exercises)
+    post = """\\end{document}"""
+    preamblesPostambles["Default"] = [pre, post]
+    return preamblesPostambles
+
+
+
+def getDefaultSequences():
+    """Returns a dictionnary containing two Default compilation sequences"""
+    compile_seq = {}
+    #Alternative : with latex/dvips/ps2pdf
+    compile_seq["Alternative (latex/dvips/ps2pdf)"] = ["latex -interaction=nonstopmode file.tex"]
+    compile_seq["Alternative (latex/dvips/ps2pdf)"].append("dvips file.dvi")
+    compile_seq["Alternative (latex/dvips/ps2pdf)"].append("ps2pdf file.ps")
+    #Default : with pdflatex
+    compile_seq["Default (pdflatex)"] = ["pdflatex -interaction=nonstopmode file.tex"]  
+    return compile_seq
+
+
+
+def getSettings():
+    """Extract preferences from ~/.texamator folder"""
+    #First of all, create a .texamator dir in the home folder if it doesn't exist
+    #Tells if a .texamator dir was found so as to know whether the wizard should be shown
     home_dir = os.path.expanduser("~")
     first_time = False
-    if ".partielator" in os.listdir(home_dir):
-        if os.path.isfile(os.path.join(home_dir,".partielator")):
-            os.remove(os.path.join(home_dir,".partielator"))
-            os.mkdir(os.path.join(home_dir,".partielator"))
+    if ".texamator" not in os.listdir(home_dir):
+        os.mkdir(os.path.join(home_dir,".texamator"))
+        os.mkdir(os.path.join(home_dir,".texamator","compile.sequences"))
+        os.mkdir(os.path.join(home_dir,".texamator","preambles.and.postambles"))
+        if ".partielator" not in os.listdir(home_dir):
             first_time = True
-        if not "generate" in os.listdir(os.path.join(home_dir,".partielator")):
-            os.mkdir(os.path.join(home_dir,".partielator","generate"))
-    else:
-        os.mkdir(os.path.join(home_dir,".partielator"))
-        os.mkdir(os.path.join(home_dir,".partielator","generate"))
-        first_time = True
-
+        else:
+            first_time = "partielator"
+            tags, dictionnary, compile_seq, preamblesPostambles = getOldSettings()
+            return first_time, tags, dictionnary, compile_seq, preamblesPostambles
     #Get basic settings in a dictionnary
-    fichier = os.path.join(home_dir,".partielator","basics")
+    fichier = os.path.join(home_dir,".texamator","preferences.txt")
     defautDict = { "file_viewer" : "okular",\
                "save_location" : home_dir,\
                "tex_path" : home_dir,\
@@ -61,8 +99,8 @@ def gimme_my_settings():
                "little_splitter_s2" : "250",\
                "big_splitter_s1" : "450",\
                "big_splitter_s2" : "550",\
-               "height" : "550",\
-               "width" : "1000",\
+               "height" : "600",\
+               "width" : "800",\
                "prefs width" : "800",\
                "prefs height" : "600",\
                "export width" : "400",\
@@ -76,112 +114,55 @@ def gimme_my_settings():
                "prefs splitter two" : "150",\
                "preferred compile sequence" : "Default (pdflatex)",\
                "preferred compile sequence for exportation" : "Default (pdflatex)",\
-               "preferred type of export" : "pdf",\
-               "preferred header/footer" : "Same header/footer",\
+               "preferred preamble" : "Default",\
+               "preferred preamble for export" : "Default",\
                "lang" : "en"}
-    dictionnary = file_to_dict(fichier,defautDict)
-
-    #Get header
-    try:
-        f = codecs.open(os.path.join(home_dir,".partielator","header"),'r','utf-8')
-        header = ""
-        for l in f.readlines():
-            header += l
-    except:
-        header = "\\documentclass{article}\n"
-        header += "\\begin{document}"
-
-    #Get footer
-    try:
-        f = codecs.open(os.path.join(home_dir,".partielator","footer"),'r','utf-8')
-        footer = ""
-        for l in f.readlines():
-            footer += l
-    except:
-        footer = "\\end{document}"
+    dictionnary = fileToDict(fichier, defautDict)
     
     #Get tags
     defautList = [["\\begin{exercise}"],["\\end{exercise}"]]
-    fichier = os.path.join(home_dir,".partielator","tags")
-    tags = file_to_tag_list(fichier,defautList)
+    fichier = os.path.join(home_dir,".texamator","tags.txt")
+    tags = fileToTagList(fichier, defautList)
     
-    #Get compile sequence
-    #compile_seq is a dictionnary of compile sequences :
-    compile_seq = {}
-    liste_fichiers = os.listdir(os.path.join(home_dir,".partielator"))
-    if "compile_seq2" not in liste_fichiers:           #First time running Texamator > 1.6
-        #Adding default compile sequences
-        setDefaultSequences(compile_seq)
-        #Export new config to text file
-        f = codecs.open(os.path.join(home_dir,".partielator","compile_seq2"),'w','utf-8')
-        for key in compile_seq.keys():
-            f.write('###' + key + '###\n')
-            f.write('#type of file:' + compile_seq[key]['type of file'] + '\n')
-            f.write('#use preview:' + compile_seq[key]['use preview'] + '\n')
-            for item in compile_seq[key]['sequence']:
-                f.write(item+'\n')
+    #Get compile sequences
+    #compile_seq is a dictionnary of compile sequences. Initiate it with default sequences
+    compile_seq = getDefaultSequences()
+    #Grab the other sequences
+    dirName = os.path.join(home_dir,".texamator","compile.sequences")
+    listOfFiles = os.listdir(dirName)
+    for foo in listOfFiles:
+        f = codecs.open(os.path.join(dirName,foo),'r','utf-8')
+        compile_seq[foo] = []
+        for line in f.readlines():
+            line = line.strip()
+            compile_seq[foo].append(line)
         f.close()
+
+    #Get preambles/postambles
+    #preamblesPostambles is a dictionnary of lists : [preamble, postamble].
+    if first_time:
+        preamblesPostambles = getDefaultPreamblePostamble()
     else:
-        f = codecs.open(os.path.join(home_dir,".partielator","compile_seq2"),'r','utf-8')
-        for i in f.readlines():
-            i = i.replace("\n","")
-            if i[:3]=="###" and i[-3:]=="###":
-                sequenceName = i[3:-3]
-                compile_seq[sequenceName] = {'sequence':[],'type of file':'pdf', 'use preview':'False'}
-            elif i[:13] == '#type of file':
-                compile_seq[sequenceName]['type of file'] = i[14:]
-            elif i[:12] == '#use preview':
-                compile_seq[sequenceName]['use preview'] = i[13:]
-            else:
-                compile_seq[sequenceName]['sequence'].append(i)
-        #Adding default compile sequences
-        setDefaultSequences(compile_seq)
-    
-    #Get generate files
-    generate = {"Same header/footer" : [header,footer]}
-    liste = os.listdir(os.path.join(home_dir,".partielator","generate"))
-    for i in liste:
-        if i[-4:] != ".end":
-            try:
-                f = codecs.open(os.path.join(home_dir,".partielator","generate",i),'r','utf-8')
-                generate[i] = ["",""]
-                for l in f:
-                    generate[i][0] += l
-                f.close()
-                if i+".end" in liste:
-                    g = codecs.open(os.path.join(home_dir,".partielator","generate",i+".end"),'r','utf-8')
-                    for l in g:
-                        generate[i][1] += l
-                    g.close()
-            except:
-                print("couldn't process file "+f)
+        preamblesPostambles = {}
+    dirName = os.path.join(home_dir,".texamator","preambles.and.postambles")
+    listOfFiles = os.listdir(dirName)
+    for foo in listOfFiles:
+        if foo[-13:]==".preamble.tex":
+            f = codecs.open(os.path.join(dirName,foo),'r','utf-8')
+            preamblesPostambles[foo[:-13]] = ["",""]
+            for line in f.readlines():
+                preamblesPostambles[foo[:-13]][0] += line
+            f.close()
+            g = codecs.open(os.path.join(dirName,foo[:-13]+".postamble.tex"),'r','utf-8')
+            for line in g.readlines():
+                preamblesPostambles[foo[:-13]][1] += line
+            g.close()
 
-    return first_time, tags, header, footer, dictionnary, compile_seq, generate
+    return first_time, tags, dictionnary, compile_seq, preamblesPostambles
 
-
-def setDefaultSequences(compile_seq):
-    #Old computer : with latex/dvipng/preview package and a QLabel to handle the png
-    compile_seq["Old computer (dvi no okular)"] = {}
-    compile_seq["Old computer (dvi no okular)"]['sequence'] = ["latex -interaction=nonstopmode file.tex", "dvipng file.dvi -o file.png"]
-    compile_seq["Old computer (dvi no okular)"]['use preview'] = 'True'
-    compile_seq["Old computer (dvi no okular)"]['type of file'] = 'png'
-    #Alternative : with latex/no preview package/okular
-    compile_seq["Alternative (latex)"] = {}
-    compile_seq["Alternative (latex)"]['sequence'] = ["latex -interaction=nonstopmode file.tex"]
-    compile_seq["Alternative (latex)"]['type of file'] = 'dvi'
-    compile_seq["Alternative (latex)"]['use preview'] = 'False'
-    #Default : with pdflatex/no preview package/okular
-    compile_seq["Default (pdflatex)"] = {}
-    compile_seq["Default (pdflatex)"]['sequence'] = ["pdflatex -interaction=nonstopmode file.tex"]
-    compile_seq["Default (pdflatex)"]['type of file'] = 'pdf'
-    compile_seq["Default (pdflatex)"]['use preview'] = 'False'    
 
 
 if __name__ == "__main__":
-    first_time, tags, header, footer, dictionnary, compile_seq, generate = gimme_my_settings()
-    for key in compile_seq.keys():
-        print(key)
-        print(compile_seq[key])
-
-
+    getSettings()
+    
 

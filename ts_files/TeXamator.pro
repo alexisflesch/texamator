@@ -1,7 +1,6 @@
 SOURCES         = ../texamator.py \
                   ../partielatormods/guis/guiwizardplus.py \
-                  ../partielatormods/guis/guiprefsplus.py \
-                  ../partielatormods/guis/guiexportamcplus.py
+                  ../partielatormods/guis/guiprefsplus.py
 FORMS           =   ../ui_files/quitter.ui \
                     ../ui_files/apropos.ui \
                     ../ui_files/preferences.ui \
@@ -13,9 +12,7 @@ FORMS           =   ../ui_files/quitter.ui \
                     ../ui_files/newconf.ui \
                     ../ui_files/wizard.ui \
                     ../ui_files/langchange.ui \
-                    ../ui_files/warning.ui \
-                    ../ui_files/depthWarning.ui \
-                    ../ui_files/exportAMC.ui
+                    ../ui_files/warning.ui
 TRANSLATIONS    = TeXamator_fr.ts \
                   TeXamator_cs.ts \
                   TeXamator_uk.ts \

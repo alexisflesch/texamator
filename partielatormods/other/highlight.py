@@ -1,7 +1,8 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 
-from PyQt4 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui
+import re
 
 
 
@@ -43,20 +44,21 @@ class MyHighlighter(QtGui.QSyntaxHighlighter):
         mathPattern += "|\\\\begin\{eqnarray\W*\}|\\\\end\{eqnarray\W*\}"
         mathPattern += "|\\\\\(|\\\\\)"
         mathPattern += "|\\\\\[|\\\\\])"
+        #mathPattern = r"\\[|\\]"
 
 
 
         #Comment highlighting
         expression = QtCore.QRegExp(commentPattern)
         index = expression.indexIn(text)
-        commentIndex = text.length()+1
+        commentIndex = len(text)+1
         if (index >= 0):
             commentIndex = index
-            self.setFormat(index, text.length()-index, commentFormat)
+            self.setFormat(index, len(text)-index, commentFormat)
 
         #Math highlighting
         mathIndex = []
-        self.setCurrentBlockState(0)
+        #self.setCurrentBlockState(0)
         expression = QtCore.QRegExp(mathPattern)
 
         if (self.previousBlockState() != 1 ):
@@ -72,19 +74,20 @@ class MyHighlighter(QtGui.QSyntaxHighlighter):
                 break
             if (endIndex == -1):
                 self.setCurrentBlockState(1)
-                mathLength = text.length() - startIndex
+                mathLength = len(text) - startIndex
             elif commentIndex < endIndex:
                 self.setCurrentBlockState(1)
                 mathLength = commentIndex - startIndex
-	    else:
+            else:
                 self.setCurrentBlockState(0)
                 mathLength = endIndex - startIndex + expression.matchedLength()
             self.setFormat(startIndex, mathLength, mathFormat)
-            mathIndex += range(startIndex,startIndex+mathLength)
+            mathIndex += list(range(startIndex,startIndex+mathLength))
             startIndex = expression.indexIn(text, startIndex + mathLength)
             endIndex = expression.indexIn(text, startIndex+1)
 
 
+        #mathIndex = []
         #Macro highlight
         expression = QtCore.QRegExp(macroPattern)
         index = expression.indexIn(text)

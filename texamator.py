@@ -1,16 +1,17 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 
-from PyQt4 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui, QtWidgets
 import sys, os
 from random import shuffle
 from partielatormods import *
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import Qt
+from PyQt5.QtGui import *
+from PyQt5.QtCore import Qt
+import time
 
-import inspect
+_translate = QtCore.QCoreApplication.translate
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -20,9 +21,12 @@ except AttributeError:
 
 
 class MonApplication(Ui_MainWindow):
-
+    resized = QtCore.pyqtSignal()
+    
     def __init__(self, settings):
-        self.first_time, self.tags, self.header, self.footer, self.settings, self.compile_seq, self.generate = settings
+        #super(Ui_MainWindow, self).__init__()
+        self.first_time, self.tags, self.settings, self.compile_seq, self.preamblesPostambles = settings
+        #self.first_time, self.tags, self.header, self.footer, self.settings, self.compile_seq, self.generate = settings
         self.treeTeX = False
         self.enonce = "None" #last exercise
         self.whatson = "tree" #what is being previewed ? tree or list ?
@@ -32,24 +36,25 @@ class MonApplication(Ui_MainWindow):
         self.myfont.setFixedPitch(True)
         self.myfont.setPointSize(10)
 
+
     def create_main_tree(self):
         """Ask crazyparser to create a tree, then fills up the QtreeWidget with it"""
-        topdir = str(self.lineEdit.text())
+        topdir = self.lineEdit.text()
         if topdir[-1] == "/":
             topdir = topdir[0:-1]
         nb_ex, self.treeTeX = crazyparser(topdir,self.tags)
         self.fillTheTree(self.treeTeX,nb_ex)
         self.actionExpand_Collapse.setEnabled(True)
         #if the search line is not empty, update the tree
-        string = unicode(self.lineEdit_search.text())
+        string = self.lineEdit_search.text()
         if string:
             self.search()
 
 
     def search(self):
         """Search for a string in folder/file names and in the exercices using treeTeX"""
-        string = unicode(self.lineEdit_search.text())
-        string = string.encode("utf-8").lower()
+        string = self.lineEdit_search.text()
+        string = string.lower()
         string2 = power_rangers(string) #to allow a search with accents of the form \'e instead of é (see crazyparser.py)
         s1 = smart_cut(string)   #to allow searching for more than one keyword
         s2 = smart_cut(string2)
@@ -101,12 +106,11 @@ class MonApplication(Ui_MainWindow):
         """Fills the QtreeWidget with someTree"""
         self.treeWidget.clear()
         if nb_ex == 0:
-            self.treeWidget.setHeaderLabel(QtGui.QApplication.translate("Dialog", "No exercise found", None, QtGui.QApplication.UnicodeUTF8))
+            self.treeWidget.setHeaderLabel(_translate("Dialog", "No exercise found"))
         elif nb_ex == 1:
-            self.treeWidget.setHeaderLabel(QtGui.QApplication.translate("Dialog", "1 exercise found", None, QtGui.QApplication.UnicodeUTF8))
+            self.treeWidget.setHeaderLabel(_translate("Dialog", "1 exercise found"))
         else:
-            self.treeWidget.setHeaderLabel(str(nb_ex) + " " + \
-                QtGui.QApplication.translate("Dialog","exercises found", None, QtGui.QApplication.UnicodeUTF8))
+            self.treeWidget.setHeaderLabel(str(nb_ex) + " " + _translate("Dialog","exercises found"))
         self.treeWidget.header().show()
         if someTree:
             itemDict = {}
@@ -122,9 +126,8 @@ class MonApplication(Ui_MainWindow):
             for fullpath, b, c in someTree:
                 nom = fullpath.split("/")[-1]
                 parent = os.path.split(fullpath)[0]
-                itemDict[fullpath] = QtGui.QTreeWidgetItem(itemDict[parent])
-                itemDict[fullpath].setText(0,QtGui.QApplication.translate("Form", nom, None,\
-                    QtGui.QApplication.UnicodeUTF8))
+                itemDict[fullpath] = QtWidgets.QTreeWidgetItem(itemDict[parent])
+                itemDict[fullpath].setText(0, nom)
                 itemDict[fullpath].setIcon(0, folderIcon)
 
                 for i in c:#TeX file
@@ -132,9 +135,8 @@ class MonApplication(Ui_MainWindow):
                     nom_tex = i[0][:-4]
                     nom2 = nom_tex + " (" + str(nb) + ")"
                     nom_element = os.path.join(fullpath,i[0])
-                    itemDict[nom_element] = QtGui.QTreeWidgetItem(itemDict[fullpath])
-                    itemDict[nom_element].setText(0,QtGui.QApplication.translate("Form", nom2, None,\
-                    QtGui.QApplication.UnicodeUTF8))
+                    itemDict[nom_element] = QtWidgets.QTreeWidgetItem(itemDict[fullpath])
+                    itemDict[nom_element].setText(0, nom2)
                     itemDict[nom_element].setIcon(0, fileIcon)
 
                     compteur_exos = 0
@@ -146,7 +148,7 @@ class MonApplication(Ui_MainWindow):
                         if nb > 99:
                             if compteur_exos < 10:
                                 nom_exo = " Ex 00" + str(compteur_exos)
-                            elif 10 < compteur_exos < 100:
+                            elif 9 < compteur_exos < 100:
                                 nom_exo = " Ex 0" + str(compteur_exos)
                             else:
                                 nom_exo = " Ex " + str(compteur_exos)
@@ -159,86 +161,62 @@ class MonApplication(Ui_MainWindow):
                             nom_exo = " Ex " + str(compteur_exos)
 
                         nom_cp_exo = nom_element + nom_exo
-                        itemDict[nom_cp_exo] = QtGui.QTreeWidgetItem(itemDict[nom_element])
-                        itemDict[nom_cp_exo].setText(0,QtGui.QApplication.translate("Form",\
-                                             nom_exo, None, QtGui.QApplication.UnicodeUTF8))
+                        itemDict[nom_cp_exo] = QtWidgets.QTreeWidgetItem(itemDict[nom_element])
+                        itemDict[nom_cp_exo].setText(0, nom_exo)
                         itemDict[nom_cp_exo].enonce = j
-                        itemDict[nom_cp_exo].titre = nom_tex + " - ex "+str(compteur_exos)
-                        itemDict[nom_cp_exo].filename = os.path.join(fullpath,i[0])
+                        itemDict[nom_cp_exo].titre = nom_tex + " - ex " + str(compteur_exos)
+                        itemDict[nom_cp_exo].filename = os.path.join(fullpath, i[0])
         self.treeWidget.sortItems(0,QtCore.Qt.AscendingOrder)
 
 
-    def show_preview(self,enonce,inside=1):
+    def show_preview(self, enonce, inside=1):
         if enonce == self.enonce and inside:  #only run LaTeX if necessary
             return False
         self.enonce = enonce
-        a = codecs.open("/tmp/partielator/file.tex","w","utf-8")
-        if inside and self.compile_seq[self.settings["preferred compile sequence"]]['use preview'] == "True":
-            replace = "\n\\usepackage[active,graphics]{preview}"
-            replace += "\n\\begin{document}\n"
-            replace += "\\begin{preview}\n"
-            if "\\begin{document}" in self.header:
-                a.write(self.header.replace("\\begin{document}",replace))
-            else:
-                a.write(self.header)
-                a.write(replace)
-            a.write(unicode(enonce,"utf-8"))
-            if "\\end{document}" in self.footer:
-                a.write(self.footer.replace("\\end{document}","\\end{preview}\n\\end{document}"))
-            else:
-                a.write(self.footer)
-                a.write("\n\\end{preview}\n")
-                a.write("\n\\end{document}")
-        elif inside:
-            a.write(self.header)
-            if "\\begin{document}" not in self.header:
+        if inside:
+            a = codecs.open("/tmp/texamator/file.tex","w","utf-8")
+        else:
+            a = codecs.open("/tmp/texamator/export.tex","w","utf-8")
+        if inside:
+            a.write(self.preamblesPostambles[self.settings["preferred preamble"]][0])
+            if "\\begin{document}" not in self.preamblesPostambles[self.settings["preferred preamble"]][0]:
                 a.write("\n\\begin{document}\n")
-            a.write(unicode(enonce,"utf-8"))
-            a.write(self.footer)
+            a.write(enonce)
+            a.write(self.preamblesPostambles[self.settings["preferred preamble"]][1])
             a.write("\n\\end{document}")
         else:
             a.write(enonce)
         a.close()
         if inside:
-            print(self.compile_seq[self.settings["preferred compile sequence"]]['sequence'])
-            for cmd in self.compile_seq[self.settings["preferred compile sequence"]]['sequence']:
-                os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
+            for cmd in self.compile_seq[self.settings["preferred compile sequence"]]:
+                os.system(str(cmd))
         else:
-            for cmd in self.compile_seq[self.settings["preferred compile sequence for exportation"]]['sequence']:
-                os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
+            for cmd in self.compile_seq[self.settings["preferred compile sequence for exportation"]]:
+                os.system(str(cmd).replace("file","export"))
         return True
-
 
     def show_preview_outside(self, enonce):
         if self.show_preview(enonce, 0):
             sequence = self.settings["preferred compile sequence for exportation"]
-            filetype = self.compile_seq[sequence]['type of file']
-            os.system(self.settings["file_viewer"] + " /tmp/partielator/file." + filetype + " &")
+            os.system(self.settings["file_viewer"] + " /tmp/texamator/export.pdf &")
 
     def show_preview_inside(self, enonce):
         if self.show_preview(enonce):
-            if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == 'png':
-                if self.viewer == 'okular':
-                    self.switchBetweenViewers('embedded')
-                self.preview.setPixmap(QtGui.QPixmap("/tmp/partielator/file.png"))
-                if self.whatson == "tree":
-                    self.verticalScrollBar.setValue(0)
-            else:
-                if self.viewer == 'embedded':
-                    self.switchBetweenViewers('okular')
-                self.okupart.openDocument("/tmp/partielator/file."  + self.compile_seq[self.settings["preferred compile sequence"]]['type of file'])
-                self.okupart.goToPage(0)
+            self.showPdf()
+
+    def showPdf(self):
+        """Changes the pdf of self.pdfwidget and shows it"""
+        print("Updating pdf")
+        self.pdfwidget.createPdf("/tmp/texamator/file.pdf")
+        self.pdfScrollBar.setSliderPosition(0)
 
     def recompile(self):
         """Recompile tex file e.g. to get references right"""
         if self.enonce == "None":
             return
         for cmd in self.compile_seq[self.settings["preferred compile sequence"]]['sequence']:
-            os.system(str(cmd).replace("!file", "/tmp/partielator/file"))
-        if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == "png":
-            self.preview.setPixmap(QtGui.QPixmap("/tmp/partielator/file.png"))
-        else:
-            self.okupart.openDocument("/tmp/partielator/file."  + self.compile_seq[self.settings["preferred compile sequence"]]['type of file'])
+            os.system(str(cmd))
+        self.showPdf()
 
     def show_preview_tree(self):
         """Show preview of the current tex file in the tree"""
@@ -288,9 +266,8 @@ class MonApplication(Ui_MainWindow):
         return l
 
     def parcourir(self):
-        dirName = QtGui.QFileDialog.getExistingDirectory(MainWindow,\
-                  QtGui.QApplication.translate("Form", "Pick a folder", None, QtGui.QApplication.UnicodeUTF8),
-                  self.settings["tex_path"])
+        dirName = QtWidgets.QFileDialog.getExistingDirectory(MainWindow,\
+                  _translate("Form", "Pick a folder"), self.settings["tex_path"])
         if dirName:
             self.settings["tex_path"] = dirName
             self.lineEdit.setText(self.settings["tex_path"])
@@ -307,21 +284,15 @@ class MonApplication(Ui_MainWindow):
             else:
                 self.tableWidget.selectionModel().clearSelection()
                 #Set tableWidget to accept multiselection withouth pressing shift or control
-                self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
+                self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
                 for tup in tuple_selected:
                     goingup = self.tableWidget.takeItem(tup[0],0)
                     goingdown = self.tableWidget.takeItem(tup[0]-1,0)
                     self.tableWidget.setItem(tup[0],0,goingdown)
                     self.tableWidget.setItem(tup[0]-1,0,goingup)
-                    self.tableWidget.setCurrentCell(tup[0]-1,0)
-                    #if self.settings['AMC'] == 'True':
-                        #goingupElt = self.tableWidget.takeItem(tup[0],1)
-                        #goingdownElt = self.tableWidget.takeItem(tup[0]-1,1)
-                        #self.tableWidget.setItem(tup[0],1,goingdownElt)
-                        #self.tableWidget.setItem(tup[0]-1,1,goingupElt)
-                        #self.tableWidget.setCurrentCell(tup[0]-1,1)                        
+                    self.tableWidget.setCurrentCell(tup[0]-1,0)                
                 #Set tableWidget back to single selection
-                self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+                self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
 
     def godowntable(self):
         """Move selected element down in the list"""
@@ -334,7 +305,7 @@ class MonApplication(Ui_MainWindow):
             else:
                 self.tableWidget.selectionModel().clearSelection()
                 #Set tableWidget to accept multiselection withouth pressing shift or control
-                self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
+                self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
                 for tup in tuple_selected:
                     goingdown = self.tableWidget.takeItem(tup[0],0)
                     goingup = self.tableWidget.takeItem(tup[0]+1,0)
@@ -342,14 +313,8 @@ class MonApplication(Ui_MainWindow):
                     self.tableWidget.setItem(tup[0]+1,0,goingdown)
                     self.tableWidget.setItem(tup[0],0,goingup)
                     self.tableWidget.setCurrentCell(tup[0]+1,0)
-                    #if self.settings['AMC'] == 'True':
-                        #goingdownElt = self.tableWidget.takeItem(tup[0],1)
-                        #goingupElt = self.tableWidget.takeItem(tup[0]+1,1)
-                        #self.tableWidget.setItem(tup[0]+1,1,goingdownElt)
-                        #self.tableWidget.setItem(tup[0],1,goingupElt)
-                        #self.tableWidget.setCurrentCell(tup[0]+1,1)
             #Set tableWidget back to single selection
-            self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+            self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
 
     ################### Moving elements in a listWidget #########################
     def goup(self, listWidget):
@@ -378,7 +343,7 @@ class MonApplication(Ui_MainWindow):
         for key in self.actionCompile:
             self.menuCompilation.removeAction(self.actionCompile[key])
         for key in sorted(self.compile_seq):
-            self.actionCompile[key] = QtGui.QAction(MainWindow)
+            self.actionCompile[key] = QtWidgets.QAction(MainWindow)
             self.actionCompile[key].setObjectName(key)
             self.actionCompile[key].setText(key)
             icon = QtGui.QIcon()
@@ -390,8 +355,9 @@ class MonApplication(Ui_MainWindow):
         def plop(key):
             """lambda function inside a loop acts oddly (to me)"""
             return lambda:self.change_compile(key)
-        for key in self.compile_seq.keys():
-            QtCore.QObject.connect(self.actionCompile[key],QtCore.SIGNAL("triggered()"),plop(key))
+        for key in list(self.compile_seq.keys()):
+            self.actionCompile[key].triggered.connect(plop(key))
+            #QtCore.SIGNAL("triggered()"),plop(key))
                 
     def change_compile(self,key):
         """A new compile sequence has been clicked"""
@@ -402,6 +368,41 @@ class MonApplication(Ui_MainWindow):
             if self.settings["preferred compile sequence"] == key:
                 icon.addPixmap(QtGui.QPixmap(":/all/icones/apply.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
             self.actionCompile[key].setIcon(icon)
+
+
+    ################# Preamble menu ###################################
+
+    def populate_preamble(self):
+        """Flush preamble menu, populate it and add slots"""
+        for key in self.actionPreamble:
+            self.menuPreamble.removeAction(self.actionPreamble[key])
+        for key in sorted(self.preamblesPostambles):
+            self.actionPreamble[key] = QtWidgets.QAction(MainWindow)
+            self.actionPreamble[key].setObjectName(key)
+            self.actionPreamble[key].setText(key)
+            icon = QtGui.QIcon()
+            if self.settings["preferred preamble"] == key:
+                icon.addPixmap(QtGui.QPixmap(":/all/icones/apply.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.actionPreamble[key].setIcon(icon)
+            self.menuPreamble.addAction(self.actionPreamble[key])
+            #Adding slots to the compile submenu
+        def plop(key):
+            """lambda function inside a loop acts oddly (to me)"""
+            return lambda:self.change_preamble(key)
+        for key in list(self.preamblesPostambles.keys()):
+            self.actionPreamble[key].triggered.connect(plop(key))
+            #QtCore.SIGNAL("triggered()"),plop(key))
+                
+    def change_preamble(self,key):
+        """A new preamble sequence has been clicked"""
+        #updating settings
+        self.settings["preferred preamble"] = key
+        for key in sorted(self.preamblesPostambles):
+            icon = QtGui.QIcon()
+            if self.settings["preferred preamble"] == key:
+                icon.addPixmap(QtGui.QPixmap(":/all/icones/apply.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+            self.actionPreamble[key].setIcon(icon)
+
 
     ################# TreeWidget stuff  #######################################################
     
@@ -433,6 +434,7 @@ class MonApplication(Ui_MainWindow):
            enable/disable the "Edit" button (depending on the number of
            elements selected)
            We also want to enable/disable the remove (-) button
+           Finally, we want to enable/disable the Preview button and enable/disable the shuffle list function
         """
         selectedItems = self.tableWidget.selectedItems()
         if len(selectedItems)==1:
@@ -474,24 +476,15 @@ class MonApplication(Ui_MainWindow):
                 self.button_remove.setEnabled(False)
                 self.button_up.setEnabled(False)
                 self.button_down.setEnabled(False)
-    
-    def enable_stuff(self):
-        """When there are exercises in the tableWidget,
-           some buttons/actions need to be enabled.
-           This function is started whenever the tableWidget
-           emits the "notempty()" signal
-        """
-        self.pushButton_preview.setEnabled(True)
-        self.actionShuffle_list.setEnabled(True)
-    
-    def disable_stuff(self):
-        """When there are no exercise in the tableWidget,
-           some buttons/actions need to be disabled.
-           This function is started whenever the tableWidget
-           emits the "empty()" signal
-        """
-        self.pushButton_preview.setEnabled(False)
-        self.actionShuffle_list.setEnabled(True)
+        #Enable/disable preview button + shuffle action
+        if self.tableWidget.rowCount():
+            self.pushButton_preview.setEnabled(True)
+            self.actionShuffle_list.setEnabled(True)
+        else:
+            self.pushButton_preview.setEnabled(False)
+            self.actionShuffle_list.setEnabled(True)
+
+
     
     def add_items(self,item):
         """Add items to the tableWidget"""
@@ -501,12 +494,11 @@ class MonApplication(Ui_MainWindow):
         else:
             nb_exercises = self.tableWidget.rowCount()
             self.tableWidget.insertRow(nb_exercises)
-            newitem = QtGui.QTableWidgetItem()
-            newitem = QtGui.QTableWidgetItem()
+            newitem = QtWidgets.QTableWidgetItem()
             newitem.setFlags(QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEnabled )
             nom = item.titre
             newitem.enonce = item.enonce
-            newitem.setText(unicode(nom,"utf8"))
+            newitem.setText(str(nom))
             self.tableWidget.setItem(nb_exercises,0,newitem)
             self.tableWidget.setCurrentItem(newitem)
 
@@ -514,8 +506,8 @@ class MonApplication(Ui_MainWindow):
         """When given an item from the treeWidget,
            try to find its AMC group name (if it has one)
         """
-        firstLine = unicode(enonce,'utf8').split('%')[0]
-        firstLine = firstLine.split('\n')[0]
+        firstLine = enonce.split('%')[0]
+        firstLine = enonce.split('\n')[0]
         if r'\begin{'+self.settings['AMC-env']+'}' in firstLine:
             a = firstLine.split(self.settings['AMC-env']+'}')[1]
             res = ''
@@ -540,19 +532,18 @@ class MonApplication(Ui_MainWindow):
         items = self.treeWidget.selectedItems()
         for item in items:
             if item.childCount() and item.child(0).childCount():
-                Dialog_warning = QtGui.QDialog()
+                Dialog_warning = QtWidgets.QDialog()
                 ui_warning = guidepthwarning.Ui_Dialog()
                 ui_warning.setupUi(Dialog_warning)
                 res = Dialog_warning.exec_()
                 if not res:
                     return
-        if items:
-            self.tableWidget.emit(QtCore.SIGNAL("notempty()"))
-        self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
+        self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
         self.tableWidget.selectionModel().clearSelection()
         for item in items:
             self.add_items(item)
-        self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
+        self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.tableSelectionChanged()
                 
     def add_ex_to_table_from_double_click(self):
         """An item has been double clicked on the tree
@@ -563,7 +554,8 @@ class MonApplication(Ui_MainWindow):
             return
         else:
             self.add_ex_to_table()
-            self.tableWidget.emit(QtCore.SIGNAL("notempty()"))
+            self.tableSelectionChanged()
+            self.tableWidget.itemSelectionChanged.emit()
 
     def remove_exercises(self):
         """Delete selected elements from the tableWidget"""
@@ -571,17 +563,17 @@ class MonApplication(Ui_MainWindow):
             try:
                 self.tableWidget.removeRow(self.tableWidget.row(item))
             except:
+                print("Error removing item from table")
                 pass
-        if not self.tableWidget.rowCount():
-            self.tableWidget.emit(QtCore.SIGNAL("empty()"))
+        self.tableSelectionChanged()
 
 
     ############################# ABOUT #######################################
     def apropos(self):
-        Dialog_apropos = QtGui.QDialog()
+        Dialog_apropos = QtWidgets.QDialog()
         ui_apropos = guiabout.Ui_Dialog()
         ui_apropos.setupUi(Dialog_apropos)
-        #guiaboutplus.updateUi(ui_apropos)
+        guiaboutplus.updateUi(ui_apropos)
         Dialog_apropos.exec_()
 
 
@@ -639,7 +631,7 @@ class MonApplication(Ui_MainWindow):
         guiprefsplus.delete_compile_config(self)
 
     def prefs(self):
-        self.Dialog_prefs = QtGui.QDialog()
+        self.Dialog_prefs = QtWidgets.QDialog()
         self.ui_prefs = guiprefs.Ui_Dialog()
         self.ui_prefs.setupUi(self.Dialog_prefs)
         guiprefsplus.updateUi(self, MyHighlighter)
@@ -649,7 +641,7 @@ class MonApplication(Ui_MainWindow):
     def randomize(self):
         """Open a dialog to generate a random exam"""
         #First, let's show the dialog :
-        Dialog_random = QtGui.QDialog()
+        Dialog_random = QtWidgets.QDialog()
         self.ui_random = guirandomize.Ui_Dialog()
         self.ui_random.setupUi(Dialog_random)
         res = Dialog_random.exec_()
@@ -658,7 +650,7 @@ class MonApplication(Ui_MainWindow):
     def shuffle_list(self):
         """Open a dialog to shuffle the list of exercises"""
         #First, let's show the dialog :
-        Dialog_shuffle = QtGui.QDialog()
+        Dialog_shuffle = QtWidgets.QDialog()
         self.ui_shuffle = guishuffle.Ui_Dialog()
         self.ui_shuffle.setupUi(Dialog_shuffle)
         res = Dialog_shuffle.exec_()
@@ -672,7 +664,7 @@ class MonApplication(Ui_MainWindow):
         liste = self.treeWidget.selectedItems()
         if liste:
             parent = liste[0]
-            if self.treeWidget.isItemExpanded(parent):
+            if parent.isExpanded():
                 self.collapse(parent)
             elif parent.childCount(): #Don't do anything if parent is an exercise
                 self.expand(parent)
@@ -703,7 +695,7 @@ class MonApplication(Ui_MainWindow):
             self.tableWidget.editItem(self.tableWidget.selectedItems()[0])
         else:
             #First, let's show the dialog :
-            Dialog_edit = QtGui.QDialog()
+            Dialog_edit = QtWidgets.QDialog()
             self.ui_edit = guiedit.Ui_Dialog()
             self.ui_edit.setupUi(Dialog_edit)
             #Window geometry
@@ -713,14 +705,14 @@ class MonApplication(Ui_MainWindow):
             #Highlighter
             self.ui_edit.textEdit.setFont(self.myfont)
             self.highlighter4 = MyHighlighter(self.ui_edit.textEdit)
-            self.ui_edit.textEdit.setText(unicode(self.tableWidget.currentItem().enonce,"utf8"))
+            self.ui_edit.textEdit.setText(self.tableWidget.currentItem().enonce)
             res = Dialog_edit.exec_()
             #Keep window ratio for next time 
             self.settings["edit width"] = str(Dialog_edit.width())
             self.settings["edit height"] = str(Dialog_edit.height())
             #Then, depending on whether the user clicked ok or cancel...
             if res:
-                self.tableWidget.currentItem().enonce = unicode(self.ui_edit.textEdit.toPlainText()).encode("utf8")
+                self.tableWidget.currentItem().enonce = self.ui_edit.textEdit.toPlainText()
                 if self.settings['AMC']=='True':
                     row = self.tableWidget.currentRow()
                     item = self.tableWidget.item(row,1)
@@ -737,7 +729,7 @@ class MonApplication(Ui_MainWindow):
             itemEnonce = self.tableWidget.item(row,0)
             itemAMC = self.tableWidget.item(row,1)
             if not itemAMC:
-                itemAMC = QtGui.QTableWidgetItem()
+                itemAMC = QtWidgets.QTableWidgetItem()
                 itemAMC.setFlags( QtCore.Qt.ItemIsSelectable | QtCore.Qt.ItemIsEditable | QtCore.Qt.ItemIsEnabled )
                 itemAMC.setText(self.findAMCGroup(itemEnonce.enonce))
                 self.tableWidget.setItem(row,1,itemAMC)
@@ -754,7 +746,7 @@ class MonApplication(Ui_MainWindow):
         """
         item = self.treeWidget.selectedItems()[0]
         oldtext = item.enonce
-        Dialog_edit = QtGui.QDialog()
+        Dialog_edit = QtWidgets.QDialog()
         ui_edit = guieditsource.Ui_Dialog()
         ui_edit.setupUi(Dialog_edit)
         #Window geometry
@@ -764,15 +756,15 @@ class MonApplication(Ui_MainWindow):
         #Highlighter
         ui_edit.textEdit.setFont(self.myfont)
         highlighter4 = MyHighlighter(ui_edit.textEdit)
-        ui_edit.textEdit.setText(unicode(oldtext,"utf8"))
-        ui_edit.label_source.setText(unicode(item.filename,"utf8"))
+        ui_edit.textEdit.setText(oldtext)
+        ui_edit.label_source.setText(item.filename)
         res = Dialog_edit.exec_()
         #Keep window ratio for next time 
         self.settings["edit width"] = str(Dialog_edit.width())
         self.settings["edit height"] = str(Dialog_edit.height())
         #Then, depending on whether the user clicked ok or cancel...
         if res:
-            newtext = unicode(ui_edit.textEdit.toPlainText()).encode("utf8")
+            newtext = ui_edit.textEdit.toPlainText()
             if newtext == oldtext:
                 print("Nothing to do, exercise wasn't changed")
             else:
@@ -840,7 +832,7 @@ class MonApplication(Ui_MainWindow):
         if self.settings['AMC']=='True':
             elementsList = self.listAMCGroups()
             if elementsList and elementsList!=['']:
-                Dialog_AMC = QtGui.QDialog()
+                Dialog_AMC = QtWidgets.QDialog()
                 ui_AMC = guiexportamc.Ui_dialog()
                 ui_AMC.setupUi(Dialog_AMC)
                 guiexportamcplus.updateUi(self, ui_AMC, elementsList)
@@ -850,7 +842,7 @@ class MonApplication(Ui_MainWindow):
                 else:
                     self.AMC_texte = ''
         #Create the dialog
-        self.Dialog_export = QtGui.QDialog()
+        self.Dialog_export = QtWidgets.QDialog()
         self.ui_export = guiexport.Ui_Dialog()
         self.ui_export.setupUi(self.Dialog_export)
         guiexportplus.updateUi(self, MyHighlighter)
@@ -892,13 +884,21 @@ class MonApplication(Ui_MainWindow):
 
     def wizard(self):
         #Create the dialog
-        self.Dialog_wizard = QtGui.QDialog()
+        self.Dialog_wizard = QtWidgets.QDialog()
         self.ui_wizard = guiwizard.Ui_Dialog()
         self.ui_wizard.setupUi(self.Dialog_wizard)
         guiwizardplus.updateUi(self, MyHighlighter, self.Dialog_wizard)
         #Opening dialog
         res = self.Dialog_wizard.exec_()
         guiwizardplus.wizard_apply(self, res)
+
+    def warningNewVersion(self):
+        #Create the dialog
+        self.Dialog_warningNewVersion = QtWidgets.QDialog()
+        self.ui_warningNewVersion = guiwarningNewVersion.Ui_Dialog()
+        self.ui_warningNewVersion.setupUi(self.Dialog_warningNewVersion)
+        #Opening dialog
+        res = self.Dialog_warningNewVersion.exec_()
 
     ########################### TRANSLATING ########################################
 
@@ -923,7 +923,7 @@ class MonApplication(Ui_MainWindow):
         self.show_lang_dialog()
 
     def show_lang_dialog(self):
-        Dialog_lang = QtGui.QDialog()
+        Dialog_lang = QtWidgets.QDialog()
         ui_lang = guilangchange.Ui_Dialog()
         ui_lang.setupUi(Dialog_lang)
         Dialog_lang.exec_()
@@ -931,7 +931,7 @@ class MonApplication(Ui_MainWindow):
     ########################### EVENT FILTERING ####################################
     def close_Event(self, e):
         """Will be executed when user tries to close the main window"""
-        Dialog_quit = QtGui.QDialog()
+        Dialog_quit = QtWidgets.QDialog()
         ui_quit = guiquit.Ui_Dialog()
         ui_quit.setupUi(Dialog_quit)
         res = Dialog_quit.exec_()
@@ -943,16 +943,17 @@ class MonApplication(Ui_MainWindow):
             e.ignore()
 
     def show_Event(self, e):
-        """Will be executed before the window is shown"""
-        if self.first_time:
+        """Will be executed before the main window is shown"""
+        if not self.first_time:
+            return
+        elif self.first_time == "partielator":
+            self.warningNewVersion()
+        else:
             self.wizard()
 
 
     def eventFilter(self, object, event):
-        """filtering right click on treeWidget 
-        and ctrl+C event on treeWidget/tableWidget"""
-        if event.type() == 82 and object == self.treeWidget:
-            object.emit(QtCore.SIGNAL("right_clicked()"))
+        """filtering ctrl+C event on treeWidget/tableWidget"""
         # If ctrl+C : copy to clipboard the source code of the selected exercise
         if event.type() == QtCore.QEvent.KeyPress:
             if event.matches(QtGui.QKeySequence.Copy):
@@ -978,14 +979,11 @@ class MonApplication(Ui_MainWindow):
         for item in items:
             if not item.childCount():
                 try:
-                    #to_clipboard += item.enonce.decode("utf8")
-                    to_clipboard = unicode(item.enonce,"utf8")
                     to_clipboard += item.enonce
-                    to_clipboard += unicode("\n","utf8")
+                    to_clipboard += "\n"
                 except:
-                    print("couldn't decode utf8")
                     to_clipboard += item.enonce
-        QtGui.QApplication.clipboard().setText(to_clipboard)
+        QtWidgets.QApplication.clipboard().setText(to_clipboard)
 
     def copyToClipboardFromTable(self):
         """copy the source code of the selected exercises in the Table."""
@@ -994,18 +992,18 @@ class MonApplication(Ui_MainWindow):
         to_clipboard = ""
         for tup in tuple_selected:
             try:
-                to_clipboard += unicode(tup[1].enonce,"utf8")
-                to_clipboard += unicode("\n","utf8")
+                to_clipboard += tup[1].enonce
+                to_clipboard += "\n"
             except:
                 to_clipboard += tup[1].enonce
-        QtGui.QApplication.clipboard().setText(to_clipboard)
+        QtWidgets.QApplication.clipboard().setText(to_clipboard)
 
     ########################### LEAVING TEXAMATOR ######################################
     def nettoyage(self):
         try:
-            for fichier in os.listdir("/tmp/partielator"):
-                os.remove(os.path.join("/tmp/partielator",fichier))
-            os.rmdir("/tmp/partielator")
+            for fichier in os.listdir("/tmp/texamator"):
+                os.remove(os.path.join("/tmp/texamator",fichier))
+            os.rmdir("/tmp/texamator")
         except:
             print("Couldn't clean up or nothing to clean")
 
@@ -1017,8 +1015,8 @@ class MonApplication(Ui_MainWindow):
         self.settings["little_splitter_s2"] = self.little_splitter.sizes()[1]
         self.settings["big_splitter_s1"] = self.big_splitter.sizes()[0]
         self.settings["big_splitter_s2"] = self.big_splitter.sizes()[1]
-        f = codecs.open(os.path.join(home_dir,".partielator","basics"),'w',"utf-8")
-        for key, value in self.settings.iteritems():
+        f = codecs.open(os.path.join(home_dir,".texamator","preferences.txt"),'w',"utf-8")
+        for key, value in self.settings.items():
             f.write(key+"="+str(value)+"\n")
         f.close()
 
@@ -1028,14 +1026,14 @@ class MonApplication(Ui_MainWindow):
         selectedItems = self.treeWidget.selectedItems()
         if not selectedItems:
             return
-        if len(selectedItems)>1 or not self.treeWidget.currentItem().childCount() or not self.treeWidget.currentItem().child(0).childCount():
-            menu = QMenu()
-            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
+        elif len(selectedItems)>1 or not self.treeWidget.currentItem().childCount() or not self.treeWidget.currentItem().child(0).childCount():
+            menu = QtWidgets.QMenu()
+            copyToClipboard = menu.addAction(_translate("Tree context menu", "Copy to clipboard"))
             copyToClipboard.setShortcut(QtGui.QKeySequence.Copy)
             copyToClipboard.triggered.connect(self.copyToClipboardFromTree)
-            addToTable = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Add", None, QtGui.QApplication.UnicodeUTF8))
+            addToTable = menu.addAction(_translate("Tree context menu", "Add"))
             addToTable.triggered.connect(self.add_ex_to_table)
-            editAction = menu.addAction(QtGui.QApplication.translate("Tree context menu", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
+            editAction = menu.addAction(_translate("Tree context menu", "Edit..."))
             editAction.triggered.connect(self.editExerciseTreeWidget)
             if len(self.treeWidget.selectedItems())!=1 or self.treeWidget.currentItem().childCount():
                 editAction.setEnabled(False)
@@ -1047,26 +1045,26 @@ class MonApplication(Ui_MainWindow):
                     break
             menu.exec_(self.treeWidget.viewport().mapToGlobal(position)+QtCore.QPoint(3,0))
         else:
-            self.treeWidget.emit(QtCore.SIGNAL("right_clicked()"))
+            self.expand_collapse_me()
 
 
     def openMenuTable(self, position):
         """Context menu on the TableWidget"""
         n = len(self.tableWidget.selectedItems())
         if n>0:
-            menu = QMenu()
-            copyToClipboard = menu.addAction(QtGui.QApplication.translate("Table context menu", "Copy to clipboard", None, QtGui.QApplication.UnicodeUTF8))
+            menu = QtWidgets.QMenu()
+            copyToClipboard = menu.addAction(_translate("Table context menu", "Copy to clipboard"))
             copyToClipboard.setShortcut(QtGui.QKeySequence.Copy)
             copyToClipboard.triggered.connect(self.copyToClipboardFromTable)
-            editAction = menu.addAction(QtGui.QApplication.translate("Table context menu", "Edit...", None, QtGui.QApplication.UnicodeUTF8))
+            editAction = menu.addAction(_translate("Table context menu", "Edit..."))
             editAction.triggered.connect(self.editExerciceTableWidget)
-            moveUp = menu.addAction(QtGui.QApplication.translate("Table context menu", "Move up", None, QtGui.QApplication.UnicodeUTF8))
+            moveUp = menu.addAction(_translate("Table context menu", "Move up"))
             moveUp.triggered.connect(self.gouptable)
-            moveDown = menu.addAction(QtGui.QApplication.translate("Table context menu", "Move down", None, QtGui.QApplication.UnicodeUTF8))
+            moveDown = menu.addAction(_translate("Table context menu", "Move down"))
             moveDown.triggered.connect(self.godowntable)
-            shuffle = menu.addAction(QtGui.QApplication.translate("Table context menu", "Shuffle", None, QtGui.QApplication.UnicodeUTF8))
+            shuffle = menu.addAction(_translate("Table context menu", "Shuffle"))
             shuffle.triggered.connect(self.shuffleFromContext)
-            remove = menu.addAction(QtGui.QApplication.translate("Table context menu", "Remove", None, QtGui.QApplication.UnicodeUTF8))
+            remove = menu.addAction(_translate("Table context menu", "Remove"))
             remove.setShortcut(QtGui.QKeySequence.Delete)
             remove.triggered.connect(self.remove_exercises)
             if n<2:
@@ -1080,9 +1078,8 @@ class MonApplication(Ui_MainWindow):
             if not self.button_up.isEnabled():
                 moveUp.setEnabled(False)
             if self.settings['AMC']=='True':
-                AMC = menu.addMenu(QtGui.QApplication.translate("AMC-Menu", "Set element name (AMC)", None, QtGui.QApplication.UnicodeUTF8))
-                action = AMC.addAction(QtGui.QApplication.translate("AMC-Menu", "New element...", None,\
-                                QtGui.QApplication.UnicodeUTF8))
+                AMC = menu.addMenu(_translate("AMC-Menu", "Set element name (AMC)"))
+                action = AMC.addAction(_translate("AMC-Menu", "New element..."))
                 action.triggered.connect(self.newElement)
                 def plop(i):
                     return lambda:self.setElementName(i)
@@ -1093,18 +1090,14 @@ class MonApplication(Ui_MainWindow):
 
     def newElement(self):
         """Creates a new element name and set it to the tableWidget.selectedItems()"""
-        Dialog_newelt = QtGui.QDialog()
+        Dialog_newelt = QtWidgets.QDialog()
         ui_newelt = guinewconf.Ui_Dialog()
         ui_newelt.setupUi(Dialog_newelt)
-        text = QtGui.QApplication.translate("AMC-Menu", "Enter the new element name", None,\
-            QtGui.QApplication.UnicodeUTF8)
-        ui_newelt.label.setText(text)
-        title = QtGui.QApplication.translate("AMC-Menu", "New element", None,\
-            QtGui.QApplication.UnicodeUTF8)
-        Dialog_newelt.setWindowTitle(title)
+        ui_newelt.label.setText(_translate("AMC-Menu", "Enter the new element name"))
+        Dialog_newelt.setWindowTitle(_translate("AMC-Menu", "New element"))
         res = Dialog_newelt.exec_()
         if res:
-            element = str(ui_newelt.lineEdit.text())
+            element = ui_newelt.lineEdit.text()
             self.setElementName(element)
         
 
@@ -1121,7 +1114,7 @@ class MonApplication(Ui_MainWindow):
         """Edit an exercise and change the element name (AMC)"""
         oldElement = self.findAMCGroup(item.enonce)
         newEnonce = ''
-        old = item.enonce.decode('utf8').split('\n')
+        old = item.enonce.split('\n')
         for line in old:
             splitted = line.split('%')
             noComment = splitted[0]
@@ -1136,41 +1129,42 @@ class MonApplication(Ui_MainWindow):
             else:
                 newEnonce += line
             newEnonce += '\n'
-        item.enonce = newEnonce.encode('utf8')
+        item.enonce = newEnonce
                 
                 
     def listAMCGroups(self):
         """list AMC Groups from tableWidget"""
         a = []
         for i in range(self.tableWidget.rowCount()):
-            plop = self.tableWidget.item(i,1).text()
-            if plop not in a:
-                a.append(plop)
+            item = self.tableWidget.item(i,1)
+            if item and item.text() not in a:
+                a.append(item.text())
         a.sort()
         return a
 
-    ######################### SWITCH BETWEEN EMBEDDED/OKULAR VIEWER ##################
-    def switchBetweenViewers(self,viewer):
-        if viewer == 'okular':
-            try:
-                from PyKDE4.kdecore import KUrl
-                from PyKDE4.kdecore import ki18n, KAboutData, KCmdLineArgs
-                from PyKDE4.kdecore import KLibLoader as ll
-                from PyKDE4.kdeui import KApplication
-                import PyKDE4.kparts as kp
-                self.okupart = ll.self().factory('okularpart').create()
-                self.okularlayout.setWidget(self.okupart.widget())
-                self.viewer = 'okular'
-            except:
-                print("Error trying to load PyKDE4 module")
-                print("Please install python-kde4 and try again or work with dvipng")
-        else:
-            self.okularlayout.setBackgroundRole(QtGui.QPalette.Light)
-            self.okularlayout.setWidget(self.preview)
-            self.verticalScrollBar = self.okularlayout.verticalScrollBar()
-            self.viewer = 'embedded'
-        #self.okupart.sidebar().setSidebarVisibility(False)
+    ######################### CREATING THE PDF WIDGET ##################
+    def initiatePdf(self):
+        """Creates the pdf Area and loads the help.pdf file into it"""
+        self.pdfScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.pdfScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.pdfScrollArea.setWidgetResizable(True)
+        self.pdfScrollBar = self.pdfScrollArea.verticalScrollBar()
+        w = int(self.settings["big_splitter_s2"])
+        #self.pdfWidgetContainer = myQWidget()
+        #self.pdfWidgetContainer.resized.connect(self.repaintPdf)
+        self.pdfWidgetContainer = DelayedUpdater(self.repaintPdf)
+        self.pdfScrollArea.setWidget(self.pdfWidgetContainer)
+        self.pdfWidgetContainer.setStyleSheet("background-color:white;")
+        self.pdfwidget = PDFWidget(None,parent=self.pdfWidgetContainer, width=w)
 
+    
+    def repaintPdf(self):
+        #Recalculate size of the pdf and repaint
+        w = self.big_splitter.sizes()[1]-self.pdfScrollBar.width()-1
+        self.pdfwidget.repaint(w)
+        
+        
+        
     ######################### COMPLETING MAIN WINDOW #################################
     def setupUi2(self,Form):
         """Adds what's missing to the main Window"""
@@ -1179,6 +1173,8 @@ class MonApplication(Ui_MainWindow):
         Form.showEvent = self.show_Event
         self.actionCompile = {} #dictionnary containing the QAction in the Compile submenu
         self.populate_compile()
+        self.actionPreamble = {}
+        self.populate_preamble()
         #Context menus on treeWidget and tableWidget
         self.treeWidget.setContextMenuPolicy(Qt.CustomContextMenu)
         self.treeWidget.customContextMenuRequested.connect(self.openMenuTree)
@@ -1188,62 +1184,44 @@ class MonApplication(Ui_MainWindow):
         self.AMC_texte = ''
         if self.settings['AMC']=='True':
             self.tableWidget.setColumnCount(2)
-            exname = QtGui.QApplication.translate("table", "Exercise", None, QtGui.QApplication.UnicodeUTF8)
-            elname = QtGui.QApplication.translate("table", "Element (AMC)", None, QtGui.QApplication.UnicodeUTF8)
-            self.tableWidget.setHorizontalHeaderLabels([exname,elname])
+            self.tableWidget.setHorizontalHeaderLabels([_translate('Form','Exercise'),_translate('Form','Element (AMC)')])
         #lineEdit
         self.lineEdit.setText(self.settings["tex_path"])
-        QtCore.QObject.connect(self.actionShuffle_list,QtCore.SIGNAL("triggered()"),self.shuffle_list)
-        QtCore.QObject.connect(self.actionGenerate_Random_Exam,QtCore.SIGNAL("triggered()"),self.randomize)
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("notempty()"),self.enable_stuff)
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("empty()"),self.disable_stuff)
-        QtCore.QObject.connect(self.treeWidget,QtCore.SIGNAL("itemDoubleClicked(QTreeWidgetItem*,int)")\
-        ,self.add_ex_to_table_from_double_click)
-        QtCore.QObject.connect(self.button_add,QtCore.SIGNAL("clicked()"),self.add_ex_to_table)
-        QtCore.QObject.connect(self.button_remove,QtCore.SIGNAL("clicked()"),self.remove_exercises)
-        QtCore.QObject.connect(self.button_up,QtCore.SIGNAL("clicked()"),self.gouptable)
-        QtCore.QObject.connect(self.button_down,QtCore.SIGNAL("clicked()"),self.godowntable)
-        QtCore.QObject.connect(self.button_refresh,QtCore.SIGNAL("clicked()"),self.create_main_tree)
-        QtCore.QObject.connect(self.treeWidget,QtCore.SIGNAL("itemClicked(QTreeWidgetItem*,int)")\
-        ,self.show_preview_tree)        
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("itemSelectionChanged()")\
-        ,self.tableSelectionChanged)
-        QtCore.QObject.connect(self.treeWidget,QtCore.SIGNAL("itemSelectionChanged()")\
-        ,self.treeSelectionChanged)
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("itemDoubleClicked(QTableWidgetItem*)")\
-        ,self.editExerciceTableWidget)
-        QtCore.QObject.connect(self.tableWidget,QtCore.SIGNAL("itemChanged(QTableWidgetItem*)")\
-        ,self.itemChangedTable)
-        QtCore.QObject.connect(self.button_save,QtCore.SIGNAL("clicked()"),self.export)
-        QtCore.QObject.connect(self.button_recompile,QtCore.SIGNAL("clicked()"),self.recompile)
-        QtCore.QObject.connect(self.actionQuitter,QtCore.SIGNAL("triggered()"),MainWindow.close)
-        QtCore.QObject.connect(self.actionStart_Wizard,QtCore.SIGNAL("triggered()"),self.wizard)
-        QtCore.QObject.connect(self.actionPrefs,QtCore.SIGNAL("triggered()"),self.prefs)
-        QtCore.QObject.connect(self.actionExport,QtCore.SIGNAL("triggered()"),self.export)
-        QtCore.QObject.connect(self.actionA_propos,QtCore.SIGNAL("triggered()"),self.apropos)
-        QtCore.QObject.connect(self.actionEdit_exercise,QtCore.SIGNAL("triggered()"),self.editExerciceTableWidget)
-        QtCore.QObject.connect(self.actionFrench,QtCore.SIGNAL("triggered()"),self.to_french)
-        QtCore.QObject.connect(self.actionEnglish,QtCore.SIGNAL("triggered()"),self.to_english)
-        QtCore.QObject.connect(self.actionCzech,QtCore.SIGNAL("triggered()"),self.to_czech)
-        QtCore.QObject.connect(self.actionUkrainian,QtCore.SIGNAL("triggered()"),self.to_ukrainian)
-        QtCore.QObject.connect(self.actionGerman,QtCore.SIGNAL("triggered()"),self.to_german)
-        QtCore.QObject.connect(self.pushButton_edit,QtCore.SIGNAL("clicked()"), self.editExerciceTableWidget)
-        QtCore.QObject.connect(self.actionExpand_Collapse,QtCore.SIGNAL("triggered()"),self.expand_collapse_me)
-        QtCore.QObject.connect(self.pushButton_parcourir,QtCore.SIGNAL("clicked()"),self.parcourir)
-        QtCore.QObject.connect(self.pushButton_preview,QtCore.SIGNAL("clicked()"),self.show_preview_list)
-        QtCore.QObject.connect(self.lineEdit_search,QtCore.SIGNAL("textChanged(QString)"),self.search)
-        #eventFilter to detect right click on the treeWidget and copy event on an exercise
+        self.actionShuffle_list.triggered.connect(self.shuffle_list)
+        self.actionGenerate_Random_Exam.triggered.connect(self.randomize)
+        self.treeWidget.itemDoubleClicked.connect(self.add_ex_to_table_from_double_click)
+        self.button_add.clicked.connect(self.add_ex_to_table)
+        self.button_remove.clicked.connect(self.remove_exercises)
+        self.button_up.clicked.connect(self.gouptable)
+        self.button_down.clicked.connect(self.godowntable)
+        self.button_refresh.clicked.connect(self.create_main_tree)
+        self.treeWidget.itemClicked.connect(self.show_preview_tree)  
+        self.tableWidget.itemSelectionChanged.connect(self.tableSelectionChanged)
+        self.treeWidget.itemSelectionChanged.connect(self.treeSelectionChanged)
+        self.tableWidget.itemDoubleClicked.connect(self.editExerciceTableWidget)
+        self.tableWidget.itemChanged.connect(self.itemChangedTable)
+        self.button_save.clicked.connect(self.export)
+        self.button_recompile.clicked.connect(self.recompile)
+        self.actionQuitter.triggered.connect(MainWindow.close)
+        self.actionStart_Wizard.triggered.connect(self.wizard)
+        self.actionPrefs.triggered.connect(self.prefs)
+        self.actionExport.triggered.connect(self.export)
+        self.actionA_propos.triggered.connect(self.apropos)
+        self.actionEdit_exercise.triggered.connect(self.editExerciceTableWidget)
+        self.actionFrench.triggered.connect(self.to_french)
+        self.actionEnglish.triggered.connect(self.to_english)
+        self.actionCzech.triggered.connect(self.to_czech)
+        self.actionUkrainian.triggered.connect(self.to_ukrainian)
+        self.actionGerman.triggered.connect(self.to_german)
+        self.actionExpand_Collapse.triggered.connect(self.expand_collapse_me)
+        self.pushButton_parcourir.clicked.connect(self.parcourir)
+        self.pushButton_preview.clicked.connect(self.show_preview_list)
+        self.lineEdit_search.textChanged[str].connect(self.search)
+        #eventFilter to detect Ctrl+C and Del
         Form.eventFilter = self.eventFilter
         self.treeWidget.installEventFilter(Form)
         self.tableWidget.installEventFilter(Form)
-        QtCore.QObject.connect(self.treeWidget,QtCore.SIGNAL("right_clicked()"),self.expand_collapse_me)       
-        #embedded viewer:
-        self.preview = QtGui.QLabel()
-        if self.compile_seq[self.settings["preferred compile sequence"]]['type of file'] == "png":
-            self.switchBetweenViewers('embedded')
-        else:
-            self.switchBetweenViewers('okular')
-        #Splitter sizes :
+        ##Splitter sizes :
         self.windowHeight = Form.height
         self.windowWidth = Form.width
         l = int(self.settings["width"])
@@ -1256,13 +1234,14 @@ class MonApplication(Ui_MainWindow):
         #Table sizes
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.setColumnWidth(0,.6*l1[1])
+        self.initiatePdf()
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     #Translate app ?
-    settings = gimme_my_settings()
-    x = settings[4]
+    settings = getSettings()
+    x = settings[2]
     if x["lang"] != "en":
         p = os.path.abspath(sys.argv[0])
         while os.path.islink(p): #get rid of simlinks
@@ -1270,18 +1249,16 @@ if __name__ == "__main__":
         full_path = os.path.split(p)[0] #get the path where the program is
         t = QtCore.QTranslator()
         t.load(os.path.join(full_path, "ts_files/TeXamator_"+x["lang"]))
-        #t.load(os.path.join(full_path, "ts_files/TeXamator_de"))
         QtCore.QCoreApplication.installTranslator(t)
     #chdir and create temp directory 
     try:
-        os.mkdir("/tmp/partielator")
+        os.mkdir("/tmp/texamator")
     except:
-        print("couldn't create partielator dir or partielator dir already exists")
-    os.chdir("/tmp/partielator")
+        print("couldn't create texamator dir or texamator dir already exists")
+    os.chdir("/tmp/texamator")
     #Let's go !
-    MainWindow = QtGui.QMainWindow()
+    MainWindow = QtWidgets.QMainWindow()
     ui = MonApplication(settings)
     ui.setupUi2(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

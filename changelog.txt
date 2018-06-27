@@ -1,0 +1,5 @@
+2018/06/25
+    * Converted from Python2 to Python3 using 2to3 utility
+    * Converted from PyQt4 to PyQt5
+    * Removed okular and implemented my own pdf viewer
+    * Removed old options (preview package and "type of file") : texamator now only supports pdf.

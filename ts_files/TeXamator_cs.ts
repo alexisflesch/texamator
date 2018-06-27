@@ -3,12 +3,12 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1087"/>
+        <location filename="../texamator.py" line="1088"/>
         <source>Set element name (AMC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1089"/>
         <source>New element...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18,7 +18,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1106"/>
+        <location filename="../texamator.py" line="1104"/>
         <source>New element</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36,24 +36,24 @@
         <translation>Opravdu chcete ukončit TeXamator?</translation>
     </message>
     <message>
-        <location filename="../ui_files/depthWarning.ui" line="40"/>
+        <location filename="../ui_files/wizard.ui" line="365"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../ui_files/depthWarning.ui" line="51"/>
+        <location filename="../ui_files/warning.ui" line="46"/>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="104"/>
+        <location filename="../texamator.py" line="109"/>
         <source>No exercise found</source>
-        <translation>Nebylo nalezeno žádné cvičení</translation>
+        <translation type="unfinished">Nebylo nalezeno žádné cvičení</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="106"/>
+        <location filename="../texamator.py" line="111"/>
         <source>1 exercise found</source>
-        <translation>Bylo nalezeno jedno cvičení</translation>
+        <translation type="unfinished">Bylo nalezeno jedno cvičení</translation>
     </message>
     <message>
         <location filename="../TeXamator.py" line="94"/>
@@ -116,12 +116,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Použít balíček &quot;preview&quot; (výchozí nastavení: ano)?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1034"/>
+        <location filename="../ui_files/preferences.ui" line="874"/>
         <source>Yes</source>
         <translation type="unfinished">Ano</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1044"/>
+        <location filename="../ui_files/preferences.ui" line="884"/>
         <source>No</source>
         <translation type="unfinished">Ne</translation>
     </message>
@@ -179,7 +179,7 @@ p, li { white-space: pre-wrap; }
         <translation>V jaké složce se nacházejí vaše soubory typu tex?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="239"/>
+        <location filename="../ui_files/preferences.ui" line="364"/>
         <source>Compilation</source>
         <translation>Sestavení</translation>
     </message>
@@ -207,9 +207,9 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Napište příkaz, a potom klepněte na tlačítko &quot;+&quot; pro jeho přidání</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="617"/>
+        <location filename="../ui_files/preferences.ui" line="513"/>
         <source>Header</source>
-        <translation>Záhlaví</translation>
+        <translation type="obsolete">Záhlaví</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="627"/>
@@ -222,12 +222,12 @@ p, li { white-space: pre-wrap; }
         <translation>Povšimněte si, že \begin{document} se zde nemusí objevit.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="679"/>
+        <location filename="../ui_files/preferences.ui" line="239"/>
         <source>Tags</source>
         <translation>Makra</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="690"/>
+        <location filename="../ui_files/preferences.ui" line="250"/>
         <source>Set up the tags you use for your exercises</source>
         <translation>Nastavte makra, která používáte pro svá cvičení</translation>
     </message>
@@ -242,14 +242,14 @@ p, li { white-space: pre-wrap; }
         <translation>Který příkaz následuje po cvičení?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="793"/>
+        <location filename="../ui_files/preferences.ui" line="353"/>
         <source>TeXamator needs to know how to extract exercises from your .tex files.</source>
         <translation>TeXamator potřebuje znát způsob, jakým vyjadřujete svá cvičení - jakým způsobem má cvičení vytáhnout z vašich souborů .tex.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="804"/>
+        <location filename="../ui_files/preferences.ui" line="700"/>
         <source>Generating files</source>
-        <translation>Vytvoření souborů</translation>
+        <translation type="obsolete">Vytvoření souborů</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="517"/>
@@ -274,7 +274,7 @@ exercises, including \begin{document}.</source>
 cvičeními, včetně \begin{document}.</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="882"/>
+        <location filename="../ui_files/preferences.ui" line="716"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
@@ -410,12 +410,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;z vašich souborů tex, který obsahuje cvičení, a klepněte na tlačítko &quot;Další&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="88"/>
+        <location filename="../ui_files/wizard.ui" line="188"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
         <translation>TeXamator našel tato makra. Můžete přidat nebo smazat makra ze seznamu.</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="77"/>
+        <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
         <translation>TeXamator použije toto záhlaví pokaždé, když bude sestavovat souborr .tex.</translation>
     </message>
@@ -438,18 +438,18 @@ p, li { white-space: pre-wrap; }
         <location filename="../partielatormods/guis/guiwizardplus.py" line="81"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
-        <translation>TeXamatoru se v souboru, který jste zadal, nepodařilo nalézt záhlaví. Neváhejte změnít výchozí záhlaví: bude se používat při sestavování všech vašich souborů .tex.</translation>
+        <translation type="obsolete">TeXamatoru se v souboru, který jste zadal, nepodařilo nalézt záhlaví. Neváhejte změnít výchozí záhlaví: bude se používat při sestavování všech vašich souborů .tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="97"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
-        <translation>TeXamatoru se nepodařilo najít vámi používaná makra.
+        <translation type="obsolete">TeXamatoru se nepodařilo najít vámi používaná makra.
 Přidejte je, prosím, aby TeXamator mohl pracovat, ručně.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="108"/>
+        <location filename="../texamator.py" line="113"/>
         <source>exercises found</source>
-        <translation>nalezená cvičení</translation>
+        <translation type="unfinished">nalezená cvičení</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="327"/>
@@ -458,7 +458,7 @@ Přidejte je, prosím, aby TeXamator mohl pracovat, ručně.</translation>
         <translation type="obsolete">Zde můžete nastavit způsob, kterým jsou soubory sestavovány na pozadí. !file je zkratkou pro /tmp/partielator/file. Nejste-li si jistý, ponechte výchozí nastavení. Nápověda po internetu je dostupná zde (v angličtině):</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="994"/>
+        <location filename="../ui_files/preferences.ui" line="834"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -471,9 +471,9 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="810"/>
+        <location filename="../ui_files/preferences.ui" line="706"/>
         <source>Here, you can set up the way files are generated when you click the &quot;export&quot; button. For example, you could add an &quot;Exercise sheet&quot; config and another one, say &quot;Exam&quot;. Add as many configs as you want.</source>
-        <translation>Zde můžete určit způsob, jakým jsou cvičení vytvářena, když klepnete na tlačítko &quot;Vytvořit&quot;. Například byste mohl přidat nastavenír une configuration &quot;List se cvičením&quot;, a další, řekněme &quot;Zkouška&quot;, atd... Přidejte si tolik nastavení, kolik chcete.</translation>
+        <translation type="obsolete">Zde můžete určit způsob, jakým jsou cvičení vytvářena, když klepnete na tlačítko &quot;Vytvořit&quot;. Například byste mohl přidat nastavenír une configuration &quot;List se cvičením&quot;, a další, řekněme &quot;Zkouška&quot;, atd... Přidejte si tolik nastavení, kolik chcete.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="615"/>
@@ -507,45 +507,45 @@ using the compilation sequence in the preferences menu.</source>
     <message>
         <location filename="../ui_files/preferences.ui" line="587"/>
         <source>&amp;Yes</source>
-        <translation>&amp;Ano</translation>
+        <translation type="obsolete">&amp;Ano</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="597"/>
         <source>&amp;No</source>
-        <translation>&amp;Ne</translation>
+        <translation type="obsolete">&amp;Ne</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="652"/>
+        <location filename="../ui_files/preferences.ui" line="548"/>
         <source>Footer</source>
-        <translation>Zápatí</translation>
+        <translation type="obsolete">Zápatí</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="661"/>
+        <location filename="../ui_files/preferences.ui" line="557"/>
         <source>This is the footer used by TeXamator to compile your .tex files.</source>
-        <translation>Toto je zápatí, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex).</translation>
+        <translation type="obsolete">Toto je zápatí, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex).</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="849"/>
+        <location filename="../ui_files/preferences.ui" line="683"/>
         <source>Set here what you want to appear before your exercises</source>
         <translation>Zde napište, co se má objevovat před vašimi cvičeními</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="865"/>
+        <location filename="../ui_files/preferences.ui" line="699"/>
         <source>New Config</source>
         <translation>Nové nastavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="923"/>
+        <location filename="../ui_files/preferences.ui" line="763"/>
         <source>Set here what you want to appear after your exercises</source>
         <translation>Zde napište, co se má objevovat za vašimi cvičeními</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="329"/>
+        <location filename="../ui_files/preferences.ui" line="454"/>
         <source>If you want, you can create your own compile sequence</source>
         <translation>Pokud chcete, můžete vytvořit vlastní řadu příkazů pro překladač</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="822"/>
+        <location filename="../ui_files/preferences.ui" line="656"/>
         <source>Select a config name</source>
         <translation>Vyberte název nastavení</translation>
     </message>
@@ -570,7 +570,7 @@ using the compilation sequence in the preferences menu.</source>
         <translation>Vyberte řadu příkazů pro překladač</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="296"/>
+        <location filename="../ui_files/preferences.ui" line="421"/>
         <source>Select the config to use (and edit it if you want to)</source>
         <translation>Vyberte nastavení (a upravte je, chcete-li)</translation>
     </message>
@@ -580,9 +580,9 @@ using the compilation sequence in the preferences menu.</source>
         <translation type="obsolete">Jaký prohlížeč dokumentů chcete používat v programu?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="623"/>
+        <location filename="../ui_files/preferences.ui" line="519"/>
         <source>This is the header used by TeXamator to compile your .tex files. You can include \begin{document} if you want.</source>
-        <translation>Toto je záhlaví, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex). Můžete zahrnout \begin{document}, chcete-li.</translation>
+        <translation type="obsolete">Toto je záhlaví, které bude TeXamator používat při sestavování vašich dokumentů (soubory .tex). Můžete zahrnout \begin{document}, chcete-li.</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="33"/>
@@ -625,23 +625,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;prostřednictvím elektronické pošty: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="251"/>
-        <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/preferences.ui" line="387"/>
+        <location filename="../ui_files/preferences.ui" line="512"/>
         <source>Write a command and click the + button to add it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/preferences.ui" line="513"/>
-        <source>What type of file does this sequence generate?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/preferences.ui" line="567"/>
-        <source>Do you want to use the preview package with it (default : no) ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -655,17 +640,17 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="945"/>
+        <location filename="../ui_files/preferences.ui" line="785"/>
         <source>AMC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="951"/>
+        <location filename="../ui_files/preferences.ui" line="791"/>
         <source>TeXamator can help you build multiple choices tests with AMC :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="967"/>
+        <location filename="../ui_files/preferences.ui" line="807"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -674,67 +659,82 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="978"/>
+        <location filename="../ui_files/preferences.ui" line="818"/>
         <source>For more information, especially on how to configure this tab and make AMC compatible with TeXamator, please visit :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1014"/>
+        <location filename="../ui_files/preferences.ui" line="854"/>
         <source>Do you want to enable this feature ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1058"/>
+        <location filename="../ui_files/preferences.ui" line="898"/>
         <source>What is the name of the corresponding environment?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1078"/>
+        <location filename="../ui_files/preferences.ui" line="918"/>
         <source>qcm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1094"/>
-        <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Generating files&quot; tab.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui_files/preferences.ui" line="1106"/>
+        <location filename="../ui_files/preferences.ui" line="946"/>
         <source>What text do you want to use ? </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="1126"/>
+        <location filename="../ui_files/preferences.ui" line="966"/>
         <source>%AMC-stuff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/depthWarning.ui" line="20"/>
-        <source>Warning</source>
+        <location filename="../ui_files/preferences.ui" line="376"/>
+        <source>Here you can set up the way LaTeX is called to preview exercises. TeXamator will try to show &quot;file.pdf&quot; after running the following commands. Help is available online here :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/depthWarning.ui" line="30"/>
-        <source>You are trying to add (at least) an entire folder to your project. This might take some time. Do you want to continue?</source>
+        <location filename="../ui_files/preferences.ui" line="638"/>
+        <source>Preamble-postamble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="644"/>
+        <source>Here, you can set up preambles and postambles used to preview exercises as well as when you click the &quot;export&quot; button.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="934"/>
+        <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="372"/>
-        <source>Pick a folder</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="297"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="244"/>
         <source>You are about to delete the compile sequence : </source>
-        <translation>Chystáte se smazat řadu příkazů pro překladač: </translation>
+        <translation type="unfinished">Chystáte se smazat řadu příkazů pro překladač: </translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="400"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="319"/>
         <source>You are about to delete the config : </source>
-        <translation>Chystáte se smazat nastavení: </translation>
+        <translation type="unfinished">Chystáte se smazat nastavení: </translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="294"/>
+        <source>Pick a folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1197"/>
+        <source>Exercise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../texamator.py" line="1197"/>
+        <source>Element (AMC)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -745,180 +745,195 @@ p, li { white-space: pre-wrap; }
         <translation>TeXamator</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="65"/>
+        <location filename="../ui_files/guigui.ui" line="55"/>
         <source>Folder in which TeXamator should look for exercices</source>
         <translation>Složka, ve které by měl TeXamator hledat cvičení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="96"/>
+        <location filename="../ui_files/guigui.ui" line="86"/>
         <source>Browse</source>
         <translation>Procházet</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="119"/>
+        <location filename="../ui_files/guigui.ui" line="109"/>
         <source>Look for exercices !</source>
         <translation>Hledat cvičení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="157"/>
+        <location filename="../ui_files/guigui.ui" line="159"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="167"/>
+        <location filename="../ui_files/guigui.ui" line="172"/>
         <source>Search</source>
         <translation>Hledání</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="439"/>
+        <location filename="../ui_files/guigui.ui" line="471"/>
         <source>Edit</source>
         <translation>Úpravy</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="242"/>
+        <location filename="../ui_files/guigui.ui" line="253"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="482"/>
+        <location filename="../ui_files/guigui.ui" line="519"/>
         <source>Export</source>
         <translation>Vytvořit</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="430"/>
+        <location filename="../ui_files/guigui.ui" line="462"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="467"/>
+        <location filename="../ui_files/guigui.ui" line="505"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="491"/>
+        <location filename="../ui_files/guigui.ui" line="528"/>
         <source>Generate Exam</source>
         <translation>Vytvořit cvičení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="500"/>
+        <location filename="../ui_files/guigui.ui" line="537"/>
         <source>Quit</source>
         <translation>Ukončit</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="509"/>
+        <location filename="../ui_files/guigui.ui" line="546"/>
         <source>Preferences</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="518"/>
+        <location filename="../ui_files/guigui.ui" line="555"/>
         <source>About ...</source>
         <translation>O programu...</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="527"/>
+        <location filename="../ui_files/guigui.ui" line="564"/>
         <source>Pick exercises randomly</source>
         <translation>Vybrat cvičení náhodně</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="539"/>
+        <location filename="../ui_files/guigui.ui" line="576"/>
         <source>Edit exercise</source>
         <translation>Upravit cvičení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="551"/>
+        <location filename="../ui_files/guigui.ui" line="588"/>
         <source>Expand/Collapse</source>
         <translation>Rozbalit/Složit</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="560"/>
+        <location filename="../ui_files/guigui.ui" line="597"/>
         <source>Start Wizard</source>
         <translation>Spustit průvodce</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="443"/>
+        <location filename="../ui_files/guigui.ui" line="475"/>
         <source>Choose language</source>
         <translation>Vybrat jazyk</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="565"/>
+        <location filename="../ui_files/guigui.ui" line="602"/>
         <source>English</source>
         <translation>Angličtina</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="570"/>
+        <location filename="../ui_files/guigui.ui" line="607"/>
         <source>French</source>
         <translation>Francouzština</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="575"/>
+        <location filename="../ui_files/guigui.ui" line="612"/>
         <source>Czech</source>
         <translation>Čeština</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="580"/>
+        <location filename="../ui_files/guigui.ui" line="617"/>
         <source>Ukrainian</source>
         <translation>Ukrajinština</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="383"/>
+        <location filename="../ui_files/guigui.ui" line="412"/>
         <source>Re-run LaTeX</source>
         <translation>Přeložit znovu (LaTeX)</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="585"/>
+        <location filename="../ui_files/guigui.ui" line="622"/>
         <source>German</source>
         <translation>Němčina</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="453"/>
+        <location filename="../ui_files/guigui.ui" line="485"/>
         <source>Compilation</source>
         <translation>Sestavení</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="590"/>
+        <location filename="../ui_files/guigui.ui" line="627"/>
         <source>m</source>
         <translation>m</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="202"/>
+        <location filename="../ui_files/guigui.ui" line="210"/>
         <source>Exercise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="598"/>
+        <location filename="../ui_files/guigui.ui" line="635"/>
         <source>Shuffle list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="159"/>
+        <source>Exercise list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="490"/>
+        <source>Preamble</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="640"/>
+        <source>a</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1062"/>
+        <location filename="../texamator.py" line="1063"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1065"/>
+        <location filename="../texamator.py" line="1066"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1067"/>
+        <location filename="../texamator.py" line="1068"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1069"/>
+        <location filename="../texamator.py" line="1070"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1071"/>
+        <location filename="../texamator.py" line="1072"/>
         <source>Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1073"/>
+        <location filename="../texamator.py" line="1074"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
@@ -926,55 +941,54 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1037"/>
+        <location filename="../texamator.py" line="1038"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1040"/>
+        <location filename="../texamator.py" line="1041"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1042"/>
+        <location filename="../texamator.py" line="1043"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>dialog</name>
+    <name>Wizard</name>
     <message>
-        <location filename="../ui_files/exportAMC.ui" line="20"/>
-        <source>AMC export</source>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="20"/>
+        <source>It looks like it is the first time you use TeXamator on this computer !</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui_files/exportAMC.ui" line="66"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Zrušit</translation>
-    </message>
-    <message>
-        <location filename="../ui_files/exportAMC.ui" line="77"/>
-        <source>Ok</source>
-        <translation type="unfinished">OK</translation>
-    </message>
-    <message>
-        <location filename="../ui_files/exportAMC.ui" line="96"/>
-        <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>table</name>
-    <message>
-        <location filename="../texamator.py" line="1198"/>
-        <source>Exercise</source>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="67"/>
+        <source>Pick a file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1199"/>
-        <source>Element (AMC)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="77"/>
+        <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
+        <translation type="unfinished">TeXamator použije toto záhlaví pokaždé, když bude sestavovat souborr .tex.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="79"/>
+        <source>TeXamator couldn&apos;t find a header in the file you gave.
+Feel free to modify the default header : it will be used to compile .tex files.</source>
+        <translation type="unfinished">TeXamatoru se v souboru, který jste zadal, nepodařilo nalézt záhlaví. Neváhejte změnít výchozí záhlaví: bude se používat při sestavování všech vašich souborů .tex.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="85"/>
+        <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
+        <translation type="unfinished">TeXamator našel tato makra. Můžete přidat nebo smazat makra ze seznamu.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
+        <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
+        <translation type="unfinished">TeXamatoru se nepodařilo najít vámi používaná makra.
+Přidejte je, prosím, aby TeXamator mohl pracovat, ručně.</translation>
     </message>
 </context>
 </TS>

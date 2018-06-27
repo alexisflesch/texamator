@@ -22,36 +22,26 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="2">
-     <widget class="QLabel" name="label_3">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap/>
-      </property>
-      <property name="scaledContents">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
      <widget class="QSplitter" name="big_splitter">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
+      <property name="handleWidth">
+       <number>6</number>
+      </property>
       <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="margin">
+         <number>0</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <property name="sizeConstraint">
            <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <property name="margin">
+           <number>0</number>
           </property>
           <item>
            <widget class="QLabel" name="label">
@@ -136,11 +126,23 @@
         </item>
         <item>
          <widget class="QSplitter" name="little_splitter">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
+          <property name="handleWidth">
+           <number>6</number>
+          </property>
           <widget class="QWidget" name="layoutWidget">
            <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="margin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QTreeWidget" name="treeWidget">
               <property name="horizontalScrollBarPolicy">
@@ -154,13 +156,16 @@
               </property>
               <column>
                <property name="text">
-                <string>1</string>
+                <string>Exercise list</string>
                </property>
               </column>
              </widget>
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="margin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QLabel" name="label_search">
                 <property name="text">
@@ -177,6 +182,9 @@
           </widget>
           <widget class="QWidget" name="layoutWidget">
            <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="margin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QTableWidget" name="tableWidget">
               <property name="autoFillBackground">
@@ -206,6 +214,9 @@
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="margin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QPushButton" name="pushButton_edit">
                 <property name="enabled">
@@ -251,6 +262,9 @@
             </item>
             <item>
              <layout class="QHBoxLayout">
+              <property name="margin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QPushButton" name="button_remove">
                 <property name="enabled">
@@ -330,47 +344,62 @@
       </widget>
       <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_6">
+        <property name="margin">
+         <number>0</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
           </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item>
-           <layout class="QHBoxLayout">
-            <item>
-             <layout class="QHBoxLayout" name="_2">
-              <item>
-               <widget class="QScrollArea" name="okularlayout">
-                <property name="sizeIncrement">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="widgetResizable">
-                 <bool>true</bool>
-                </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>684</width>
-                   <height>864</height>
-                  </rect>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_2"/>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
+           <widget class="QScrollArea" name="pdfScrollArea">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Panel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="lineWidth">
+             <number>2</number>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOn</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>681</width>
+               <height>904</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
           </item>
          </layout>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QPushButton" name="button_recompile">
             <property name="sizePolicy">
@@ -388,6 +417,9 @@
            <spacer>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::MinimumExpanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -453,9 +485,15 @@
       <string>Compilation</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuPreamble">
+     <property name="title">
+      <string>Preamble</string>
+     </property>
+    </widget>
     <addaction name="actionStart_Wizard"/>
     <addaction name="actionPrefs"/>
     <addaction name="menuCompilation"/>
+    <addaction name="menuPreamble"/>
     <addaction name="actionEdit_exercise"/>
     <addaction name="actionExpand_Collapse"/>
     <addaction name="actionShuffle_list"/>
@@ -472,7 +510,6 @@
    <addaction name="menuEdition"/>
    <addaction name="menuAide"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExport">
    <property name="icon">
     <iconset resource="icones.qrc">
@@ -596,6 +633,11 @@
    </property>
    <property name="text">
     <string>Shuffle list</string>
+   </property>
+  </action>
+  <action name="actionA">
+   <property name="text">
+    <string>a</string>
    </property>
   </action>
  </widget>
