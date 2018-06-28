@@ -21,10 +21,9 @@ except AttributeError:
 
 
 class MonApplication(Ui_MainWindow):
-    resized = QtCore.pyqtSignal()
     
     def __init__(self, settings):
-        #super(Ui_MainWindow, self).__init__()
+        super(Ui_MainWindow, self).__init__()
         self.first_time, self.tags, self.settings, self.compile_seq, self.preamblesPostambles = settings
         #self.first_time, self.tags, self.header, self.footer, self.settings, self.compile_seq, self.generate = settings
         self.treeTeX = False
@@ -1145,22 +1144,21 @@ class MonApplication(Ui_MainWindow):
     ######################### CREATING THE PDF WIDGET ##################
     def initiatePdf(self):
         """Creates the pdf Area and loads the help.pdf file into it"""
-        self.pdfScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.pdfScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.pdfScrollArea.setWidgetResizable(True)
         self.pdfScrollBar = self.pdfScrollArea.verticalScrollBar()
         w = int(self.settings["big_splitter_s2"])
-        #self.pdfWidgetContainer = myQWidget()
-        #self.pdfWidgetContainer.resized.connect(self.repaintPdf)
-        self.pdfWidgetContainer = DelayedUpdater(self.repaintPdf)
+        self.pdfWidgetContainer = QtWidgets.QWidget()
+        self.pdfScrollArea.fun = self.repaintPdf
         self.pdfScrollArea.setWidget(self.pdfWidgetContainer)
         self.pdfWidgetContainer.setStyleSheet("background-color:white;")
-        self.pdfwidget = PDFWidget(None,parent=self.pdfWidgetContainer, width=w)
+        self.pdfwidget = PDFWidget(None,parent=self.pdfWidgetContainer, width=w-1)
+        #Initiate horizontal scroll bar to be notified when pdfscrollArea is shrinked
+        self.pdfScrollBarh = self.pdfScrollArea.horizontalScrollBar()
 
     
     def repaintPdf(self):
         #Recalculate size of the pdf and repaint
-        w = self.big_splitter.sizes()[1]-self.pdfScrollBar.width()-1
+        w = self.big_splitter.sizes()[1]-self.pdfScrollBar.width()-4
         self.pdfwidget.repaint(w)
         
         

@@ -3,22 +3,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Set element name (AMC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1089"/>
+        <location filename="../texamator.py" line="1088"/>
         <source>New element...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1103"/>
+        <location filename="../texamator.py" line="1102"/>
         <source>Enter the new element name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1104"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>New element</source>
         <translation type="unfinished"></translation>
     </message>
@@ -417,17 +417,17 @@ using the compilation sequence in the preferences menu.</source>
 файл буде створено на основі команд, вказаний у меню налаштування.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="109"/>
+        <location filename="../texamator.py" line="108"/>
         <source>No exercise found</source>
         <translation type="unfinished">Не знайдено жодної вправи</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="111"/>
+        <location filename="../texamator.py" line="110"/>
         <source>1 exercise found</source>
         <translation type="unfinished">Знайдено 1 вправу</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="113"/>
+        <location filename="../texamator.py" line="112"/>
         <source>exercises found</source>
         <translation type="unfinished">вправ знайдено</translation>
     </message>
@@ -678,12 +678,12 @@ Also, please note that a few functionalities of TeXamator have changed :
         <translation type="unfinished">Вкажіть теку</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1197"/>
+        <location filename="../texamator.py" line="1195"/>
         <source>Exercise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1197"/>
+        <location filename="../texamator.py" line="1195"/>
         <source>Element (AMC)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -869,32 +869,32 @@ Also, please note that a few functionalities of TeXamator have changed :
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1063"/>
+        <location filename="../texamator.py" line="1062"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1066"/>
+        <location filename="../texamator.py" line="1065"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1068"/>
+        <location filename="../texamator.py" line="1067"/>
         <source>Move up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1070"/>
+        <location filename="../texamator.py" line="1069"/>
         <source>Move down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1072"/>
+        <location filename="../texamator.py" line="1071"/>
         <source>Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1074"/>
+        <location filename="../texamator.py" line="1073"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
@@ -902,17 +902,17 @@ Also, please note that a few functionalities of TeXamator have changed :
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1038"/>
+        <location filename="../texamator.py" line="1037"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1041"/>
+        <location filename="../texamator.py" line="1040"/>
         <source>Add</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1043"/>
+        <location filename="../texamator.py" line="1042"/>
         <source>Edit...</source>
         <translation type="unfinished"></translation>
     </message>

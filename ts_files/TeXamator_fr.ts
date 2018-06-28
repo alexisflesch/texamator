@@ -3,22 +3,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Set element name (AMC)</source>
         <translation>Changer l&apos;élément (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1089"/>
+        <location filename="../texamator.py" line="1088"/>
         <source>New element...</source>
         <translation>Nouvel élément...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1103"/>
+        <location filename="../texamator.py" line="1102"/>
         <source>Enter the new element name</source>
         <translation>Entrez le nom du nouvel élément</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1104"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>New element</source>
         <translation>Nouvel élément</translation>
     </message>
@@ -46,12 +46,12 @@
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="109"/>
+        <location filename="../texamator.py" line="108"/>
         <source>No exercise found</source>
         <translation>Aucun exercice trouvé</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="111"/>
+        <location filename="../texamator.py" line="110"/>
         <source>1 exercise found</source>
         <translation>1 exercice trouvé</translation>
     </message>
@@ -448,7 +448,7 @@ l&apos;en-tête par défault : il sera utilisé pour compiler tous vos fichiers 
 Vous devez les ajouter-les manuellement pour que Partielator fonctionne.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="113"/>
+        <location filename="../texamator.py" line="112"/>
         <source>exercises found</source>
         <translation>exercices trouvés</translation>
     </message>
@@ -826,12 +826,12 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
         <translation>Vous êtes sur le point de supprimer la configuration : </translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1197"/>
+        <location filename="../texamator.py" line="1195"/>
         <source>Exercise</source>
         <translation>Exercice</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1197"/>
+        <location filename="../texamator.py" line="1195"/>
         <source>Element (AMC)</source>
         <translation>Élément (AMC)</translation>
     </message>
@@ -1007,32 +1007,32 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1063"/>
+        <location filename="../texamator.py" line="1062"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1066"/>
+        <location filename="../texamator.py" line="1065"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1068"/>
+        <location filename="../texamator.py" line="1067"/>
         <source>Move up</source>
         <translation>Déplacer vers le haut</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1070"/>
+        <location filename="../texamator.py" line="1069"/>
         <source>Move down</source>
         <translation>Déplacer vers le bas</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1072"/>
+        <location filename="../texamator.py" line="1071"/>
         <source>Shuffle</source>
         <translation>Mélanger</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1074"/>
+        <location filename="../texamator.py" line="1073"/>
         <source>Remove</source>
         <translation>Supprimer</translation>
     </message>
@@ -1040,17 +1040,17 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1038"/>
+        <location filename="../texamator.py" line="1037"/>
         <source>Copy to clipboard</source>
         <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1041"/>
+        <location filename="../texamator.py" line="1040"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1043"/>
+        <location filename="../texamator.py" line="1042"/>
         <source>Edit...</source>
         <translation>Éditer...</translation>
     </message>

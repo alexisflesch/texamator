@@ -15,6 +15,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from popplerqt5 import Poppler
 
 
+
 class DelayedUpdater(QtWidgets.QWidget):
     #https://stackoverflow.com/questions/13552345/how-to-disable-multiple-auto-redrawing-at-resizing-widgets-in-pyqt
     def __init__(self, fun=None):

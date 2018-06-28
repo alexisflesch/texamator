@@ -10,3 +10,4 @@
     | maybe keep only one tab in the preferences and add something in the menu to select the preamble/postamble to compile inside TeXamator.
     | add two settings : preferred preamble inside TeXamator, preferred preamble for exportation
 - Create a help.pdf file to show on startup
+- Rework on resizing and updating the pdf

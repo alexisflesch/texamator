@@ -12,7 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(1622, 1024)
+        MainWindow.resize(998, 566)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/all/icones/TeXamator.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -195,7 +195,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.pdfScrollArea = QtWidgets.QScrollArea(self.layoutWidget3)
+        self.pdfScrollArea = QVScrollArea(self.layoutWidget3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -208,7 +208,7 @@ class Ui_MainWindow(object):
         self.pdfScrollArea.setWidgetResizable(True)
         self.pdfScrollArea.setObjectName("pdfScrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 681, 904))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 402, 471))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.pdfScrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout_4.addWidget(self.pdfScrollArea)
@@ -236,7 +236,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.big_splitter, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1622, 43))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 998, 27))
         self.menubar.setObjectName("menubar")
         self.menuFichier = QtWidgets.QMenu(self.menubar)
         self.menuFichier.setObjectName("menuFichier")
@@ -373,6 +373,7 @@ class Ui_MainWindow(object):
         self.actionShuffle_list.setText(_translate("MainWindow", "Shuffle list"))
         self.actionA.setText(_translate("MainWindow", "a"))
 
+from partielatormods.other.qvscrollarea import QVScrollArea
 from . import icones_rc
 
 if __name__ == "__main__":

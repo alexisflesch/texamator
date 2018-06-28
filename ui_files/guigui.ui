@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1622</width>
-    <height>1024</height>
+    <width>998</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -359,7 +359,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QScrollArea" name="pdfScrollArea">
+           <widget class="QVScrollArea" name="pdfScrollArea">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -386,8 +386,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>681</width>
-               <height>904</height>
+               <width>402</width>
+               <height>471</height>
               </rect>
              </property>
             </widget>
@@ -453,8 +453,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1622</width>
-     <height>43</height>
+     <width>998</width>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">
@@ -641,6 +641,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header location="global">partielatormods/other/qvscrollarea</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="icones.qrc"/>
  </resources>
