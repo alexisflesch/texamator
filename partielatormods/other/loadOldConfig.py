@@ -38,7 +38,8 @@ def fileToDict(fichier, defautDict):
         line = line.strip()
         if line and line[0] != "#":
             values = line.split("=")
-            ret[values[0]] = values[1].replace('\"','')
+            if values[1] != "Old computer (dvi no okular)":
+                ret[values[0]] = values[1].replace('\"','')
     return ret
 
 def fileToTagList(fichier, defautList):
