@@ -38,7 +38,7 @@ def fileToDict(fichier, defautDict):
         line = line.strip()
         if line and line[0] != "#":
             values = line.split("=")
-            if values[1] != "Old computer (dvi no okular)":
+            if values[1] != "Old computer (dvi no okular)" and values[1]=="Alternative (latex)":
                 ret[values[0]] = values[1].replace('\"','')
     return ret
 
