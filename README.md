@@ -19,10 +19,10 @@ Please note that you now NEED to produce a pdf in order for TeXamator to preview
 
 You need the following to run this programm :
 - latex
-- python3-pyqt4
+- python3-pyqt5
 - python3-poppler-qt5
 
-To launch the programm you can double-click on the file "texamator.py" or open a shell,
+To launch the program you can double-click on the file "texamator.py" or open a shell,
 hop to the directory and type "python texamator.py". This last method is preferred
 because it will let you see LaTeX running in the background and catch errors.
 
