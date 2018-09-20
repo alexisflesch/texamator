@@ -72,7 +72,7 @@ def update_header(self, text):
 
 
 def save(self, tex_code, MainWindow):
-    fileName = QtWidgets.QFileDialog.getSaveFileName(MainWindow,"Save",
+    fileName, _ = QtWidgets.QFileDialog.getSaveFileName(MainWindow,"Save",
                     os.path.join(self.settings["save_location"],"exam.tex"),
                     "TeX files (*.tex);;All files (*.*)")
     if fileName:
