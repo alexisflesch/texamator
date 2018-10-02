@@ -1146,19 +1146,19 @@ class MonApplication(Ui_MainWindow):
         """Creates the pdf Area and loads the help.pdf file into it"""
         self.pdfScrollArea.setWidgetResizable(True)
         self.pdfScrollBar = self.pdfScrollArea.verticalScrollBar()
-        w = int(self.settings["big_splitter_s2"])
+        w = int(self.settings["big_splitter_s2"])-1
         self.pdfWidgetContainer = QtWidgets.QWidget()
         self.pdfScrollArea.fun = self.repaintPdf
         self.pdfScrollArea.setWidget(self.pdfWidgetContainer)
         self.pdfWidgetContainer.setStyleSheet("background-color:white;")
-        self.pdfwidget = PDFWidget(None,parent=self.pdfWidgetContainer, width=w-1)
+        self.pdfwidget = PDFWidget(None, parent=self.pdfWidgetContainer, width=w-30)
         #Initiate horizontal scroll bar to be notified when pdfscrollArea is shrinked
         self.pdfScrollBarh = self.pdfScrollArea.horizontalScrollBar()
 
     
     def repaintPdf(self):
         #Recalculate size of the pdf and repaint
-        w = self.big_splitter.sizes()[1]-self.pdfScrollBar.width()-4
+        w = self.big_splitter.sizes()[1]-self.pdfScrollBar.width()-1
         self.pdfwidget.repaint(w)
         
         

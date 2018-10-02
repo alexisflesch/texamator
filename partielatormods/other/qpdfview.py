@@ -82,6 +82,7 @@ class PDFWidget(QVBoxLayout):
             foo = QLabel()
             foo.setPixmap(pixmap)
             self.addWidget(foo)
+            self.setAlignment(foo, QtCore.Qt.AlignCenter)
     
     def clearLayout(layout):
         """Function to clear self (which is a layout) of all its child widgets"""
@@ -121,6 +122,7 @@ class PDFWidget(QVBoxLayout):
         #add new QLabels to self (which is a layout)
         for f in foo:
             self.addWidget(f)
+            self.setAlignment(f, QtCore.Qt.AlignCenter)
 
     
     def createPdf(self, filename):
