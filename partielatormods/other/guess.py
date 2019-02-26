@@ -58,5 +58,5 @@ def get_tags_header(d):
 
 if __name__ == "__main__":
     tags, header = get_tags_header("/home/snouffy/Documents/enseignement/ro/poly/ro.tex")
-    print tags
-    print header
+    print(tags)
+    print(header)

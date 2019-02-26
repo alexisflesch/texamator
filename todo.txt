@@ -1,42 +1,13 @@
-- Fix the "add random exercises" function -> done.
-- Add a "shuffle list" feature -> done
-- Fix bug when adding a compile sequence -> done
-- Fix the "search" feature when reloading the tree (automatically refresh) -> done
-
-- Simplify the compile sequence : get rid of /tmp/partielator by using os.chdir("/tmp/partielator") -> done
-- Switch the old default (dvipng) to okular -> done
-- Write in guiprefsplus that "preview" should not be used by default -> done
-- Write in guiprefsplus that "okular" should be used by default -> done
-- Possibility to edit an exercise on the main treeWidget (and save changes to disk) -> done
-- When adding random exercises : send signal that the list is not empty anymore (to enable different actions) -> done
-- Show a warning when trying to add (at least) an entire folder -> done
-- automatically switch between okular and embedded viewer when compilation method has changed -> done
-- Remember size of the edit exercise window -> done
-- add a "QDelete" filter on tableWidget connected to the remove_exercises function -> done
-
-- Modify compile tab so that a compile configuration is:
-   | - a compile sequence
-   | - a file type (pdf, dvi, ps or png)
-   | - the possibility to use the preview package
-    -> done
-
-- Modify the export window -> done
-- Add AMC feature -> done
-- Write a script to modify .tex files containing \element{}{...} -> done (separate github repo)
-
+- Change .partielator dir to .texamator and re-organize it -> done
+- Rewrite how settings are saved : -> done
+    | simplify compile sequence which is outdated
+    | remove checks on .partielator dir
 - add a "QCut" feature?
 - add an "Undo" feature?
-
-
 - When shuffling the entire list : keep selection (cosmetic change)     
-
 - Update documentation on compile sequence
-
-
-
-- 2to3
-
-
-
-
-
+- Rethink the preambles/postamble : -> done
+    | maybe keep only one tab in the preferences and add something in the menu to select the preamble/postamble to compile inside TeXamator.
+    | add two settings : preferred preamble inside TeXamator, preferred preamble for exportation
+- Create a help.pdf file to show on startup
+- Rework on resizing and updating the pdf -> done

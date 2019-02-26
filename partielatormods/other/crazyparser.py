@@ -13,12 +13,12 @@ def contientExos(root,fichier_sans_root,balises1,balises2):
             hop = f.readlines()
             f.close()
         except:
-            print "Couldn't open" + fichier
+            print("Couldn't open" + fichier)
             return []
         enregistrer = False
         for ligne in hop:
             for balise in balises1:
-                if balise.encode("utf-8") in ligne.split("%")[0]:
+                if balise in ligne.split("%")[0]:
                     enregistrer = True
                     exos.append("")
             if enregistrer:
@@ -33,7 +33,7 @@ def contientExos(root,fichier_sans_root,balises1,balises2):
                             ligne = ligne.replace(a,os.path.join(root,a))
                 exos[-1] += ligne
             for balise in balises2:
-                if balise.encode("utf-8") in ligne.split("%")[0]:
+                if balise in ligne.split("%")[0]:
                     enregistrer = False
     return exos
 
@@ -108,4 +108,4 @@ def smart_cut(search):
 
 if __name__ == "__main__":
     a = 'matrices -'
-    print smart_cut(a)
+    print(smart_cut(a))

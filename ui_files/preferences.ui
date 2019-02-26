@@ -20,7 +20,7 @@
    <string>Preferences</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="icones.qrc">
+   <iconset resource="../../texamator/ui_files/icones.qrc">
     <normaloff>:/all/icones/TeXamator.png</normaloff>:/all/icones/TeXamator.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
@@ -48,7 +48,7 @@
         <string>Cancel</string>
        </property>
        <property name="icon">
-        <iconset resource="icones.qrc">
+        <iconset resource="../../texamator/ui_files/icones.qrc">
          <normaloff>:/all/icones/cancel.png</normaloff>:/all/icones/cancel.png</iconset>
        </property>
       </widget>
@@ -59,7 +59,7 @@
         <string>Ok</string>
        </property>
        <property name="icon">
-        <iconset resource="icones.qrc">
+        <iconset resource="../../texamator/ui_files/icones.qrc">
          <normaloff>:/all/icones/apply.png</normaloff>:/all/icones/apply.png</iconset>
        </property>
       </widget>
@@ -159,7 +159,7 @@
             <string>Browse</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/folder.png</normaloff>:/all/icones/folder.png</iconset>
            </property>
            <property name="iconSize">
@@ -193,7 +193,7 @@
             <string>Browse</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/folder.png</normaloff>:/all/icones/folder.png</iconset>
            </property>
            <property name="iconSize">
@@ -234,6 +234,131 @@
       <zorder>verticalSpacer_3</zorder>
       <zorder></zorder>
      </widget>
+     <widget class="QWidget" name="tab3">
+      <attribute name="title">
+       <string>Tags</string>
+      </attribute>
+      <layout class="QGridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Set up the tags you use for your exercises</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <layout class="QGridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>What comes before an exercise ?</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>What comes after ?</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="lineEdit_tag1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_tag2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QListWidget" name="listWidget"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QPushButton" name="pushButton_add">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
+               <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_remove">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
+               <normaloff>:/all/icones/edit_remove.png</normaloff>:/all/icones/edit_remove.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>16</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>TeXamator needs to know how to extract exercises from your .tex files.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="tabcomp">
       <attribute name="title">
        <string>Compilation</string>
@@ -248,10 +373,10 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</string>
+          <string>Here you can set up the way LaTeX is called to preview exercises. TeXamator will try to show &quot;file.pdf&quot; after running the following commands. Help is available online here :</string>
          </property>
          <property name="textFormat">
-          <enum>Qt::RichText</enum>
+          <enum>Qt::AutoText</enum>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -355,7 +480,7 @@ p, li { white-space: pre-wrap; }
             <string>New Config</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
            </property>
           </widget>
@@ -366,7 +491,7 @@ p, li { white-space: pre-wrap; }
             <string>Delete</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/delete.png</normaloff>:/all/icones/delete.png</iconset>
            </property>
           </widget>
@@ -426,7 +551,7 @@ p, li { white-space: pre-wrap; }
               <string/>
              </property>
              <property name="icon">
-              <iconset resource="icones.qrc">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
                <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
              </property>
             </widget>
@@ -443,7 +568,7 @@ p, li { white-space: pre-wrap; }
               <string/>
              </property>
              <property name="icon">
-              <iconset resource="icones.qrc">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
                <normaloff>:/all/icones/edit_remove.png</normaloff>:/all/icones/edit_remove.png</iconset>
              </property>
             </widget>
@@ -473,7 +598,7 @@ p, li { white-space: pre-wrap; }
               <string/>
              </property>
              <property name="icon">
-              <iconset resource="icones.qrc">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
                <normaloff>:/all/icones/up.png</normaloff>:/all/icones/up.png</iconset>
              </property>
             </widget>
@@ -490,7 +615,7 @@ p, li { white-space: pre-wrap; }
               <string/>
              </property>
              <property name="icon">
-              <iconset resource="icones.qrc">
+              <iconset resource="../../texamator/ui_files/icones.qrc">
                <normaloff>:/all/icones/down.png</normaloff>:/all/icones/down.png</iconset>
              </property>
             </widget>
@@ -499,111 +624,7 @@ p, li { white-space: pre-wrap; }
          </item>
         </layout>
        </item>
-       <item row="7" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_14">
-         <item>
-          <widget class="QLabel" name="label_11">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>What type of file does this sequence generate?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_typeOfFile">
-           <item>
-            <property name="text">
-             <string notr="true">pdf</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">dvi</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">ps</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">png</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="8" column="0" colspan="2">
-        <layout class="QHBoxLayout" name="horizontalLayout_15">
-         <item>
-          <widget class="QLabel" name="label_22">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Do you want to use the preview package with it (default : no) ?</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_yes">
-           <property name="text">
-            <string>&amp;Yes</string>
-           </property>
-           <property name="checked">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_no">
-           <property name="text">
-            <string>&amp;No</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="9" column="1">
+       <item row="7" column="1">
         <widget class="Line" name="line_5">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -612,202 +633,15 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab2">
-      <attribute name="title">
-       <string>Header</string>
-      </attribute>
-      <layout class="QGridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>This is the header used by TeXamator to compile your .tex files. You can include \begin{document} if you want.</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QTextEdit" name="textEdit"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab21">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>1421</width>
-        <height>876</height>
-       </size>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <attribute name="title">
-       <string>Footer</string>
-      </attribute>
-      <layout class="QGridLayout" name="gridLayout_6">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_18">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="text">
-          <string>This is the footer used by TeXamator to compile your .tex files.</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QTextEdit" name="textEdit1">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab3">
-      <attribute name="title">
-       <string>Tags</string>
-      </attribute>
-      <layout class="QGridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Set up the tags you use for your exercises</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <layout class="QGridLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>What comes before an exercise ?</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>What comes after ?</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLineEdit" name="lineEdit_tag1">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_tag2">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="3" column="0">
-        <layout class="QHBoxLayout">
-         <item>
-          <widget class="QListWidget" name="listWidget"/>
-         </item>
-         <item>
-          <layout class="QVBoxLayout">
-           <item>
-            <widget class="QPushButton" name="pushButton_add">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset resource="icones.qrc">
-               <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_remove">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset resource="icones.qrc">
-               <normaloff>:/all/icones/edit_remove.png</normaloff>:/all/icones/edit_remove.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer>
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>16</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>TeXamator needs to know how to extract exercises from your .tex files.</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QWidget" name="tabGenerate">
       <attribute name="title">
-       <string>Generating files</string>
+       <string>Preamble-postamble</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
         <widget class="QLabel" name="label_12">
          <property name="text">
-          <string>Here, you can set up the way files are generated when you click the &quot;export&quot; button. For example, you could add an &quot;Exercise sheet&quot; config and another one, say &quot;Exam&quot;. Add as many configs as you want.</string>
+          <string>Here, you can set up preambles and postambles used to preview exercises as well as when you click the &quot;export&quot; button.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -865,7 +699,7 @@ p, li { white-space: pre-wrap; }
             <string>New Config</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/edit_add.png</normaloff>:/all/icones/edit_add.png</iconset>
            </property>
           </widget>
@@ -882,7 +716,7 @@ p, li { white-space: pre-wrap; }
             <string>Delete</string>
            </property>
            <property name="icon">
-            <iconset resource="icones.qrc">
+            <iconset resource="../../texamator/ui_files/icones.qrc">
              <normaloff>:/all/icones/delete.png</normaloff>:/all/icones/delete.png</iconset>
            </property>
           </widget>
@@ -901,6 +735,9 @@ p, li { white-space: pre-wrap; }
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
+         <property name="handleWidth">
+          <number>6</number>
+         </property>
          <widget class="QTextEdit" name="textEdit_generate">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -917,6 +754,9 @@ p, li { white-space: pre-wrap; }
          </widget>
          <widget class="QWidget" name="layoutWidget">
           <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="margin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QLabel" name="label_20">
              <property name="text">
@@ -1091,7 +931,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QLabel" name="label_24">
          <property name="text">
-          <string>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Generating files&quot; tab.</string>
+          <string>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -1149,7 +989,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources>
-  <include location="icones.qrc"/>
+  <include location="../../texamator/ui_files/icones.qrc"/>
  </resources>
  <connections>
   <connection>

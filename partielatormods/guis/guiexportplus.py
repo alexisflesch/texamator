@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from PyQt4 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui, QtWidgets
 import os, codecs
-import guidepthwarning
+from . import guidepthwarning
 
+_translate = QtCore.QCoreApplication.translate
 
 def updateUi(self, MyHighlighter):
     #Geometry
@@ -15,10 +16,10 @@ def updateUi(self, MyHighlighter):
     self.ui_export.textEdit.setFont(self.myfont)
     #Set up highlighting
     self.highlighter3 = MyHighlighter(self.ui_export.textEdit)
-    #Populate header/footer comboBox and select preferred header/footer
-    for key in sorted(self.generate):
+    #Populate preamble comboBox and select preferred preamble for export
+    for key in sorted(self.preamblesPostambles):
         self.ui_export.comboBox_header.addItem(key,key)
-    num = self.ui_export.comboBox_header.findText(self.settings["preferred header/footer"])
+    num = self.ui_export.comboBox_header.findText(self.settings["preferred preamble for export"])
     self.ui_export.comboBox_header.setCurrentIndex(num)
     self.lastHeaderIndex = num
     #Populate Compilation sequence comboBox and select preferred compilation sequence
@@ -27,17 +28,15 @@ def updateUi(self, MyHighlighter):
     num = self.ui_export.comboBox_compile.findText(self.settings["preferred compile sequence for exportation"])
     self.ui_export.comboBox_compile.setCurrentIndex(num)
     #Copy tex code to the textEdit
-    value = self.settings["preferred header/footer"]
+    value = self.settings["preferred preamble for export"]
     self.sources = create_document(self, value)
     self.ui_export.textEdit.setText(self.sources)
     #Slots and signals
-    QtCore.QObject.connect(self.ui_export.comboBox_header,\
-                            QtCore.SIGNAL("currentIndexChanged(QString)"),self.update_header)
-    QtCore.QObject.connect(self.ui_export.comboBox_compile,\
-                            QtCore.SIGNAL("currentIndexChanged(QString)"),self.update_compile)
-    QtCore.QObject.connect(self.ui_export.pushButton_source,QtCore.SIGNAL("clicked()"), self.source_export)
-    QtCore.QObject.connect(self.ui_export.pushButton_close,QtCore.SIGNAL("clicked()"), self.close_export)
-    QtCore.QObject.connect(self.ui_export.pushButton_compile,QtCore.SIGNAL("clicked()"), self.compile_export)
+    self.ui_export.comboBox_header.currentIndexChanged[str].connect(self.update_header)
+    self.ui_export.comboBox_compile.currentIndexChanged[str].connect(self.update_compile)
+    self.ui_export.pushButton_source.clicked.connect(self.source_export)
+    self.ui_export.pushButton_close.clicked.connect(self.close_export)
+    self.ui_export.pushButton_compile.clicked.connect(self.compile_export)
 
 
 def close_export(self):
@@ -55,12 +54,12 @@ def update_compile(self, text):
 def update_header(self, text):
     """Update settings and change textEdit according to comboBox_header"""
     value = str(text)
-    self.settings["preferred header/footer"] = value
-    if self.sources != unicode(self.ui_export.textEdit.toPlainText()):
-        Dialog_warning = QtGui.QDialog()
+    self.settings["preferred preamble for export"] = value
+    if self.sources != self.ui_export.textEdit.toPlainText():
+        Dialog_warning = QtWidgets.QDialog()
         ui_warning = guidepthwarning.Ui_Dialog()
         ui_warning.setupUi(Dialog_warning)
-        ui_warning.label_2.setText(QtGui.QApplication.translate("Dialog","All the changes you made to the source code will be lost. Do you want to continue?", None, QtGui.QApplication.UnicodeUTF8))
+        ui_warning.label_2.setText(_translate("Dialog","All the changes you made to the source code will be lost. Do you want to continue?"))
         res = Dialog_warning.exec_()
         if not res:
             self.ui_export.comboBox_header.blockSignals(True)
@@ -73,7 +72,7 @@ def update_header(self, text):
 
 
 def save(self, tex_code, MainWindow):
-    fileName = QtGui.QFileDialog.getSaveFileName(MainWindow,"Save",
+    fileName, _ = QtWidgets.QFileDialog.getSaveFileName(MainWindow,"Save",
                     os.path.join(self.settings["save_location"],"exam.tex"),
                     "TeX files (*.tex);;All files (*.*)")
     if fileName:
@@ -83,13 +82,13 @@ def save(self, tex_code, MainWindow):
 
 
 def create_document(self, key):
-    sources = self.generate[key][0] + u"\n"
+    sources = self.preamblesPostambles[key][0] + "\n"
     if "\\begin{document}" not in sources:
-        sources += u"\n\\begin{document}\n"
-    sources += unicode(self.whole_thing(), "utf-8")
-    sources += self.generate[key][1]
-    if "\\end{document}" not in self.generate[key][1]:
-        sources += u"\n\\end{document}"
+        sources += "\n\\begin{document}\n"
+    sources += self.whole_thing()
+    sources += self.preamblesPostambles[key][1]
+    if "\\end{document}" not in self.preamblesPostambles[key][1]:
+        sources += "\n\\end{document}"
     if self.settings['AMC']=='True' and self.AMC_texte:
         if self.settings['AMC-text'] in sources:
             sources = sources.replace(self.settings['AMC-text'],self.AMC_texte)
@@ -99,7 +98,7 @@ def create_document(self, key):
     return sources
 
 def compile_export(self):
-    self.show_preview_outside(unicode(self.ui_export.textEdit.toPlainText()))
+    self.show_preview_outside(self.ui_export.textEdit.toPlainText())
 
 def source_export(self):
-    self.save(unicode(self.ui_export.textEdit.toPlainText()))
+    self.save(self.ui_export.textEdit.toPlainText())
