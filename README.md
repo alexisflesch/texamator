@@ -8,9 +8,7 @@ alexis.flesch@gmail.com
 
 ---------------------------- WARNING --------------------------------------------
 
-This is an alpha version. It has not been tested enough to ensure that it will work flawlessly.
-
-That being said, it can be installed alongside the develop version (2.4.2) : they don't save preferences in the same directories.
+This version can be installed alongside the develop version (2.4.2) : they don't save preferences in the same directories.
 
 Please note that you now NEED to produce a pdf in order for TeXamator to preview your exercises (dvi and png are not supported anymore).
 
