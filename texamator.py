@@ -947,6 +947,10 @@ class MonApplication(Ui_MainWindow):
     def to_german(self):
         self.settings["lang"] = "de"
         self.show_lang_dialog()
+    
+    def to_greek(self):
+        self.settings["lang"] = "el"
+        self.show_lang_dialog()
 
     def show_lang_dialog(self):
         Dialog_lang = QtWidgets.QDialog()
@@ -1251,11 +1255,15 @@ class MonApplication(Ui_MainWindow):
         self.actionA_propos.triggered.connect(self.apropos)
         self.actionEdit_exercise.triggered.connect(
             self.editExerciceTableWidget)
+        
+        #Translations
         self.actionFrench.triggered.connect(self.to_french)
         self.actionEnglish.triggered.connect(self.to_english)
         self.actionCzech.triggered.connect(self.to_czech)
         self.actionUkrainian.triggered.connect(self.to_ukrainian)
         self.actionGerman.triggered.connect(self.to_german)
+        self.actionGreek.triggered.connect(self.to_greek)
+
         self.actionExpand_Collapse.triggered.connect(self.expand_collapse_me)
         self.pushButton_parcourir.clicked.connect(self.parcourir)
         self.pushButton_preview.clicked.connect(self.show_preview_list)

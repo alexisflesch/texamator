@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR">
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1087"/>
+        <location filename="../texamator.py" line="1117"/>
         <source>Set element name (AMC)</source>
-        <translation>Changer l&apos;élément (AMC)</translation>
+        <translation type="unfinished">Changer l'élément (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1119"/>
         <source>New element...</source>
-        <translation>Nouvel élément...</translation>
+        <translation type="unfinished">Nouvel élément...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1102"/>
+        <location filename="../texamator.py" line="1136"/>
         <source>Enter the new element name</source>
-        <translation>Entrez le nom du nouvel élément</translation>
+        <translation type="unfinished">Entrez le nom du nouvel élément</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1103"/>
+        <location filename="../texamator.py" line="1138"/>
         <source>New element</source>
-        <translation>Nouvel élément</translation>
+        <translation type="unfinished">Nouvel élément</translation>
     </message>
 </context>
 <context>
@@ -48,12 +49,12 @@
     <message>
         <location filename="../texamator.py" line="108"/>
         <source>No exercise found</source>
-        <translation>Aucun exercice trouvé</translation>
+        <translation type="unfinished">Aucun exercice trouvé</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="110"/>
+        <location filename="../texamator.py" line="111"/>
         <source>1 exercise found</source>
-        <translation>1 exercice trouvé</translation>
+        <translation type="unfinished">1 exercice trouvé</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="94"/>
@@ -83,17 +84,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you have a question or a request, you can contact&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;me by mail : alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Partielator est distribué sous GPL.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Pour plus d&apos;information, rendez-vous sur mon site :&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Si vous avez des questions/requêtes, merci de me&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;contacter par mail : alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Partielator est distribué sous GPL.&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Pour plus d'information, rendez-vous sur mon site :&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://snouffy.free.fr&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Si vous avez des questions/requêtes, merci de me&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;contacter par mail : alexis.flesch@gmail.com&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/warningNewVersion.ui" line="149"/>
@@ -113,7 +114,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="57"/>
         <source>Do you want to use the preview package (default : yes) ?</source>
-        <translation type="obsolete">Utiliser le paquet &quot;preview&quot; (défaut : oui) ?</translation>
+        <translation type="obsolete">Utiliser le paquet &amp;quot;preview&amp;quot; (défaut : oui) ?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="874"/>
@@ -132,11 +133,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;About the Generate Exam button&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;À propos du bouton &quot;exporter&quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-weight:600;&amp;quot;&amp;gt;À propos du bouton &amp;quot;exporter&amp;quot;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
@@ -192,19 +193,19 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Here you can set up the way LaTeX is called in the background. !file is a shortcut for&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;/tmp/partielator/file. Leave default settings if unsure. Help is available online here :&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Vous pouvez configurer ici la manière dont sont compilés les fichiers en arrière-plan.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;!file est un raccourci pour /tmp/partielator/file. En cas d&apos;hésitation, ne touchez à rien.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Plus d&apos;informations en ligne (en anglais) :&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Vous pouvez configurer ici la manière dont sont compilés les fichiers en arrière-plan.&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;!file est un raccourci pour /tmp/partielator/file. En cas d'hésitation, ne touchez à rien.&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Plus d'informations en ligne (en anglais) :&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://snouffy.free.fr/blog-en/index.php/post/2009/01/08/What-is-TeXamator&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="462"/>
         <source>Write a command and click the + button to add it</source>
-        <translation type="obsolete">Écrivez une commande puis cliquez sur le bouton &quot;+&quot; pour l&apos;ajouter</translation>
+        <translation type="obsolete">Écrivez une commande puis cliquez sur le bouton &amp;quot;+&amp;quot; pour l'ajouter</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="513"/>
@@ -214,7 +215,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="627"/>
         <source>This is the header used by TeXamator to compile your .tex files.</source>
-        <translation type="obsolete">Ceci est l&apos;en-tête qui sera utilisé pour compiler vos documents</translation>
+        <translation type="obsolete">Ceci est l'en-tête qui sera utilisé pour compiler vos documents</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="319"/>
@@ -257,8 +258,8 @@ p, li { white-space: pre-wrap; }
 button. For example, you could add an &quot;Exercise sheet&quot; config and another
 one, say &quot;Exam&quot;. Add as many configs as you want.</source>
         <translation type="obsolete">Vous pouvez configurer la manière dont sera généré votre examen quand
-vous cliquerez sur le bouton &quot;exporter&quot;. Par exemple, vous pouvez ajouter
-une configuration &quot;Feuille d&apos;exercice&quot;, une &quot;Examen&quot;, etc...</translation>
+vous cliquerez sur le bouton &amp;quot;exporter&amp;quot;. Par exemple, vous pouvez ajouter
+une configuration &amp;quot;Feuille d'exercice&amp;quot;, une &amp;quot;Examen&amp;quot;, etc...</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="639"/>
@@ -285,7 +286,7 @@ exercices, y compris \begin{document}.</translation>
     <message>
         <location filename="../ui_files/randomize.ui" line="32"/>
         <source>How many exercises should be added ?</source>
-        <translation>Ajouter combien d&apos;exercices ?</translation>
+        <translation>Ajouter combien d'exercices ?</translation>
     </message>
     <message>
         <location filename="../ui_files/randomize.ui" line="51"/>
@@ -295,12 +296,12 @@ exercices, y compris \begin{document}.</translation>
     <message>
         <location filename="../ui_files/randomize.ui" line="90"/>
         <source>Selected elements in the tree</source>
-        <translation>Les éléments sélectionnés dans l&apos;arbre</translation>
+        <translation>Les éléments sélectionnés dans l'arbre</translation>
     </message>
     <message>
         <location filename="../ui_files/randomize.ui" line="100"/>
         <source>Entire database</source>
-        <translation>Toute la base d&apos;exercices</translation>
+        <translation>Toute la base d'exercices</translation>
     </message>
     <message>
         <location filename="../ui_files/delete.ui" line="14"/>
@@ -347,7 +348,7 @@ exercices, y compris \begin{document}.</translation>
         <source>What type of file do you want to export ? If don&apos;t choose .tex the file will be generated
 using the compilation sequence in the preferences menu.</source>
         <translation type="obsolete">Quel type de fichier souhaitez-vous générer ? Si vous ne choisissez pas .tex, le fichier
-sera compilé avec les commandes précisées dans les préférences sous l&apos;onglet &quot;compilation&quot;</translation>
+sera compilé avec les commandes précisées dans les préférences sous l'onglet &amp;quot;compilation&amp;quot;</translation>
     </message>
     <message>
         <location filename="../ui_files/export.ui" line="160"/>
@@ -364,7 +365,7 @@ sera compilé avec les commandes précisées dans les préférences sous l&apos;
         <source>Choose a header (to manage headers go to edit -&gt; preferences and then click on
 the tab &quot;Generating files&quot;)</source>
         <translation type="obsolete">Choisissez un en-tête (pour créer des en-têtes, allez dans le menu Édition, puis
-préférences, et cliquez sur l&apos;onglet &quot;Exporation&quot;)</translation>
+préférences, et cliquez sur l'onglet &amp;quot;Exporation&amp;quot;)</translation>
     </message>
     <message>
         <location filename="../ui_files/newconf.ui" line="20"/>
@@ -398,16 +399,16 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you want, TeXamator can try to find out automatically. Just enter the location of one of&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your typical tex files with some exercices in it and hit the &quot;Next&quot; button.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Partielator a besoin de connaître plusieurs choses avant de marcher correctement :&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;-&lt;/span&gt; De quelle manière déclarez-vous vos exercices dans vos fichiers tex ?&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;-&lt;/span&gt; Quel en-tête utilisez-vous (que mettez-vous avant \begin{document}) ?&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lui un de&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;vos fichiers tex contenant des exercices et cliquez sur &quot;Suivant&quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Partielator a besoin de connaître plusieurs choses avant de marcher correctement :&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-weight:600;&amp;quot;&amp;gt;-&amp;lt;/span&amp;gt; De quelle manière déclarez-vous vos exercices dans vos fichiers tex ?&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-weight:600;&amp;quot;&amp;gt;-&amp;lt;/span&amp;gt; Quel en-tête utilisez-vous (que mettez-vous avant \begin{document}) ?&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lui un de&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;vos fichiers tex contenant des exercices et cliquez sur &amp;quot;Suivant&amp;quot;.&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="188"/>
@@ -417,7 +418,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation type="obsolete">Partielator utilisera cet en-tête à chaque fois qu&apos;il devra compiler un fichier tex.</translation>
+        <translation type="obsolete">Partielator utilisera cet en-tête à chaque fois qu'il devra compiler un fichier tex.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="379"/>
@@ -438,25 +439,25 @@ p, li { white-space: pre-wrap; }
         <location filename="../partielatormods/guis/guiwizardplus.py" line="81"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
-        <translation type="obsolete">Partielator n&apos;a pas pu déterminer l&apos;en-tête que vous utilisez. N&apos;hésitez pas à modifier
-l&apos;en-tête par défault : il sera utilisé pour compiler tous vos fichiers .tex.</translation>
+        <translation type="obsolete">Partielator n'a pas pu déterminer l'en-tête que vous utilisez. N'hésitez pas à modifier
+l'en-tête par défault : il sera utilisé pour compiler tous vos fichiers .tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="97"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
-        <translation type="obsolete">Partielator n&apos;a pas pu déterminer quelles macros vous utilisez.
+        <translation type="obsolete">Partielator n'a pas pu déterminer quelles macros vous utilisez.
 Vous devez les ajouter-les manuellement pour que Partielator fonctionne.</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="112"/>
+        <location filename="../texamator.py" line="114"/>
         <source>exercises found</source>
-        <translation>exercices trouvés</translation>
+        <translation type="unfinished">exercices trouvés</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="327"/>
         <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here :
 </source>
-        <translation type="obsolete">Vous pouvez configurer ici la manière dont sont compilés les fichiers en arrière-plan. !file est un raccourci pour /tmp/partielator/file. En cas d&apos;hésitation, ne touchez à rien.Plus d&apos;informations en ligne (en anglais) :</translation>
+        <translation type="obsolete">Vous pouvez configurer ici la manière dont sont compilés les fichiers en arrière-plan. !file est un raccourci pour /tmp/partielator/file. En cas d'hésitation, ne touchez à rien.Plus d'informations en ligne (en anglais) :</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="834"/>
@@ -465,16 +466,16 @@ Vous devez les ajouter-les manuellement pour que Partielator fonctionne.</transl
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://alexisfles.ch/en&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="706"/>
         <source>Here, you can set up the way files are generated when you click the &quot;export&quot; button. For example, you could add an &quot;Exercise sheet&quot; config and another one, say &quot;Exam&quot;. Add as many configs as you want.</source>
-        <translation type="obsolete">Vous pouvez configurer la manière dont sera généré votre examen quand vous cliquerez sur le bouton &quot;exporter&quot;. Par exemple, vous pouvez ajouter une configuration &quot;Feuille d&apos;exercice&quot;, une &quot;Examen&quot;, etc...</translation>
+        <translation type="obsolete">Vous pouvez configurer la manière dont sera généré votre examen quand vous cliquerez sur le bouton &amp;quot;exporter&amp;quot;. Par exemple, vous pouvez ajouter une configuration &amp;quot;Feuille d'exercice&amp;quot;, une &amp;quot;Examen&amp;quot;, etc...</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="615"/>
@@ -491,7 +492,7 @@ If you want, TeXamator can try to find out automatically. Just enter the locatio
         <translation type="obsolete">Partielator a besoin de connaître plusieurs choses avant de marcher correctement :
 De quelle manière déclarez-vous vos exercices dans vos fichiers tex ?
 Quel en-tête utilisez-vous (que mettez-vous avant \begin{document}) ?
-Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lui un de vos fichiers tex contenant des exercices et cliquez sur &quot;Suivant&quot;.</translation>
+Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lui un de vos fichiers tex contenant des exercices et cliquez sur &amp;quot;Suivant&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="143"/>
@@ -503,7 +504,7 @@ Si vous le voulez, Partielator peut tenter de deviner vos paramètres. Donnez-lu
         <source>What type of file do you want to export ? If you don&apos;t choose .tex the file will be generated
 using the compilation sequence in the preferences menu.</source>
         <translation type="obsolete">Quel type de fichier souhaitez-vous générer ? Si vous ne choisissez pas .tex, le fichier
-sera compilé avec les commandes précisées dans les préférences sous l&apos;onglet &quot;compilation&quot;.</translation>
+sera compilé avec les commandes précisées dans les préférences sous l'onglet &amp;quot;compilation&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="587"/>
@@ -578,7 +579,7 @@ sera compilé avec les commandes précisées dans les préférences sous l&apos;
     <message>
         <location filename="../ui_files/preferences.ui" line="133"/>
         <source>Which viewer do you want TeXamator to use inside the application ? (default : okular)</source>
-        <translation type="obsolete">Quel visionneur de documents souhaitez-vous utiliser dans l&apos;application ?</translation>
+        <translation type="obsolete">Quel visionneur de documents souhaitez-vous utiliser dans l'application ?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="519"/>
@@ -613,27 +614,27 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Partielator est distribué sous licence GPL.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Pour plus d&apos;informations, rendez-vous sur ma page :&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Si vous avez des questions ou des suggestions :&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Partielator est distribué sous licence GPL.&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Pour plus d'informations, rendez-vous sur ma page :&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://snouffy.free.fr&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Si vous avez des questions ou des suggestions :&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;alexis.flesch@gmail.com&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="251"/>
         <source>Here you can set up the way LaTeX is called in the background. Leave default settings if unsure. Help is available online here:</source>
-        <translation type="obsolete">Vous pouvez configurer ici la manière dont LaTeX compilera vos documents. Laissez les paramètres par défault en cas de doute. Vous trouverez de l&apos;aide à cette adresse :</translation>
+        <translation type="obsolete">Vous pouvez configurer ici la manière dont LaTeX compilera vos documents. Laissez les paramètres par défault en cas de doute. Vous trouverez de l'aide à cette adresse :</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="512"/>
         <source>Write a command and click the + button to add it.</source>
-        <translation>Écrivez une commande et appuyez sur le bouton + pour l&apos;ajouter.</translation>
+        <translation>Écrivez une commande et appuyez sur le bouton + pour l'ajouter.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="513"/>
@@ -672,16 +673,16 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://home.gna.org/auto-qcm/&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://home.gna.org/auto-qcm/&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="818"/>
         <source>For more information, especially on how to configure this tab and make AMC compatible with TeXamator, please visit :</source>
-        <translation>Pour plus d&apos;informations, en particulier pour comprendre les options présentées ici et rendre AMC compatible avec TeXamator, rendez-vous ici :</translation>
+        <translation>Pour plus d'informations, en particulier pour comprendre les options présentées ici et rendre AMC compatible avec TeXamator, rendez-vous ici :</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="854"/>
@@ -691,7 +692,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="898"/>
         <source>What is the name of the corresponding environment?</source>
-        <translation>Quel est le nom de l&apos;environnement correspondant ?</translation>
+        <translation>Quel est le nom de l'environnement correspondant ?</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="918"/>
@@ -701,7 +702,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="990"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Generating files&quot; tab.</source>
-        <translation type="obsolete">Quand vous exporterez votre projet, TeXamator ajoutera les commandes du type \copygroup et \shufflegroup à un endroit de votre choix. Il faut pour cela renseigner un texte qui sera remplacé par ces commandes. Ce texte devrait apparaître dans au moins l&apos;une de vos configurations de l&apos;onglet &quot;Exportation&quot;.</translation>
+        <translation type="obsolete">Quand vous exporterez votre projet, TeXamator ajoutera les commandes du type \copygroup et \shufflegroup à un endroit de votre choix. Il faut pour cela renseigner un texte qui sera remplacé par ces commandes. Ce texte devrait apparaître dans au moins l'une de vos configurations de l'onglet &amp;quot;Exportation&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="946"/>
@@ -716,7 +717,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="376"/>
         <source>Here you can set up the way LaTeX is called to preview exercises. TeXamator will try to show &quot;file.pdf&quot; after running the following commands. Help is available online here :</source>
-        <translation>Vous pouvez configurer ici la manière dont LaTeX sera appelé pour prévisualiser vos exercices. TeXamator essayera ensuite d&apos;afficher &quot;file.pdf&quot; après avoir exécuté les commandes ci-dessous. Vous trouverez de l&apos;aide en ligne (en anglais) ici :</translation>
+        <translation>Vous pouvez configurer ici la manière dont LaTeX sera appelé pour prévisualiser vos exercices. TeXamator essayera ensuite d'afficher &amp;quot;file.pdf&amp;quot; après avoir exécuté les commandes ci-dessous. Vous trouverez de l'aide en ligne (en anglais) ici :</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="638"/>
@@ -726,12 +727,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="644"/>
         <source>Here, you can set up preambles and postambles used to preview exercises as well as when you click the &quot;export&quot; button.</source>
-        <translation>Vous pouvez configurer ici différents préambules/postambules qui seront utilisés pour prévisualiser vos exercices ainsi que lorsque vous cliquerez sur le boutton &quot;export&quot;.</translation>
+        <translation>Vous pouvez configurer ici différents préambules/postambules qui seront utilisés pour prévisualiser vos exercices ainsi que lorsque vous cliquerez sur le boutton &amp;quot;export&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="934"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
-        <translation>Quand vous exporterez votre projet, TeXamator ajoutera les commandes du type \copygroup et \shufflegroup à un endroit de votre choix. Il faut pour cela renseigner un texte qui sera remplacé par ces commandes. Ce texte doit apparaître dans au moins l&apos;une de vos configurations de l&apos;onglet &quot;Préambule-postambule&quot;.</translation>
+        <translation>Quand vous exporterez votre projet, TeXamator ajoutera les commandes du type \copygroup et \shufflegroup à un endroit de votre choix. Il faut pour cela renseigner un texte qui sera remplacé par ces commandes. Ce texte doit apparaître dans au moins l'une de vos configurations de l'onglet &amp;quot;Préambule-postambule&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/warningNewVersion.ui" line="60"/>
@@ -741,7 +742,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/depthWarning.ui" line="30"/>
         <source>You are trying to add (at least) an entire folder to your project. This might take some time. Do you want to continue?</source>
-        <translation>Vous essayez d&apos;ajouter (au moins) un dossier complet à votre projet. Cette opération peut prendre du temps. Souhaitez-vous continuer ?</translation>
+        <translation>Vous essayez d'ajouter (au moins) un dossier complet à votre projet. Cette opération peut prendre du temps. Souhaitez-vous continuer ?</translation>
     </message>
     <message>
         <location filename="../ui_files/editsource.ui" line="14"/>
@@ -756,7 +757,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/editsource.ui" line="73"/>
         <source>don&apos;t translate</source>
-        <translation>don&apos;t translate</translation>
+        <translation>don't translate</translation>
     </message>
     <message>
         <location filename="../ui_files/editsource.ui" line="80"/>
@@ -800,40 +801,40 @@ Merci de vous assurer que tout a bien été sauvegardé avant de supprimer le do
 Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
 - Vous devez maintenant produire un pdf pour prévisualiser vos exercices.
 - Si vous souhaitez utiliser le paquet preview, il vous faudra le faire en éditant votre préambule.
-- Vous pouvez utiliser autant de préambules/postambules que vous le souhaitez pour prévisualiser vos exercices ainsi que pour les exporter : ils sont tous présents sous l&apos;onglet &quot;Préambules-postambules&quot; dans les préférences. Vous pouvez sélectionner le préambule à utiliser pour prévisualiser vos exercices via le menu &quot;Édition -&gt; Préambule&quot;.</translation>
+- Vous pouvez utiliser autant de préambules/postambules que vous le souhaitez pour prévisualiser vos exercices ainsi que pour les exporter : ils sont tous présents sous l'onglet &amp;quot;Préambules-postambules&amp;quot; dans les préférences. Vous pouvez sélectionner le préambule à utiliser pour prévisualiser vos exercices via le menu &amp;quot;Édition -&amp;gt; Préambule&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiexportplus.py" line="62"/>
         <source>All the changes you made to the source code will be lost. Do you want to continue?</source>
-        <translation>Tous les changements apportés au code source seront perdus. Souhaitez-vous vraiment continuer ?</translation>
+        <translation type="unfinished">Tous les changements apportés au code source seront perdus. Souhaitez-vous vraiment continuer ?</translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="294"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="327"/>
         <source>Pick a folder</source>
-        <translation>Choisissez un dossier</translation>
+        <translation type="unfinished">Choisissez un dossier</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="244"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="266"/>
         <source>You are about to delete the compile sequence : </source>
-        <translation>Vous êtes sur le point de supprimer la séquence : </translation>
+        <translation type="unfinished">Vous êtes sur le point de supprimer la séquence : </translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="319"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="357"/>
         <source>You are about to delete the config : </source>
-        <translation>Vous êtes sur le point de supprimer la configuration : </translation>
+        <translation type="unfinished">Vous êtes sur le point de supprimer la configuration : </translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1195"/>
+        <location filename="../texamator.py" line="1225"/>
         <source>Exercise</source>
-        <translation>Exercice</translation>
+        <translation type="unfinished">Exercice</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1195"/>
+        <location filename="../texamator.py" line="1225"/>
         <source>Element (AMC)</source>
-        <translation>Élément (AMC)</translation>
+        <translation type="unfinished">Élément (AMC)</translation>
     </message>
 </context>
 <context>
@@ -844,17 +845,17 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
         <translation>Partielator</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="55"/>
+        <location filename="../ui_files/guigui.ui" line="73"/>
         <source>Folder in which TeXamator should look for exercices</source>
         <translation>Dans quel dossier Partielator doit-il chercher vos exercices ?</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="86"/>
+        <location filename="../ui_files/guigui.ui" line="104"/>
         <source>Browse</source>
         <translation>Parcourir</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="109"/>
+        <location filename="../ui_files/guigui.ui" line="127"/>
         <source>Look for exercices !</source>
         <translation>Chercher les exercices !</translation>
     </message>
@@ -864,195 +865,200 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
         <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="172"/>
+        <location filename="../ui_files/guigui.ui" line="208"/>
         <source>Search</source>
         <translation>Rechercher</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="471"/>
+        <location filename="../ui_files/guigui.ui" line="561"/>
         <source>Edit</source>
         <translation>Édition</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="253"/>
+        <location filename="../ui_files/guigui.ui" line="307"/>
         <source>Preview</source>
         <translation>Aperçu</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="519"/>
+        <location filename="../ui_files/guigui.ui" line="610"/>
         <source>Export</source>
         <translation>Exporter</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="462"/>
+        <location filename="../ui_files/guigui.ui" line="552"/>
         <source>File</source>
         <translation>Fichier</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="505"/>
+        <location filename="../ui_files/guigui.ui" line="596"/>
         <source>Help</source>
         <translation>Aide</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="528"/>
+        <location filename="../ui_files/guigui.ui" line="619"/>
         <source>Generate Exam</source>
         <translation>Exporter</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="537"/>
+        <location filename="../ui_files/guigui.ui" line="628"/>
         <source>Quit</source>
         <translation>Quitter</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="546"/>
+        <location filename="../ui_files/guigui.ui" line="637"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="555"/>
+        <location filename="../ui_files/guigui.ui" line="646"/>
         <source>About ...</source>
         <translation>À propos ...</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="564"/>
+        <location filename="../ui_files/guigui.ui" line="655"/>
         <source>Pick exercises randomly</source>
         <translation>Ajouter des exercices aléatoirement</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="576"/>
+        <location filename="../ui_files/guigui.ui" line="667"/>
         <source>Edit exercise</source>
-        <translation>Modifier l&apos;exercice</translation>
+        <translation>Modifier l'exercice</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="588"/>
+        <location filename="../ui_files/guigui.ui" line="679"/>
         <source>Expand/Collapse</source>
         <translation>Développer/Regrouper</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="597"/>
+        <location filename="../ui_files/guigui.ui" line="688"/>
         <source>Start Wizard</source>
         <translation>Assistant de démarrage</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="475"/>
+        <location filename="../ui_files/guigui.ui" line="565"/>
         <source>Choose language</source>
         <translation>Changer de langue</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="602"/>
+        <location filename="../ui_files/guigui.ui" line="693"/>
         <source>English</source>
         <translation>Anglais</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="607"/>
+        <location filename="../ui_files/guigui.ui" line="698"/>
         <source>French</source>
         <translation>Français</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="612"/>
+        <location filename="../ui_files/guigui.ui" line="703"/>
         <source>Czech</source>
         <translation>Tchèque</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="617"/>
+        <location filename="../ui_files/guigui.ui" line="708"/>
         <source>Ukrainian</source>
         <translation>Ukrainien</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="412"/>
+        <location filename="../ui_files/guigui.ui" line="502"/>
         <source>Re-run LaTeX</source>
         <translation>Recompiler</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="622"/>
+        <location filename="../ui_files/guigui.ui" line="713"/>
         <source>German</source>
         <translation>Allemand</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="485"/>
+        <location filename="../ui_files/guigui.ui" line="576"/>
         <source>Compilation</source>
         <translation>Compilation</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="627"/>
+        <location filename="../ui_files/guigui.ui" line="718"/>
         <source>m</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="210"/>
+        <location filename="../ui_files/guigui.ui" line="255"/>
         <source>Exercise</source>
         <translation>Exercice</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="635"/>
+        <location filename="../ui_files/guigui.ui" line="726"/>
         <source>Shuffle list</source>
         <translation>Mélanger la liste</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="159"/>
+        <location filename="../ui_files/guigui.ui" line="186"/>
         <source>Exercise list</source>
         <translation>Liste des exercices</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="490"/>
+        <location filename="../ui_files/guigui.ui" line="581"/>
         <source>Preamble</source>
         <translation>Préambule</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="640"/>
+        <location filename="../ui_files/guigui.ui" line="731"/>
         <source>a</source>
         <translation>a</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="736"/>
+        <source>Greek</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1062"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Copy to clipboard</source>
-        <translation>Copier dans le presse-papier</translation>
+        <translation type="unfinished">Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1065"/>
+        <location filename="../texamator.py" line="1091"/>
         <source>Edit...</source>
-        <translation>Éditer...</translation>
+        <translation type="unfinished">Éditer...</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1067"/>
+        <location filename="../texamator.py" line="1094"/>
         <source>Move up</source>
-        <translation>Déplacer vers le haut</translation>
+        <translation type="unfinished">Déplacer vers le haut</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1069"/>
+        <location filename="../texamator.py" line="1097"/>
         <source>Move down</source>
-        <translation>Déplacer vers le bas</translation>
+        <translation type="unfinished">Déplacer vers le bas</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1071"/>
+        <location filename="../texamator.py" line="1100"/>
         <source>Shuffle</source>
-        <translation>Mélanger</translation>
+        <translation type="unfinished">Mélanger</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1073"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>Remove</source>
-        <translation>Supprimer</translation>
+        <translation type="unfinished">Supprimer</translation>
     </message>
 </context>
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1037"/>
+        <location filename="../texamator.py" line="1060"/>
         <source>Copy to clipboard</source>
-        <translation>Copier dans le presse-papier</translation>
+        <translation type="unfinished">Copier dans le presse-papier</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1040"/>
+        <location filename="../texamator.py" line="1064"/>
         <source>Add</source>
-        <translation>Ajouter</translation>
+        <translation type="unfinished">Ajouter</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1042"/>
+        <location filename="../texamator.py" line="1066"/>
         <source>Edit...</source>
-        <translation>Éditer...</translation>
+        <translation type="unfinished">Éditer...</translation>
     </message>
 </context>
 <context>
@@ -1060,34 +1066,34 @@ Aussi, merci de noter que plusieurs fonctionnalités ont évolué :
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="20"/>
         <source>It looks like it is the first time you use TeXamator on this computer !</source>
-        <translation>On dirait que vous démarrez TeXamator pour la première fois sur cet ordinateur !</translation>
+        <translation type="unfinished">On dirait que vous démarrez TeXamator pour la première fois sur cet ordinateur !</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="67"/>
         <source>Pick a file</source>
-        <translation>Choisissez un fichier</translation>
+        <translation type="unfinished">Choisissez un fichier</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="77"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation>Partielator utilisera ce préambule à chaque fois qu&apos;il devra compiler un fichier tex.</translation>
+        <translation type="unfinished">Partielator utilisera ce préambule à chaque fois qu'il devra compiler un fichier tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="79"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
-        <translation>Partielator n&apos;a pas pu déterminer l&apos;en-tête que vous utilisez. N&apos;hésitez pas à modifier
-l&apos;en-tête par défault : il sera utilisé pour compiler tous vos fichiers .tex.</translation>
+        <translation type="unfinished">Partielator n'a pas pu déterminer l'en-tête que vous utilisez. N'hésitez pas à modifier
+l'en-tête par défault : il sera utilisé pour compiler tous vos fichiers .tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="85"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation>Partielator a trouvé ces macros. Vous pouvez en ajouter et en supprimer.</translation>
+        <translation type="unfinished">Partielator a trouvé ces macros. Vous pouvez en ajouter et en supprimer.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
-        <translation>TeXamator n&apos;a pas pu déterminer quelles macros vous utilisez.
+        <translation type="unfinished">TeXamator n'a pas pu déterminer quelles macros vous utilisez.
 Vous devez les ajouter-les manuellement pour que TeXamator fonctionne.</translation>
     </message>
 </context>
@@ -1111,7 +1117,7 @@ Vous devez les ajouter-les manuellement pour que TeXamator fonctionne.</translat
     <message>
         <location filename="../ui_files/exportAMC.ui" line="96"/>
         <source>TeXamator has detected that you are working with AMC. Please configure the elements you want to use below :</source>
-        <translation>TeXamator a détecté que vous travaillez sur un projet AMC. Merci de configurer le nombre d&apos;exercices à ajouter dans chacune des catégories ci-dessous :</translation>
+        <translation>TeXamator a détecté que vous travaillez sur un projet AMC. Merci de configurer le nombre d'exercices à ajouter dans chacune des catégories ci-dessous :</translation>
     </message>
 </context>
 </TS>

@@ -4,24 +4,24 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1087"/>
+        <location filename="../texamator.py" line="1117"/>
         <source>Set element name (AMC)</source>
-        <translation>Встановити назву елемента (AMC)</translation>
+        <translation type="unfinished">Встановити назву елемента (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1088"/>
+        <location filename="../texamator.py" line="1119"/>
         <source>New element...</source>
-        <translation>Новий елемент…</translation>
+        <translation type="unfinished">Новий елемент…</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1102"/>
+        <location filename="../texamator.py" line="1136"/>
         <source>Enter the new element name</source>
-        <translation>Введіть назву нового елемента</translation>
+        <translation type="unfinished">Введіть назву нового елемента</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1103"/>
+        <location filename="../texamator.py" line="1138"/>
         <source>New element</source>
-        <translation>Новий елемент</translation>
+        <translation type="unfinished">Новий елемент</translation>
     </message>
 </context>
 <context>
@@ -49,17 +49,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you have a question or a request, you can contact&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;me by mail : alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;TeXamator поширюється за умов дотримання GPL.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Докладніші відомості можна знайти тут:&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://snouffy.free.fr&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Якщо у вас виникли питання або побажання щодо програми, ви можете надіслати їх&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;електронною поштою: alexis.flesch@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;TeXamator поширюється за умов дотримання GPL.&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Докладніші відомості можна знайти тут:&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://snouffy.free.fr&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;Якщо у вас виникли питання або побажання щодо програми, ви можете надіслати їх&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;електронною поштою: alexis.flesch@gmail.com&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/warningNewVersion.ui" line="149"/>
@@ -137,7 +137,7 @@ using the compilation sequence in the preferences menu.</source>
         <location filename="../ui_files/export.ui" line="242"/>
         <source>Choose a header (to manage headers go to edit -&gt; preferences and then click on
 the tab &quot;Generating files&quot;)</source>
-        <translation type="obsolete">Вкажіть заголовок (змінити або додати заголовки можна за допомогою пункту меню «Редагування -&gt; Параметри» (виберіть вкладку «Створення файлів»))</translation>
+        <translation type="obsolete">Вкажіть заголовок (змінити або додати заголовки можна за допомогою пункту меню «Редагування -&amp;gt; Параметри» (виберіть вкладку «Створення файлів»))</translation>
     </message>
     <message>
         <location filename="../ui_files/langchange.ui" line="14"/>
@@ -191,11 +191,11 @@ the tab &quot;Generating files&quot;)</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;About the Generate Exam button&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Щодо кнопки створення білетів&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-weight:600;&amp;quot;&amp;gt;Щодо кнопки створення білетів&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="94"/>
@@ -256,11 +256,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://alexisfles.ch/en&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="462"/>
@@ -420,17 +420,17 @@ using the compilation sequence in the preferences menu.</source>
     <message>
         <location filename="../texamator.py" line="108"/>
         <source>No exercise found</source>
-        <translation>Не знайдено жодної вправи</translation>
+        <translation type="unfinished">Не знайдено жодної вправи</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="110"/>
+        <location filename="../texamator.py" line="111"/>
         <source>1 exercise found</source>
-        <translation>Знайдено 1 вправу</translation>
+        <translation type="unfinished">Знайдено 1 вправу</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="112"/>
+        <location filename="../texamator.py" line="114"/>
         <source>exercises found</source>
-        <translation>вправ знайдено</translation>
+        <translation type="unfinished">вправ знайдено</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="81"/>
@@ -517,17 +517,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;TeXamator розповсюджується за умов дотримання GPL.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Відвідайте мій сайт, щоб дізнатися більше:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Якщо маєте якесь питання або запит, повідомте&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;про це електронною поштою: alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;TeXamator розповсюджується за умов дотримання GPL.&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Відвідайте мій сайт, щоб дізнатися більше:&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://alexisfles.ch/en&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p align=&amp;quot;justify&amp;quot; style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Якщо маєте якесь питання або запит, повідомте&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p align=&amp;quot;justify&amp;quot; style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;про це електронною поштою: alexis.flesch@gmail.com&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="512"/>
@@ -561,11 +561,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://home.gna.org/auto-qcm/&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://home.gna.org/auto-qcm/&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="818"/>
@@ -640,7 +640,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/editsource.ui" line="73"/>
         <source>don&apos;t translate</source>
-        <translation>don&apos;t translate</translation>
+        <translation>don't translate</translation>
     </message>
     <message>
         <location filename="../ui_files/editsource.ui" line="80"/>
@@ -670,7 +670,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../partielatormods/guis/guiexportplus.py" line="62"/>
         <source>All the changes you made to the source code will be lost. Do you want to continue?</source>
-        <translation>Усі внесені вами зміни до коду буде втрачено. Хочете саме цього?</translation>
+        <translation type="unfinished">Усі внесені вами зміни до коду буде втрачено. Хочете саме цього?</translation>
     </message>
     <message>
         <location filename="../ui_files/warningNewVersion.ui" line="98"/>
@@ -689,35 +689,35 @@ Also, please note that a few functionalities of TeXamator have changed :
 Також, будь ласка, зверніть увагу на те, що відбулися деякі зміни у функціональних можливостях TeXamator:
 - Для попереднього перегляду ваших вправ тепер доведеться створити файл pdf.
 - Якщо ви хочете скористатися пакунком попереднього перегляду, вам слід вписати його власноруч до преамбули.
-- Ви можете створити декілька преамбул і завершень для попереднього перегляду вправ та експортування документів: ці дані буде збережено на вкладці «Преамбула-завершення», ви зможете вибрати потрібний вам варіант за допомогою меню «Зміни -&gt; Преамбула».</translation>
+- Ви можете створити декілька преамбул і завершень для попереднього перегляду вправ та експортування документів: ці дані буде збережено на вкладці «Преамбула-завершення», ви зможете вибрати потрібний вам варіант за допомогою меню «Зміни -&amp;gt; Преамбула».</translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="294"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="327"/>
         <source>Pick a folder</source>
-        <translation>Вкажіть теку</translation>
+        <translation type="unfinished">Вкажіть теку</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1195"/>
+        <location filename="../texamator.py" line="1225"/>
         <source>Exercise</source>
-        <translation>Вправа</translation>
+        <translation type="unfinished">Вправа</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1195"/>
+        <location filename="../texamator.py" line="1225"/>
         <source>Element (AMC)</source>
-        <translation>Елемент (AMC)</translation>
+        <translation type="unfinished">Елемент (AMC)</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="244"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="266"/>
         <source>You are about to delete the compile sequence : </source>
-        <translation>Ви наказали програмі вилучити послідовність збирання: </translation>
+        <translation type="unfinished">Ви наказали програмі вилучити послідовність збирання: </translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiprefsplus.py" line="319"/>
+        <location filename="../partielatormods/guis/guiprefsplus.py" line="357"/>
         <source>You are about to delete the config : </source>
-        <translation>Ви наказали програмі вилучити налаштування: </translation>
+        <translation type="unfinished">Ви наказали програмі вилучити налаштування: </translation>
     </message>
 </context>
 <context>
@@ -728,17 +728,17 @@ Also, please note that a few functionalities of TeXamator have changed :
         <translation>TeXamator</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="55"/>
+        <location filename="../ui_files/guigui.ui" line="73"/>
         <source>Folder in which TeXamator should look for exercices</source>
         <translation>Тека, з якої TeXamator має брати вправи</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="86"/>
+        <location filename="../ui_files/guigui.ui" line="104"/>
         <source>Browse</source>
         <translation>Вказати</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="109"/>
+        <location filename="../ui_files/guigui.ui" line="127"/>
         <source>Look for exercices !</source>
         <translation>Шукати вправи!</translation>
     </message>
@@ -748,195 +748,200 @@ Also, please note that a few functionalities of TeXamator have changed :
         <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="172"/>
+        <location filename="../ui_files/guigui.ui" line="208"/>
         <source>Search</source>
         <translation>Шукати</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="471"/>
+        <location filename="../ui_files/guigui.ui" line="561"/>
         <source>Edit</source>
         <translation>Зміни</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="253"/>
+        <location filename="../ui_files/guigui.ui" line="307"/>
         <source>Preview</source>
         <translation>Попередній перегляд</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="519"/>
+        <location filename="../ui_files/guigui.ui" line="610"/>
         <source>Export</source>
         <translation>Експортувати</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="462"/>
+        <location filename="../ui_files/guigui.ui" line="552"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="475"/>
+        <location filename="../ui_files/guigui.ui" line="565"/>
         <source>Choose language</source>
         <translation>Вибрати мову</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="505"/>
+        <location filename="../ui_files/guigui.ui" line="596"/>
         <source>Help</source>
         <translation>Довідка</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="528"/>
+        <location filename="../ui_files/guigui.ui" line="619"/>
         <source>Generate Exam</source>
         <translation>Створити білети</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="537"/>
+        <location filename="../ui_files/guigui.ui" line="628"/>
         <source>Quit</source>
         <translation>Завершити роботу</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="546"/>
+        <location filename="../ui_files/guigui.ui" line="637"/>
         <source>Preferences</source>
         <translation>Параметри</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="555"/>
+        <location filename="../ui_files/guigui.ui" line="646"/>
         <source>About ...</source>
         <translation>Про програму…</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="564"/>
+        <location filename="../ui_files/guigui.ui" line="655"/>
         <source>Pick exercises randomly</source>
         <translation>Вибрати вправи випадковим чином</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="576"/>
+        <location filename="../ui_files/guigui.ui" line="667"/>
         <source>Edit exercise</source>
         <translation>Змінити вправу</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="588"/>
+        <location filename="../ui_files/guigui.ui" line="679"/>
         <source>Expand/Collapse</source>
         <translation>Розгорнути/Згорнути</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="597"/>
+        <location filename="../ui_files/guigui.ui" line="688"/>
         <source>Start Wizard</source>
         <translation>Запустити майстер</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="602"/>
+        <location filename="../ui_files/guigui.ui" line="693"/>
         <source>English</source>
         <translation>Англійська</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="607"/>
+        <location filename="../ui_files/guigui.ui" line="698"/>
         <source>French</source>
         <translation>Французька</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="612"/>
+        <location filename="../ui_files/guigui.ui" line="703"/>
         <source>Czech</source>
         <translation>Чеська</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="617"/>
+        <location filename="../ui_files/guigui.ui" line="708"/>
         <source>Ukrainian</source>
         <translation>Українська</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="412"/>
+        <location filename="../ui_files/guigui.ui" line="502"/>
         <source>Re-run LaTeX</source>
         <translation>Перезапустити LaTeX</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="622"/>
+        <location filename="../ui_files/guigui.ui" line="713"/>
         <source>German</source>
         <translation>Німецька</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="485"/>
+        <location filename="../ui_files/guigui.ui" line="576"/>
         <source>Compilation</source>
         <translation>Збирання</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="627"/>
+        <location filename="../ui_files/guigui.ui" line="718"/>
         <source>m</source>
         <translation>м</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="635"/>
+        <location filename="../ui_files/guigui.ui" line="726"/>
         <source>Shuffle list</source>
         <translation>Випадковий порядок</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="210"/>
+        <location filename="../ui_files/guigui.ui" line="255"/>
         <source>Exercise</source>
         <translation>Вправа</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="159"/>
+        <location filename="../ui_files/guigui.ui" line="186"/>
         <source>Exercise list</source>
         <translation>Список вправ</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="490"/>
+        <location filename="../ui_files/guigui.ui" line="581"/>
         <source>Preamble</source>
         <translation>Преамбула</translation>
     </message>
     <message>
-        <location filename="../ui_files/guigui.ui" line="640"/>
+        <location filename="../ui_files/guigui.ui" line="731"/>
         <source>a</source>
         <translation>a</translation>
+    </message>
+    <message>
+        <location filename="../ui_files/guigui.ui" line="736"/>
+        <source>Greek</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1062"/>
+        <location filename="../texamator.py" line="1087"/>
         <source>Copy to clipboard</source>
-        <translation>Копіювати до буфера</translation>
+        <translation type="unfinished">Копіювати до буфера</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1065"/>
+        <location filename="../texamator.py" line="1091"/>
         <source>Edit...</source>
-        <translation>Змінити…</translation>
+        <translation type="unfinished">Змінити…</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1067"/>
+        <location filename="../texamator.py" line="1094"/>
         <source>Move up</source>
-        <translation>Пересунути вище</translation>
+        <translation type="unfinished">Пересунути вище</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1069"/>
+        <location filename="../texamator.py" line="1097"/>
         <source>Move down</source>
-        <translation>Пересунути нижче</translation>
+        <translation type="unfinished">Пересунути нижче</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1071"/>
+        <location filename="../texamator.py" line="1100"/>
         <source>Shuffle</source>
-        <translation>Перемішати</translation>
+        <translation type="unfinished">Перемішати</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1073"/>
+        <location filename="../texamator.py" line="1103"/>
         <source>Remove</source>
-        <translation>Вилучити</translation>
+        <translation type="unfinished">Вилучити</translation>
     </message>
 </context>
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1037"/>
+        <location filename="../texamator.py" line="1060"/>
         <source>Copy to clipboard</source>
-        <translation>Копіювати до буфера</translation>
+        <translation type="unfinished">Копіювати до буфера</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1040"/>
+        <location filename="../texamator.py" line="1064"/>
         <source>Add</source>
-        <translation>Додати</translation>
+        <translation type="unfinished">Додати</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1042"/>
+        <location filename="../texamator.py" line="1066"/>
         <source>Edit...</source>
-        <translation>Змінити…</translation>
+        <translation type="unfinished">Змінити…</translation>
     </message>
 </context>
 <context>
@@ -944,34 +949,34 @@ Also, please note that a few functionalities of TeXamator have changed :
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="20"/>
         <source>It looks like it is the first time you use TeXamator on this computer !</source>
-        <translation>Здається. ви вперше запустили TeXamator на цьому комп&apos;ютері!</translation>
+        <translation type="unfinished">Здається. ви вперше запустили TeXamator на цьому комп'ютері!</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="67"/>
         <source>Pick a file</source>
-        <translation>Виберіть файл</translation>
+        <translation type="unfinished">Виберіть файл</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="77"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation>Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
+        <translation type="unfinished">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="79"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
-        <translation>TeXamator не вдалося знайти заголовок у вказаному вами файлі.
+        <translation type="unfinished">TeXamator не вдалося знайти заголовок у вказаному вами файлі.
 Ви можете змінити типовий заголовок: його буде використано для збирання файлів .tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="85"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation>Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
+        <translation type="unfinished">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
-        <translation>TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
+        <translation type="unfinished">TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
     </message>
 </context>
 <context>

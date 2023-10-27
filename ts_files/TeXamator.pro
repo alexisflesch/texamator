@@ -28,5 +28,6 @@ FORMS           = ../ui_files/apropos.ui \
 TRANSLATIONS    = TeXamator_fr.ts \
                   TeXamator_cs.ts \
                   TeXamator_uk.ts \
-                  TeXamator_de.ts
+                  TeXamator_de.ts \
+                  TeXamator_el.ts
 CODECFORTR      = UTF-8
