@@ -4,22 +4,22 @@
 <context>
     <name>AMC-Menu</name>
     <message>
-        <location filename="../texamator.py" line="1117"/>
+        <location filename="../texamator.py" line="1121"/>
         <source>Set element name (AMC)</source>
         <translation type="unfinished">Встановити назву елемента (AMC)</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1119"/>
+        <location filename="../texamator.py" line="1123"/>
         <source>New element...</source>
         <translation type="unfinished">Новий елемент…</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1136"/>
+        <location filename="../texamator.py" line="1140"/>
         <source>Enter the new element name</source>
         <translation type="unfinished">Введіть назву нового елемента</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1138"/>
+        <location filename="../texamator.py" line="1142"/>
         <source>New element</source>
         <translation type="unfinished">Новий елемент</translation>
     </message>
@@ -77,7 +77,7 @@ p, li { white-space: pre-wrap; }
         <translation>Ви маєте намір вилучити файл налаштувань:</translation>
     </message>
     <message>
-        <location filename="../ui_files/shufflelist.ui" line="75"/>
+        <location filename="../ui_files/wizard.ui" line="365"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
@@ -109,12 +109,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="337"/>
         <source>Back</source>
-        <translation type="obsolete">Назад</translation>
+        <translation type="unfinished">Назад</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="354"/>
         <source>Next</source>
-        <translation type="obsolete">Далі</translation>
+        <translation type="unfinished">Далі</translation>
     </message>
     <message>
         <location filename="export.ui" line="139"/>
@@ -175,12 +175,12 @@ the tab &quot;Generating files&quot;)</source>
         <translation type="obsolete">Бажаєте попередньо переглядати пакунок (типово, так)?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="874"/>
+        <location filename="../ui_files/preferences.ui" line="883"/>
         <source>Yes</source>
         <translation>Так</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="884"/>
+        <location filename="../ui_files/preferences.ui" line="893"/>
         <source>No</source>
         <translation>Ні</translation>
     </message>
@@ -228,7 +228,7 @@ p, li { white-space: pre-wrap; }
         <translation>У якій теці слід типово зберігати ваші проекти?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="193"/>
+        <location filename="../ui_files/wizard.ui" line="157"/>
         <source>Browse</source>
         <translation>Вказати</translation>
     </message>
@@ -256,7 +256,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+        <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
 &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
 &amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
@@ -280,7 +280,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="319"/>
         <source>Note that \begin{document} must not appear here !</source>
-        <translation type="obsolete">Зауважте, що у заголовку не повинно бути команди \begin{document}!</translation>
+        <translation type="unfinished">Зауважте, що у заголовку не повинно бути команди \begin{document}!</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="239"/>
@@ -293,12 +293,12 @@ p, li { white-space: pre-wrap; }
         <translation>Налаштування міток окремих вправ</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="259"/>
+        <location filename="../ui_files/wizard.ui" line="200"/>
         <source>What comes before an exercise ?</source>
         <translation>Яка команда передує вправі?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="266"/>
+        <location filename="../ui_files/wizard.ui" line="227"/>
         <source>What comes after ?</source>
         <translation>Яка команда її завершує?</translation>
     </message>
@@ -370,12 +370,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/wizard.ui" line="20"/>
         <source>Wizard</source>
-        <translation type="obsolete">Майстер</translation>
+        <translation type="unfinished">Майстер</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="100"/>
         <source>Warning ! This wizard will erase some of your settings !</source>
-        <translation type="obsolete">Попередження: у результаті використання майстра частину налаштувань буде вилучено!</translation>
+        <translation type="unfinished">Попередження: у результаті використання майстра частину налаштувань буде вилучено!</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="123"/>
@@ -384,7 +384,7 @@ p, li { white-space: pre-wrap; }
 - what header do you use to compile your files (what comes before begin{document}) ?
 
 If you want, TeXamator can try to find out automatically. Just enter the location of one of your typical tex files with some exercices in it and hit the &quot;Next&quot; button.</source>
-        <translation type="obsolete">Для роботи TeXamator потрібно вказати певний набір даних:
+        <translation type="unfinished">Для роботи TeXamator потрібно вказати певний набір даних:
 - спосіб оголошення окремих вправ у ваших файлах tex;
 - заголовок, який слід використати для збирання остаточних документів (тобто набір команд до begin{document}).
 
@@ -393,17 +393,17 @@ If you want, TeXamator can try to find out automatically. Just enter the locatio
     <message>
         <location filename="../ui_files/wizard.ui" line="188"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation type="obsolete">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
+        <translation type="unfinished">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation type="obsolete">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
+        <translation type="unfinished">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="379"/>
         <source>Apply</source>
-        <translation type="obsolete">Застосувати</translation>
+        <translation type="unfinished">Застосувати</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="143"/>
@@ -455,7 +455,7 @@ Feel free to modify the default header : it will be used to compile .tex files.<
         <translation>Нові налаштування</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="763"/>
+        <location filename="../ui_files/preferences.ui" line="772"/>
         <source>Set here what you want to appear after your exercises</source>
         <translation>Тут ви можете вказати текст, який буде показано після ваших вправ</translation>
     </message>
@@ -509,15 +509,15 @@ Feel free to modify the default header : it will be used to compile .tex files.<
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;TeXamator is distributed under the GPL.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Feel free to visit my website for more information :&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://alexisfles.ch/en&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://alexisfles.ch/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Feel free to visit my github for more information :&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/alexisflesch/texamator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/alexisflesch/texamator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
+        <translation type="unfinished">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
 &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
 &amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
@@ -545,17 +545,17 @@ p, li { white-space: pre-wrap; }
         <translation>Зібрати і експортувати</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="785"/>
+        <location filename="../ui_files/preferences.ui" line="794"/>
         <source>AMC</source>
         <translation>AMC</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="791"/>
+        <location filename="../ui_files/preferences.ui" line="800"/>
         <source>TeXamator can help you build multiple choices tests with AMC :</source>
         <translation>TeXamator може допомогти вам зібрати тести із варіантами відповідей за допомогою AMC:</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="807"/>
+        <location filename="../ui_files/preferences.ui" line="816"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -568,32 +568,32 @@ p, li { white-space: pre-wrap; }
 &amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://home.gna.org/auto-qcm/&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://home.gna.org/auto-qcm/&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="818"/>
+        <location filename="../ui_files/preferences.ui" line="827"/>
         <source>For more information, especially on how to configure this tab and make AMC compatible with TeXamator, please visit :</source>
         <translation>Щоб дізнатися більше, особливо про те, як налаштувати цю вкладку та зробити AMC сумісним із TeXamator, відвідайте цей сайт:</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="854"/>
+        <location filename="../ui_files/preferences.ui" line="863"/>
         <source>Do you want to enable this feature ?</source>
         <translation>Хочете увімкнути цю можливість?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="898"/>
+        <location filename="../ui_files/preferences.ui" line="907"/>
         <source>What is the name of the corresponding environment?</source>
         <translation>Якою є назва відповідного середовища?</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="918"/>
+        <location filename="../ui_files/preferences.ui" line="927"/>
         <source>qcm</source>
         <translation>qcm</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="946"/>
+        <location filename="../ui_files/preferences.ui" line="955"/>
         <source>What text do you want to use ? </source>
         <translation>Який текст ви хочете використати? </translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="966"/>
+        <location filename="../ui_files/preferences.ui" line="975"/>
         <source>%AMC-stuff</source>
         <translation>%AMC-stuff</translation>
     </message>
@@ -613,7 +613,7 @@ p, li { white-space: pre-wrap; }
         <translation>Тут ви можете налаштувати преамбули і завершення, які буде використано для попереднього перегляду вправ та обробки у відповідь на натискання кнопки «Експортувати».</translation>
     </message>
     <message>
-        <location filename="../ui_files/preferences.ui" line="934"/>
+        <location filename="../ui_files/preferences.ui" line="943"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
         <translation>Під час експортування вашого проекту TeXamator запише команди \copygroup та \shufflegroup. TeXamator замінить вибраний вами текст на ці макроси LaTeX. Цей текст має бути використано принаймні один раз у налаштуваннях на вкладці «Преамбула-завершення».</translation>
     </message>
@@ -691,6 +691,15 @@ Also, please note that a few functionalities of TeXamator have changed :
 - Якщо ви хочете скористатися пакунком попереднього перегляду, вам слід вписати його власноруч до преамбули.
 - Ви можете створити декілька преамбул і завершень для попереднього перегляду вправ та експортування документів: ці дані буде збережено на вкладці «Преамбула-завершення», ви зможете вибрати потрібний вам варіант за допомогою меню «Зміни -&amp;gt; Преамбула».</translation>
     </message>
+    <message>
+        <location filename="../ui_files/preferences.ui" line="843"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt;&quot;&gt;https://github.com/alexisflesch/texamator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Form</name>
@@ -700,12 +709,12 @@ Also, please note that a few functionalities of TeXamator have changed :
         <translation type="unfinished">Вкажіть теку</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1225"/>
+        <location filename="../texamator.py" line="1229"/>
         <source>Exercise</source>
         <translation type="unfinished">Вправа</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1225"/>
+        <location filename="../texamator.py" line="1229"/>
         <source>Element (AMC)</source>
         <translation type="unfinished">Елемент (AMC)</translation>
     </message>
@@ -896,32 +905,32 @@ Also, please note that a few functionalities of TeXamator have changed :
 <context>
     <name>Table context menu</name>
     <message>
-        <location filename="../texamator.py" line="1087"/>
+        <location filename="../texamator.py" line="1091"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished">Копіювати до буфера</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1091"/>
+        <location filename="../texamator.py" line="1095"/>
         <source>Edit...</source>
         <translation type="unfinished">Змінити…</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1094"/>
+        <location filename="../texamator.py" line="1098"/>
         <source>Move up</source>
         <translation type="unfinished">Пересунути вище</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1097"/>
+        <location filename="../texamator.py" line="1101"/>
         <source>Move down</source>
         <translation type="unfinished">Пересунути нижче</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1100"/>
+        <location filename="../texamator.py" line="1104"/>
         <source>Shuffle</source>
         <translation type="unfinished">Перемішати</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1103"/>
+        <location filename="../texamator.py" line="1107"/>
         <source>Remove</source>
         <translation type="unfinished">Вилучити</translation>
     </message>
@@ -929,17 +938,17 @@ Also, please note that a few functionalities of TeXamator have changed :
 <context>
     <name>Tree context menu</name>
     <message>
-        <location filename="../texamator.py" line="1060"/>
+        <location filename="../texamator.py" line="1064"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished">Копіювати до буфера</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1064"/>
+        <location filename="../texamator.py" line="1068"/>
         <source>Add</source>
         <translation type="unfinished">Додати</translation>
     </message>
     <message>
-        <location filename="../texamator.py" line="1066"/>
+        <location filename="../texamator.py" line="1070"/>
         <source>Edit...</source>
         <translation type="unfinished">Змінити…</translation>
     </message>
@@ -947,36 +956,71 @@ Also, please note that a few functionalities of TeXamator have changed :
 <context>
     <name>Wizard</name>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="20"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="22"/>
         <source>It looks like it is the first time you use TeXamator on this computer !</source>
         <translation type="unfinished">Здається. ви вперше запустили TeXamator на цьому комп'ютері!</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="67"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="72"/>
         <source>Pick a file</source>
         <translation type="unfinished">Виберіть файл</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="77"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="83"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
         <translation type="unfinished">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="79"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="86"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
         <translation type="unfinished">TeXamator не вдалося знайти заголовок у вказаному вами файлі.
 Ви можете змінити типовий заголовок: його буде використано для збирання файлів .tex.</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="85"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
         <translation type="unfinished">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
     </message>
     <message>
-        <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="100"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
         <translation type="unfinished">TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
+    </message>
+</context>
+<context>
+    <name>Wizard2</name>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="22"/>
+        <source>It looks like it is the first time you use TeXamator on this computer !</source>
+        <translation type="obsolete">Здається. ви вперше запустили TeXamator на цьому комп'ютері!</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="72"/>
+        <source>Pick a file</source>
+        <translation type="obsolete">Виберіть файл</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="83"/>
+        <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
+        <translation type="obsolete">Тут слід вказати заголовок, який буде використано TeXamator для збирання документа.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="86"/>
+        <source>TeXamator couldn&apos;t find a header in the file you gave.
+Feel free to modify the default header : it will be used to compile .tex files.</source>
+        <translation type="obsolete">TeXamator не вдалося знайти заголовок у вказаному вами файлі.
+Ви можете змінити типовий заголовок: його буде використано для збирання файлів .tex.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
+        <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
+        <translation type="obsolete">Нижче наведено мітки, які знайдено TeXamator. Ви можете додати або вилучити мітки зі списку.</translation>
+    </message>
+    <message>
+        <location filename="../partielatormods/guis/guiwizardplus.py" line="100"/>
+        <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
+        <translation type="obsolete">TeXamator не вдалося знайти використані вами мітки. Будь ласка, додайте їх вручну.</translation>
     </message>
 </context>
 <context>

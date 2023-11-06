@@ -22,8 +22,8 @@ FORMS           = ../ui_files/apropos.ui \
                     ../ui_files/randomize.ui \
                     ../ui_files/shufflelist.ui \
                     ../ui_files/warning.ui \
-                    ../ui_files/warningNewVersion.ui
-                    ../ui_files/wizard.ui
+                    ../ui_files/warningNewVersion.ui \
+                    ../ui_files/wizard.ui \
                     
 TRANSLATIONS    = TeXamator_fr.ts \
                   TeXamator_cs.ts \
