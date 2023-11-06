@@ -53,7 +53,7 @@ Or, if you prefer, you can simply double click on the file _texamator.py_. But, 
 
 ### Getting started
 
-The first time your run TeXamator, it will start a wizard to help you configure it. If, for some reason, you want to remove all your preferences, just find the folder ".partielator" in your home directory and delete it.
+The first time your run TeXamator, it will start a wizard to help you configure it. If, for some reason, you want to remove all your preferences, just find the folder `.texamator` in your home directory and delete it.
 
 The wizard will ask you to give it a .tex file and try to guess the tags you use for your exercises. It will probably grab unuseful stuff like `\begin{cases}...\end{cases}`: remove them at the next step.
 
