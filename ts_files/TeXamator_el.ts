@@ -6,22 +6,22 @@
     <message>
         <location filename="../texamator.py" line="1121"/>
         <source>Set element name (AMC)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορίστε το όνομα στοιχείου(AMC)</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1123"/>
         <source>New element...</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέο στοιχείο...</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1140"/>
         <source>Enter the new element name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ορίίστε το όνομα του νέου στοιχείου</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1142"/>
         <source>New element</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέο στοιχείο</translation>
     </message>
 </context>
 <context>
@@ -49,17 +49,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;If you have a question or a request, you can contact&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;me by email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
-&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
-&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;Το TeXamator διανέμεται υπό το GPL.&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt; Μη διστάσετε να επισκεφτείτε τον ιστότοπό μου για περισσότερες πληροφορίες:&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://alexisfles.ch/en&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p style=&amp;quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p align=&amp;quot;justify&amp;quot; style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt; Εάν έχετε κάποια ερώτηση ή κάποιο αίτημα, μπορείτε να επικοινωνήσετε &amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;p align=&amp;quot;justify&amp;quot; style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; font-family:'Sans'; font-size:10pt;&amp;quot;&amp;gt;μαζί μου στο email : alexis.flesch@gmail.com&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Το TeXamator διανέμεται υπό το GPL.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Για περισσότερες πληροφορίες επισκεφθείτε τη σελίδα μου στο github  :&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/alexisflesch/texamator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/alexisflesch/texamator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;Εάν έχετε κάποια ερώτηση ή κάποιο αίτημα, μπορείτε να επικοινωνήσετε&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;μαζί μου μέσω email : alexis.flesch@gmail.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/warningNewVersion.ui" line="149"/>
@@ -251,7 +251,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
 &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
 p, li { white-space: pre-wrap; }
-&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
+&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
 &amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://alexisfles.ch/en&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://alexisfles.ch/en&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
     </message>
     <message>
@@ -321,11 +321,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.0//EN&amp;quot; &amp;quot;http://www.w3.org/TR/REC-html40/strict.dtd&amp;quot;&amp;gt;
-&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta name=&amp;quot;qrichtext&amp;quot; content=&amp;quot;1&amp;quot; /&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body style=&amp;quot; font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;&amp;quot;&amp;gt;
-&amp;lt;p style=&amp;quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://home.gna.org/auto-qcm/&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot; text-decoration: underline; color:#0000ff;&amp;quot;&amp;gt;http://home.gna.org/auto-qcm/&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</translation>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://home.gna.org/auto-qcm/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://home.gna.org/auto-qcm/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="827"/>
@@ -360,12 +360,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui_files/preferences.ui" line="943"/>
         <source>When you will export your project, TeXamator will write the \copygroup and \shufflegroup stuff for you. TeXamator will replace a text of your choice with these LaTeX macros. This text should appear in at least one of your configs in the &quot;Preamble-postamble&quot; tab.</source>
-        <translation>Όταν θα εξαγάγετε το έργο σας, το TeXamator θα γράψει τα στοιχεία \copygroup και \shufflegroup για εσάς. Το TeXamator θα αντικαταστήσει ένα κείμενο της επιλογής σας με αυτές τις μακροεντολές LaTeX. Αυτό το κείμενο θα πρέπει να εμφανίζεται σε τουλάχιστον μία από τις παραμέτρους ρύθμισης στην καρτέλα &amp;quot;Preamble-postamble&amp;quot; </translation>
+        <translation>Όταν θα εξαγάγετε το έργο σας, το TeXamator θα γράψει τα στοιχεία \copygroup και \shufflegroup για εσάς. Το TeXamator θα αντικαταστήσει ένα κείμενο της επιλογής σας με αυτές τις μακροεντολές LaTeX. Αυτό το κείμενο θα πρέπει να εμφανίζεται σε τουλάχιστον μία από τις παραμέτρους ρύθμισης στην καρτέλα &quot;Preamble-postamble&quot; </translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="955"/>
         <source>What text do you want to use ? </source>
-        <translation>Τι κείμενο θέλετε να χρησιμοποιήσετε;</translation>
+        <translation>Τι κείμενο θέλετε να χρησιμοποιήσετε; </translation>
     </message>
     <message>
         <location filename="../ui_files/preferences.ui" line="975"/>
@@ -464,37 +464,41 @@ Also, please note that a few functionalities of TeXamator have changed :
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt;&quot;&gt;https://github.com/alexisflesch/texamator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Noto Sans&apos;; font-size:9pt;&quot;&gt;https://github.com/alexisflesch/texamator&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="108"/>
         <source>No exercise found</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεν βράθηκαν ασκήσεις</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="111"/>
         <source>1 exercise found</source>
-        <translation type="unfinished"></translation>
+        <translation>Βρέθηκε 1 άσκηση</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="114"/>
         <source>exercises found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ασκήσεις που βρέθηκαν</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiexportplus.py" line="62"/>
         <source>All the changes you made to the source code will be lost. Do you want to continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>Όλες οι αλλαγές που κάνατε στον πηγαίο κώδικα θα χαθούν.Θέλετε να συνεχίσετε;</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="20"/>
         <source>Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Οδηγός ρυθμίσεων.(Wizard)</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="100"/>
         <source>Warning ! This wizard will erase some of your settings !</source>
-        <translation type="unfinished"></translation>
+        <translation>Προειδοποποίηση ! Ο οδηγός θα διαγάψει κάποιες από τις ρυθμίσεις σας!</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="123"/>
@@ -503,37 +507,41 @@ p, li { white-space: pre-wrap; }
 - what header do you use to compile your files (what comes before begin{document}) ?
 
 If you want, TeXamator can try to find out automatically. Just enter the location of one of your typical tex files with some exercices in it and hit the &quot;Next&quot; button.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το TeXamator πρέπει να γνωρίζει μερικά πράγματα για να μπορέσει να λειτουργήσει πλήρως:
+- πώς δηλώνετε τις ασκήσεις σας στα tex αρχεία σας;
+- ποια κεφαλίδα(header) χρησιμοποιείτε για τη μεταγλώττιση των αρχείων σας (τι εμφανίζεται πριν από τo begin{document});
+
+Εάν θέλετε, το TeXamator μπορεί να προσπαθήσει να το ανακαλύψει αυτόματα. Απλώς εισαγάγετε τη θέση ενός από τα τυπικά αρχεία tex σας με μερικές ασκήσεις και πατήστε το κουμπί &quot;Επόμενο&quot;.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="188"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εδώ είναι οι ετικέτες(tags) που βρήκε το TeXamator. Μπορείτε να προσθέσετε ή να διαγράψετε ετικέτες από τη λίστα.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="306"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εδώ είναι η κεφαλίδα(header) που πρόκειται να χρησιμοποιήσει το TeXamator κάθε φορά που χρειάζεται να μεταγλωττίσει ένα αρχείο.</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="319"/>
         <source>Note that \begin{document} must not appear here !</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσέξτε ότι το \begin{document} δεν πρέπει να εμφανίζεται εδώ !</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="337"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Πίσω</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="354"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Επόμενο</translation>
     </message>
     <message>
         <location filename="../ui_files/wizard.ui" line="379"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Εφαρμογή</translation>
     </message>
 </context>
 <context>
@@ -541,27 +549,27 @@ If you want, TeXamator can try to find out automatically. Just enter the locatio
     <message>
         <location filename="../partielatormods/guis/guiprefsplus.py" line="327"/>
         <source>Pick a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλέξτε έναν φάκελο</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1229"/>
         <source>Exercise</source>
-        <translation type="unfinished">Άσκηση</translation>
+        <translation>Άσκηση</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1229"/>
         <source>Element (AMC)</source>
-        <translation type="unfinished"></translation>
+        <translation>Στοιχείο (AMC)</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiprefsplus.py" line="266"/>
         <source>You are about to delete the compile sequence : </source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόκειται να διαγράψετε την ακολουθία μεταγλώττισης : </translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiprefsplus.py" line="357"/>
         <source>You are about to delete the config : </source>
-        <translation type="unfinished"></translation>
+        <translation>Πρόκειται να διαγράψετε τη διαμόρφωση: </translation>
     </message>
 </context>
 <context>
@@ -614,11 +622,7 @@ If you want, TeXamator can try to find out automatically. Just enter the locatio
     <message>
         <location filename="../ui_files/guigui.ui" line="502"/>
         <source>Re-run LaTeX</source>
-        <translation>​Look up details
-12 / 5,000
-Translation results
-Translation result
-Εκτελέστε ξανά τη LaTeX</translation>
+        <translation>Εκτελέστε ξανά τη LaTeX</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="610"/>
@@ -688,7 +692,7 @@ Translation result
     <message>
         <location filename="../ui_files/guigui.ui" line="688"/>
         <source>Start Wizard</source>
-        <translation>Οδηγός εκκίνησης</translation>
+        <translation>Οδηγός ρυθμίσεων</translation>
     </message>
     <message>
         <location filename="../ui_files/guigui.ui" line="693"/>
@@ -733,7 +737,7 @@ Translation result
     <message>
         <location filename="../ui_files/guigui.ui" line="736"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Ελληνικά</translation>
     </message>
 </context>
 <context>
@@ -741,32 +745,32 @@ Translation result
     <message>
         <location filename="../texamator.py" line="1091"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιγραφή στο πρόχειρο</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1095"/>
         <source>Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>Επεξεργασία...</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1098"/>
         <source>Move up</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση πάνω</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1101"/>
         <source>Move down</source>
-        <translation type="unfinished"></translation>
+        <translation>Μετακίνηση κάτω</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1104"/>
         <source>Shuffle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ανακάτεμα</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1107"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Αφαίρεση</translation>
     </message>
 </context>
 <context>
@@ -774,17 +778,17 @@ Translation result
     <message>
         <location filename="../texamator.py" line="1064"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιγραφή στο πρόχειρο</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1068"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη</translation>
     </message>
     <message>
         <location filename="../texamator.py" line="1070"/>
         <source>Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>Επεξεργασία...</translation>
     </message>
 </context>
 <context>
@@ -792,33 +796,34 @@ Translation result
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="22"/>
         <source>It looks like it is the first time you use TeXamator on this computer !</source>
-        <translation type="unfinished"></translation>
+        <translation>Φαίνεται ότι είναι η πρώτη φορά που χρησιμοποιείτε το TeXamator σε αυτόν τον υπολογιστή!</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="72"/>
         <source>Pick a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Επιλέξτε ένα αρχείο</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="83"/>
         <source>Here is the header TeXamator is going to use each time it needs to compile a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτή είναι η κεφαλίδα(header) που πρόκειται να χρησιμοποιήσει το TeXamator κάθε φορά που χρειάζεται να μεταγλωττίσει ένα αρχείο.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="86"/>
         <source>TeXamator couldn&apos;t find a header in the file you gave.
 Feel free to modify the default header : it will be used to compile .tex files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το TeXamator δεν μπόρεσε να βρει κεφαλίδα (header) στο αρχείο που δώσατε.
+Μη διστάσετε να τροποποιήσετε την προεπιλεγμένη κεφαλίδα: θα χρησιμοποιηθεί για τη μεταγλώττιση αρχείων .tex.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="92"/>
         <source>Here are the tags TeXamator found. You can add or delete tags from the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Εδώ είναι οι ετικέτες(tags) που βρέθηκαν το TeXamator. Μπορείτε να προσθέσετε ή να διαγράψετε ετικέτες από τη λίστα.</translation>
     </message>
     <message>
         <location filename="../partielatormods/guis/guiwizardplus.py" line="100"/>
         <source>TeXamator couldn&apos;t find the tags you use. Please, add them manually.</source>
-        <translation type="unfinished"></translation>
+        <translation>Το TeXamator δεν μπόρεσε να βρει τις ετικέτες που χρησιμοποιείτε. Προσθέστε τις χειροκίνητα.</translation>
     </message>
 </context>
 <context>

@@ -26,7 +26,7 @@ class MonApplication(Ui_MainWindow):
     def __init__(self, settings):
         super(Ui_MainWindow, self).__init__()
         self.first_time, self.tags, self.settings, self.compile_seq, self.preamblesPostambles = settings
-        #self.first_time, self.tags, self.header, self.footer, self.settings, self.compile_seq, self.generate = settings
+        # self.first_time, self.tags, self.header, self.footer, self.settings, self.compile_seq, self.generate = settings
         self.treeTeX = False
         self.enonce = "None"  # last exercise
         self.whatson = "tree"  # what is being previewed ? tree or list ?
@@ -947,7 +947,7 @@ class MonApplication(Ui_MainWindow):
     def to_german(self):
         self.settings["lang"] = "de"
         self.show_lang_dialog()
-    
+
     def to_greek(self):
         self.settings["lang"] = "el"
         self.show_lang_dialog()
@@ -1255,8 +1255,8 @@ class MonApplication(Ui_MainWindow):
         self.actionA_propos.triggered.connect(self.apropos)
         self.actionEdit_exercise.triggered.connect(
             self.editExerciceTableWidget)
-        
-        #Translations
+
+        # Translations
         self.actionFrench.triggered.connect(self.to_french)
         self.actionEnglish.triggered.connect(self.to_english)
         self.actionCzech.triggered.connect(self.to_czech)
@@ -1267,6 +1267,8 @@ class MonApplication(Ui_MainWindow):
         self.actionExpand_Collapse.triggered.connect(self.expand_collapse_me)
         self.pushButton_parcourir.clicked.connect(self.parcourir)
         self.pushButton_preview.clicked.connect(self.show_preview_list)
+        self.pushButton_edit.clicked.connect(
+            self.editExerciceTableWidget)
         self.lineEdit_search.textChanged[str].connect(self.search)
         # eventFilter to detect Ctrl+C and Del
         Form.eventFilter = self.eventFilter
