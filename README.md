@@ -186,5 +186,5 @@ which is released under LGPL (version not specified to my knowledge)
 http://fripohled.blogspot.com/
 * German translation supported by Martin Zinser (zinser@zinser.no-ip.info)
 * Bernard Remond (NBRemond@laposte.net) is reponsible for the new feature "footer" !
-* Greek translation supported by Emmanuil Tsioptsias
+* Greek translation supported by Emmanuil Tsioptsias (https://emtsiopt.sites.sch.gr/)
 * I am responsible for all the bugs. Open an issue if you find one !
