@@ -1,6 +1,6 @@
 # TeXamator
 
-This programm is distributed under the GPLv3.
+This programm is distributed under the GPLv3. It was meant for Linux but can work under Mac OS (see issues for hints) and works with Windows 11/wslg.
 
 ## What is TeXamator?
 
